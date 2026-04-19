@@ -1,0 +1,1317 @@
+
+!!!!
+DISCLAIMER: TinyTroupe relies on Artificial Intelligence (AI) models to generate content. 
+The AI models are not perfect and may produce inappropriate or inaccurate results. 
+For any serious or consequential use, please review the generated content before using it.
+!!!!
+
+Looking for default config on: /data1/cache/mjlee/conda_envs/tinytroupe/lib/python3.10/site-packages/tinytroupe/utils/../config.ini
+Found custom config on: /nfs/nas/home/mjlee/AgentSociety/experiment1/config.ini
+TinyTroupe version: 0.7.0
+Current date and time (local): 2026-04-20 03:02:11
+Current date and time (UTC):   2026-04-19 19:02:11
+
+=================================
+Current TinyTroupe configuration 
+=================================
+[OpenAI]
+api_type = openai
+azure_api_version = 2024-12-01-preview
+model = gpt-5-mini
+reasoning_model = o3-mini
+vision_detail = auto
+embedding_model = text-embedding-3-small
+azure_embedding_model_api_version = 2023-05-15
+max_completion_tokens = 128000
+timeout = 60
+max_attempts = 5
+waiting_time = 1
+exponential_backoff_factor = 5
+max_concurrent_model_calls = 4
+reasoning_effort = high
+cache_api_calls = False
+cache_file_name = openai_api_cache.json
+max_content_display_length = 4000
+
+[Simulation]
+parallel_agent_generation = True
+parallel_agent_actions = True
+rai_harmful_content_prevention = True
+rai_copyright_infringement_prevention = True
+
+[Cognition]
+enable_memory_consolidation = False
+enable_continuous_contextual_semantic_memory_retrieval = False
+min_episode_length = 10
+max_episode_length = 15
+episodic_memory_fixed_prefix_length = 10
+episodic_memory_lookback_length = 20
+
+[ActionGenerator]
+max_attempts = 2
+enable_quality_checks = False
+enable_regeneration = True
+enable_direct_correction = False
+enable_quality_check_for_persona_adherence = True
+enable_quality_check_for_selfconsistency = False
+enable_quality_check_for_fluency = False
+enable_quality_check_for_suitability = False
+enable_quality_check_for_similarity = False
+continue_on_failure = True
+quality_threshold = 5
+
+[Logging]
+loglevel = ERROR
+loglevel_console = INFO
+loglevel_file = DEBUG
+log_include_thread_id = True
+
+=====================================================
+ 啟動對照組 (Control Group)：5 位普通陪審員 (無極端份子)
+=====================================================
+
+===== [Control] 實驗啟動 =====
+USER --> Juror_1_高中老師_Control: [CONVERSATION] 
+          > 案件背景：一名年輕的父親因為女兒罹患罕見疾病，無力支付高昂醫藥費，而在深夜潛入製藥實驗室竊取了尚未上市的實驗性藥物。他被當場逮捕。
+          > 【討論規則】第一輪討論開始。如果你覺得證據尚不足，可以選擇『暫不表態』。
+       + --> Juror_2_軟體工程師_Control
+       + --> Juror_3_單親媽媽_Control
+       + --> ...others...
+2026-04-20 03:02:14,122 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] Running world simulation step 1 of 1.
+──────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Control step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:02:14,122 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:02:14,642 - ThreadPoolExecutor-0_1(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:14,654 - ThreadPoolExecutor-0_0(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:14,655 - ThreadPoolExecutor-0_4(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:14,655 - ThreadPoolExecutor-0_3(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:14,656 - ThreadPoolExecutor-0_2(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:35,214 - ThreadPoolExecutor-0_4(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_5_會計師_Control acts: [THINK] 
+                         > 我要以理性和证据为基础评估此案。已知事实：被告为救治罕见病女儿，深夜进入实验室取得尚未上市的试验性药物，随后被当场逮捕。需要查明的关键信息包括：1
+                         > ) 是否存在合法或可行的替代途径（例如求助医院、慈善或药厂）？2) 被告是否明知该药物为非法取得或存在高度危险性？3)
+                         > 药物的危险性或有效性有无明确证据？4) 他取得药物的具体行为是否构成盗窃或其他刑事要件？5) 是否有证人或监控能证明他的主观故意或紧急避险的客观情
+                         > 况？根据讨论规则，本轮发言可选择“暂不表态”。在证据不充分的情况下，我倾向于暂不表态，等待更多事实和证据以便在后续轮次明确表态（有罪或无罪）。
+Juror_5_會計師_Control acts: [TALK] 
+                         > 各位，我现在选择“暂不表态”。理由很简单：目前证据不足以让我在有罪或无罪之间做出确定判断。现有材料描述了动机（为救女儿）和行为（深夜进入实验室取药
+                         > 并被逮捕），但缺少关于他是否别无选择、是否知悉药物非法或危险、以及行为是否满足盗窃等刑法构成要件的关键事实。作为会计师出身的陪审员，我强调证据链与
+                         > 意图证明的重要性。对被告的动机我表示同情，但这并不能替代法律上对事实与主观要件的证明。建议收集并讨论上述缺失的信息后再做最终判断。
+Juror_5_會計師_Control acts: [DONE] 
+                         > 等待其他陪审员发言或补充证据。
+2026-04-20 03:02:37,921 - ThreadPoolExecutor-0_3(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Control acts: [THINK] 
+                          > 作为一名退休警察，我要以证据为导向、冷静评估。当前需要弄清的要点：1)
+                          > 被告是否真的在实验室制造了尚未上市的实验性药物？有无物证、监控、目击证或化学检测报告？2)
+                          > 该药物是否具有危险性或对公众构成风险？是否仅为个人使用？3)
+                          > 被告的动机与行为是否属于为救治女儿的必要行为（可能带来同情理解），还是有传播、销售或其它故意违法行为？4)
+                          > 是否存在合法替代途径或紧急避险抗辩？5) 检方和辩方提供的证人和专家证词的可信度如何？我需要在讨论中逐项核实这些事实，评估是否满足构成犯罪的要素
+                          > 。第一轮我应当发言但可以暂不决定有罪与否，待证据更充分后在后续轮次给出明确票决。
+Juror_4_退休警察_Control acts: [TALK] 
+                          > 各位，我先说明我的立场和我关注的问题。我是一名退休警察，习惯用证据说话。就本案我关心几件事：  1)
+                          > 事实层面——有没有直接物证或可靠目击证明他确实在实验室制造了该药？有无检验报告显示那是未上市的实验性药物？ 2)
+                          > 危害性——这种药物是否对他人或社会有实际危险？被告只是为女儿自用，还是有扩散或销售的迹象？ 3)
+                          > 主观故意——他当时的心态是什么？是出于救治女儿的迫切需要，还是有谋利或无视法规的故意？ 4)
+                          > 抗辩理由——是否存在紧急避险、无法获得合法药物的现实障碍，或者其他可以减轻责任的情形？ 5)
+                          > 证人和专家——检方与辩方提供的证据、证词和专家意见谁更可信，是否存在程序或取证瑕疵？  我的建议是：在接下来的讨论中把上述问题逐条核实，要求法庭
+                          > 记录中列明的化验结果、专家意见和被告当时的陈述。只有在这些关键事实更清晰之后，我才能在第二轮及以后的表决中做出明确的有罪或无罪选择。第一轮我暂不
+                          > 表态。
+Juror_4_退休警察_Control acts: [DONE] 
+                          > 等待其他陪审员发言并收集更多证据相关问题。
+2026-04-20 03:02:38,714 - ThreadPoolExecutor-0_0(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Control acts: [THINK] 
+                          > 我需要以證據為核心來組織發言。案情重點：一名年輕父親因女兒罕見病，負擔不起昂貴藥費，深夜進入實驗室取走尚未上市的實驗性藥物，當場被逮捕。裁判程序
+                          > 規則提醒：本輪為第一輪，可以選擇暫不表態；自第二輪起，發言末尾必須明確表態有罪或無罪。作為重視證據的陪審員（也是一名高中老師），我應先列出必須釐
+                          > 清的事實與法律要點，避免情緒化判斷；若證據不足，採取本輪允許的暫不表態是負責任的做法。
+Juror_1_高中老師_Control acts: [TALK] 
+                          > 我先整理我認為需要查明的關鍵事實，並說明我的初步考量： 1) 事實經過：他是否確實進入實驗室並取得藥物？有無破門、暴力或其他加重情節？ 2)
+                          > 藥物性質：該藥是否屬於未經許可的人用藥或危險化學品？有無對公眾或第三人造成風險？ 3)
+                          > 行為目的與範圍：他取藥是否僅為救治自己女兒？是否有販售或散佈的證據？ 4)
+                          > 可得的替代途徑：他是否已嘗試合法途徑（醫院、慈善、政府）而被拒絕或無法即時取得？ 5)
+                          > 後果與因果：女兒服用後有無實際治療效果或反效果，是否存在對他人之危害？ 法律上我們需釐清要件（如竊盜、擅自製造或運用違法藥物等）與可能的抗辯（例
+                          > 如必要性或緊急避難），並以超越合理懷疑為有罪判斷標準。道德同情不能取代法律上的證據標準。基於目前我們還未取得上述關鍵事實的完整證據，在本輪我選擇
+                          > 「暫不表態」。
+Juror_1_高中老師_Control acts: [DONE] 
+                          > 等待其他陪審員發言並蒐集更多事實。
+2026-04-20 03:02:44,330 - ThreadPoolExecutor-0_1(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Control acts: [THINK] 
+                           > 我是陪審員2（軟體工程師），以理性與證據為依歸。這是第一輪辯論；根據規則，若證據尚不足，我可以『暫不表態』。目前案情摘要：一位年輕父親因其女兒
+                           > 罕見疾病且無力負擔昂貴藥物，深夜進入實驗室取走尚未上市的實驗性藥物，當場被逮捕。要判定有罪或無罪，需要釐清若干關鍵事實與證據，例如：藥物是否真
+                           > 能救治其女兒（醫療必要性）、父親是否了解藥物性質與風險、他取得藥物的方式與來源是否合法、是否有任何替代途徑可行、被告是否有明確的犯罪意圖、以及
+                           > 藥物是否造成或可能造成他人傷害。此外需審查現場證據、證人證詞、醫療紀錄、藥物化驗報告與法律適用標準。基於目前收到的摘要性資訊，證據仍不足以在第
+                           > 一輪作出有罪或無罪的確定。我將在發言中採取暫不表態，並在後續輪次根據新增證據明確表明立場以協助陪審團達成共識。
+Juror_2_軟體工程師_Control acts: [TALK] 
+                           > 暫不表態。我認為目前提供的資訊（父親因女兒病情且負擔不起藥物而取走實驗性藥物並被逮捕）仍屬摘要性陳述，關鍵細節缺失，無法支持確定的有罪或無罪裁
+                           > 決。為了在後續討論中做出判斷，我希望檢視以下證據：1) 女兒的醫療紀錄與該藥物的醫療必要性與可替代性；2)
+                           > 被告與任何醫療人員或實驗室的通訊記錄，顯示其是否知悉藥物為未經授權的實驗性產品；3) 藥物的來源、取得過程與持有的合法性（包含鏈條）；4)
+                           > 藥物的安全性檢驗與是否可能對他人造成傷害；5) 現場目擊證詞與逮捕情形；6) 適用的法律條文與先例。我會在聽取以上具體證據後改變或明確我的立場
+                           > 。現在我保持暫不表態，並願意聆聽其他陪審員與檢方、辯方在接下來輪次提供的事實與證據，以便共同達成最合理的結論。
+Juror_2_軟體工程師_Control acts: [DONE] 
+                           > 等待更多證據與討論。
+2026-04-20 03:02:53,933 - ThreadPoolExecutor-0_2(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Control acts: [THINK] 
+                          > 已收到案件背景：一名年輕父親因女兒罕見疾病，無力負擔昂貴藥費，深夜闖入實驗室取走尚未上市的實驗性藥物，當場被逮捕。我的角色是理性、重證據的陪審員
+                          > 。下一步我應按程序、以證據為依歸評估。主要待查問題：1) 事實面──他是否確實闖入並取走藥物？證據鏈（監視、指紋、被害人證詞）如何？2)
+                          > 主觀面──他的意圖為何？是否有販售或其他不正當目的？3) 法律抗辯──是否存在緊急必要性或正當理由（為救治女兒）可作為減責或正當化抗辯？4)
+                          > 藥物性質──該藥是否確為實驗性、是否對他人有危害性？5) 可用替代手段──他是否有其他可行合法途徑取得藥物？目前資訊不足，必須聽取更多證人、醫療
+                          > 帳單、藥物檢驗與警方報告，並確認證據的可靠性。根據陪審規則，第一輪發言若尚未確定可說「暫不表態」。我將遵守此規則，並在第二輪開始時根據討論明確表
+                          > 態有罪或無罪。
+Juror_3_單親媽媽_Control acts: [TALK] 
+                          > 各位同審：我先說明我在本輪的立場——暫不表態。作為一名注重證據的陪審員（同時身為母親，我能理解被告的處境），我必須把同情與法律區分開來。基於目前
+                          > 公開的案情，我特別關注幾點：一、現場與物證是否能確實連結被告；二、被告的主觀意圖（救女或其他目的）；三、是否有法律上可採納的必要性抗辯；四、藥物
+                          > 的性質與風險；五、是否存在可行的替代合法途徑。我希望接下來聽到更多證人與書面證據，再在第二輪做出明確有罪或無罪的選擇。暫不表態。
+Juror_3_單親媽媽_Control acts: [DONE] 
+                          > 等待其他陪審員回應與接收更多證據。
+Juror_1_高中老師_Control --> Juror_2_軟體工程師_Control: [CONVERSATION] 
+                          > 我先整理我認為需要查明的關鍵事實，並說明我的初步考量： 1) 事實經過：他是否確實進入實驗室並取得藥物？有無破門、暴力或其他加重情節？ 2)
+                          > 藥物性質：該藥是否屬於未經許可的人用藥或危險化學品？有無對公眾或第三人造成風險？ 3)
+                          > 行為目的與範圍：他取藥是否僅為救治自己女兒？是否有販售或散佈的證據？ 4)
+                          > 可得的替代途徑：他是否已嘗試合法途徑（醫院、慈善、政府）而被拒絕或無法即時取得？ 5)
+                          > 後果與因果：女兒服用後有無實際治療效果或反效果，是否存在對他人之危害？ 法律上我們需釐清要件（如竊盜、擅自製造或運用違法藥物等）與可能的抗辯（例
+                          > 如必要性或緊急避難），並以超越合理懷疑為有罪判斷標準。道德同情不能取代法律上的證據標準。基於目前我們還未取得上述關鍵事實的完整證據，在本輪我選擇
+                          > 「暫不表態」。
+                           + --> Juror_3_單親媽媽_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_2_軟體工程師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                           > 暫不表態。我認為目前提供的資訊（父親因女兒病情且負擔不起藥物而取走實驗性藥物並被逮捕）仍屬摘要性陳述，關鍵細節缺失，無法支持確定的有罪或無罪裁
+                           > 決。為了在後續討論中做出判斷，我希望檢視以下證據：1) 女兒的醫療紀錄與該藥物的醫療必要性與可替代性；2)
+                           > 被告與任何醫療人員或實驗室的通訊記錄，顯示其是否知悉藥物為未經授權的實驗性產品；3) 藥物的來源、取得過程與持有的合法性（包含鏈條）；4)
+                           > 藥物的安全性檢驗與是否可能對他人造成傷害；5) 現場目擊證詞與逮捕情形；6) 適用的法律條文與先例。我會在聽取以上具體證據後改變或明確我的立場
+                           > 。現在我保持暫不表態，並願意聆聽其他陪審員與檢方、辯方在接下來輪次提供的事實與證據，以便共同達成最合理的結論。
+                            + --> Juror_3_單親媽媽_Control
+                            + --> Juror_4_退休警察_Control
+                            + --> ...others...
+Juror_3_單親媽媽_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 各位同審：我先說明我在本輪的立場——暫不表態。作為一名注重證據的陪審員（同時身為母親，我能理解被告的處境），我必須把同情與法律區分開來。基於目前
+                          > 公開的案情，我特別關注幾點：一、現場與物證是否能確實連結被告；二、被告的主觀意圖（救女或其他目的）；三、是否有法律上可採納的必要性抗辯；四、藥物
+                          > 的性質與風險；五、是否存在可行的替代合法途徑。我希望接下來聽到更多證人與書面證據，再在第二輪做出明確有罪或無罪的選擇。暫不表態。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_4_退休警察_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 各位，我先说明我的立场和我关注的问题。我是一名退休警察，习惯用证据说话。就本案我关心几件事：  1)
+                          > 事实层面——有没有直接物证或可靠目击证明他确实在实验室制造了该药？有无检验报告显示那是未上市的实验性药物？ 2)
+                          > 危害性——这种药物是否对他人或社会有实际危险？被告只是为女儿自用，还是有扩散或销售的迹象？ 3)
+                          > 主观故意——他当时的心态是什么？是出于救治女儿的迫切需要，还是有谋利或无视法规的故意？ 4)
+                          > 抗辩理由——是否存在紧急避险、无法获得合法药物的现实障碍，或者其他可以减轻责任的情形？ 5)
+                          > 证人和专家——检方与辩方提供的证据、证词和专家意见谁更可信，是否存在程序或取证瑕疵？  我的建议是：在接下来的讨论中把上述问题逐条核实，要求法庭
+                          > 记录中列明的化验结果、专家意见和被告当时的陈述。只有在这些关键事实更清晰之后，我才能在第二轮及以后的表决中做出明确的有罪或无罪选择。第一轮我暂不
+                          > 表态。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_3_單親媽媽_Control
+                           + --> ...others...
+Juror_5_會計師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                         > 各位，我现在选择“暂不表态”。理由很简单：目前证据不足以让我在有罪或无罪之间做出确定判断。现有材料描述了动机（为救女儿）和行为（深夜进入实验室取药
+                         > 并被逮捕），但缺少关于他是否别无选择、是否知悉药物非法或危险、以及行为是否满足盗窃等刑法构成要件的关键事实。作为会计师出身的陪审员，我强调证据链与
+                         > 意图证明的重要性。对被告的动机我表示同情，但这并不能替代法律上对事实与主观要件的证明。建议收集并讨论上述缺失的信息后再做最终判断。
+                          + --> Juror_2_軟體工程師_Control
+                          + --> Juror_3_單親媽媽_Control
+                          + --> ...others...
+USER --> Juror_1_高中老師_Control: [CONVERSATION] 
+          > 【強制表態令】現在進入第 2 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Control
+       + --> Juror_3_單親媽媽_Control
+       + --> ...others...
+2026-04-20 03:02:54,006 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] Running world simulation step 1 of 1.
+──────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Control step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:02:54,007 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:02:54,039 - ThreadPoolExecutor-1_0(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:54,069 - ThreadPoolExecutor-1_4(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:54,072 - ThreadPoolExecutor-1_3(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:54,073 - ThreadPoolExecutor-1_1(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:02:54,073 - ThreadPoolExecutor-1_2(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:03:16,292 - ThreadPoolExecutor-1_0(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Control acts: [THINK] 
+                          > 我整理目前我需要依據的關鍵事實與法律判準，逐項檢驗： 1) 現場事實：有證詞指出被告深夜進入實驗室並取走藥物且被逮捕，但缺乏證明他製造該藥物或該
+                          > 藥物為未經授權實驗性產品的完整鏈條（如製造紀錄、採購紀錄、監控影像等）。也沒有明確證據顯示有暴力或破壞行為。  2)
+                          > 藥物性質：目前沒有法醫或實驗室的安全性／來源檢驗結果，無法確定該物質是否屬於「未上市且危險」類別或是否可能為可合法替代的藥品。  3) 行為目的
+                          > 與範圍：有情境線索（為救女兒）顯示動機可能是個人緊急醫療需求，尚無可靠證據顯示販售或散布的意圖。刑責成立常須證明不法目的或有害公共利益的實際或可
+                          > 預見風險。  4) 可得替代途徑：尚未充份證明被告已嘗試或被合法途徑拒絕，或存在無法取得的障礙；但即便存在困難，也不能自動等同於有罪。  5) 
+                          > 舉證標準：在刑事案件中，應排除合理疑點才能判定有罪。基於以上，我認為目前公開證據在關鍵要素上仍有重大缺口（來源／性質／不法意圖），無法排除合理疑
+                          > 點。  因此，依證據為核心的判準，我傾向認為不能認定有罪。
+Juror_1_高中老師_Control acts: [TALK] 
+                          > 各位陪審，我的結論與理由簡述如下：目前證據在關鍵點（藥物來源與性質的檢驗報告、製造或持有非法物質的直接鏈條、以及販售或散布的不法意圖）仍不足以排
+                          > 除合理疑點；被告的行為與救女兒的動機存在可理解的情境解釋。基於刑事案件必須排除合理疑點的原則，我現在的表態是：無罪。
+Juror_1_高中老師_Control acts: [DONE] 
+                          > 完成第2輪表決表態，等候其他陪審員回應。
+2026-04-20 03:03:16,340 - ThreadPoolExecutor-1_0(134488675129024) - tinytroupe - WARNING - [Juror_1_高中老師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:03:16,485 - ThreadPoolExecutor-1_1(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Control acts: [THINK] 
+                           > 我必須根據目前公開的事實與我們之前的討論做出評估。回顧要點：1) 缺乏能證明該藥物確實為已上市、合法可用藥物的現場化驗或文件；2)
+                           > 不清楚藥物是否具有醫療必要性或可替代的合法途徑；3) 藥物來源、取得過程與被告的主觀意圖（救治目的還是其他目的）未被充分釐清；4) 現場證人、
+                           > 醫療紀錄與專家鑑定仍不足以消除合理懷疑。刑事裁判應以超越合理懷疑為標準；如果重要事實存在合理懷疑，應傾向不定罪。雖我原先選擇暫不表態，但本輪被
+                           > 要求必須表態；在現有證據框架下，合理的選擇是傾向不確認被告有罪，並在討論中繼續推動補充專家與書面證據以爭取共識。
+Juror_2_軟體工程師_Control acts: [TALK] 
+                           > 各位同審，我的立場仍以證據為依歸。到目前為止，關鍵缺口包括：藥物的性質與安全性檢驗報告、藥物來源與取得過程的合法性、醫療必要性是否成立，以及被
+                           > 告當時的主觀意圖與可行的替代途徑等，這些未被充分釐清。依據刑事的「超越合理懷疑」標準，現有證據還無法排除合理懷疑；因此我在本輪表態：無罪
+Juror_2_軟體工程師_Control acts: [DONE] 
+                           > 等待其他陪審員的回應與更多證據或專家意見。
+2026-04-20 03:03:16,506 - ThreadPoolExecutor-1_1(134488683521728) - tinytroupe - WARNING - [Juror_2_軟體工程師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:03:17,612 - ThreadPoolExecutor-1_4(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_5_會計師_Control acts: [THINK] 
+                         > 檢視目前已知事實並依證據衡量：1) 被告深夜進入實驗室取走未上市藥物並被逮捕——這是事實陳述，但未明確顯示是否有非法製造或販售的構成要件。2)
+                         > 尚缺乏藥物來源、取得程序（是否經請求醫院/善款/藥廠被拒或不可得）及保管鏈（chain of custody）的完整證據。3)
+                         > 藥物本身之危險性或療效尚未有明確鑑定結果，無法確定對他人或社會有實質危害。4)
+                         > 被告之主觀動機（是否為緊急救護以挽救女兒）目前存在合理替代解釋。5)
+                         > 若依無罪推定與超越合理懷疑標準，現有證據留有重大疑點。綜合而言，我傾向在證據不足以排除合理懷疑時，不應判定有罪；但必須在發言末明確表態。
+Juror_5_會計師_Control acts: [TALK] 
+                         > 根據現有證據鏈的不完整、藥物合法性與危險性未經明確鑑定、以及被告行為有可被理解為緊急救助的合理解釋，我認為檢方尚未達到超越合理懷疑的舉證責任。基於
+                         > 審慎與以事實為依據的原則，我在本輪選擇：無罪
+Juror_5_會計師_Control acts: [DONE] 
+                         > 發表本輪意見並等待其他陪審員回應。
+2026-04-20 03:03:17,634 - ThreadPoolExecutor-1_4(134488658343616) - tinytroupe - WARNING - [Juror_5_會計師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:03:18,316 - ThreadPoolExecutor-1_3(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Control acts: [THINK] 
+                          > 現在進入第2輪，我必須根據現有討論與證據做出明確表態。我要聚焦的要點有：1)
+                          > 是否有直接物證或可靠檢驗報告顯示被告在實驗室製造了該未上市的實驗性藥物？目前紀錄與證據不足；2)
+                          > 該藥物的危險性與是否構成對公眾實際風險，證據不明確；3) 被告的主觀動機（是否出於救治其女兒的急迫需要）與是否存在販售、散布的證據仍不充分；4)
+                          > 是否存在合法替代途徑被拒絕的事實尚未被證實；5) 提供證據的證人與專家意見的可信度與程序性證據鏈有缺口。依照我作為陪審員、且受過執法背景的思考方
+                          > 式，若存在合理懷疑，我必須維持無罪推定。基於目前資訊，我傾向於作出無罪判斷，但我會表明若出現可靠的新檢驗或監控證據，我願重新評估。
+Juror_4_退休警察_Control acts: [TALK] 
+                          > 各位同審，我是退休警察，發言時以證據為依歸。綜合目前我們所討論與掌握的事實：沒有明確的實驗室檢驗或監控紀錄能直接證明被告在實驗室製造了該未上市藥
+                          > 物；該藥品的危險性、販售或散布的證據以及被告的主觀犯意均存在重大疑問；提供證據的程序鏈與可信度也有缺失。根據刑事案件『排除合理懷疑』的要求，現有
+                          > 證據不足以排除合理懷疑，不能構成確定的有罪判斷。基於以上理由，我的立場是：無罪。若接下來出現可靠的檢驗報告、監控錄像或可信證人證詞，我願意重新評
+                          > 估。
+Juror_4_退休警察_Control acts: [DONE] 
+                          > 完成本回合發言，等待其他陪審員表態與討論。
+2026-04-20 03:03:18,340 - ThreadPoolExecutor-1_3(134488666736320) - tinytroupe - WARNING - [Juror_4_退休警察_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:03:43,469 - ThreadPoolExecutor-1_2(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Control acts: [THINK] 
+                          > 規則提示：現在進入第2輪，發言末尾必須明確表態。我在第1輪採取了「暫不表態」，因為目前證據尚不完整。我要根據現有事實與法律標準（超越合理懷疑）快
+                          > 速評估關鍵問題：1) 事實面——是否有可靠證據顯示被告確實進入實驗室並取走該藥物（監視、指紋、目擊證詞等的可信度）？2)
+                          > 藥物性質——該藥物是否確屬未經許可、具實驗性或有危害性的化學品？有無檢驗報告與鑑定鏈？3)
+                          > 主觀意圖——被告取藥是為救治女兒的緊急需要，還是有販售/散布的動機？有無販賣或分發的證據？4)
+                          > 法律抗辯——是否存在緊急避難或必要性可減輕責任？檢方是否已就此舉證？5) 後果與危害——藥物使用後是否造成實際危害？綜合判斷：目前紀錄顯示多項關
+                          > 鍵證據缺失（缺乏化驗與完整的持有/取得鏈、意圖與分發證據不明），檢方未達到排除合理懷疑的程度。基於我的角色（重視證據的陪審員）和法律標準，我在本
+                          > 輪必須表態，傾向作出「無罪」判斷——但我會明確表示，若之後出現可靠的新證據（例如化驗結果、清楚的監視或指紋鏈、明確的分發證據）我願意重新評估。
+Juror_3_單親媽媽_Control acts: [TALK] 
+                          > 各位同審：我在本輪表態——我的選擇是「無罪」。理由簡要說明：1)
+                          > 事實連結不確定：目前沒有充分、可追溯的檢驗與鏈條證據能確定他在實驗室製取或持有該藥物；監視與指證的關鍵細節仍不足以排除合理懷疑。2)
+                          > 藥物性質與來源未被充分鑑定：缺乏獨立化驗報告與合法來源證明，無法確認其為非法製造或具社會危害性之物。3)
+                          > 意圖不明：未能有確切證據顯示其有販售或散布的目的；若存在救治女兒的緊急情形，這可能構成抗辯理由，但檢方尚未證明抗辯不存在。4) 與我職責相符：作
+                          > 為一名以證據為重的陪審員，我不能以同情或道德判斷替代法律上的舉證標準。綜上，檢方尚未達到排除合理懷疑的舉證責任，因此我投「無罪」。如果後續出現新
+                          > 且具體的證據，我會重新評估我的立場。
+Juror_3_單親媽媽_Control acts: [DONE] 
+                          > 完成第2輪表態，等待其他陪審員回應與進一步證據。
+2026-04-20 03:03:43,497 - ThreadPoolExecutor-1_2(134488691914432) - tinytroupe - WARNING - [Juror_3_單親媽媽_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_1_高中老師_Control --> Juror_2_軟體工程師_Control: [CONVERSATION] 
+                          > 各位陪審，我的結論與理由簡述如下：目前證據在關鍵點（藥物來源與性質的檢驗報告、製造或持有非法物質的直接鏈條、以及販售或散布的不法意圖）仍不足以排
+                          > 除合理疑點；被告的行為與救女兒的動機存在可理解的情境解釋。基於刑事案件必須排除合理疑點的原則，我現在的表態是：無罪。
+                           + --> Juror_3_單親媽媽_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_2_軟體工程師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                           > 各位同審，我的立場仍以證據為依歸。到目前為止，關鍵缺口包括：藥物的性質與安全性檢驗報告、藥物來源與取得過程的合法性、醫療必要性是否成立，以及被
+                           > 告當時的主觀意圖與可行的替代途徑等，這些未被充分釐清。依據刑事的「超越合理懷疑」標準，現有證據還無法排除合理懷疑；因此我在本輪表態：無罪
+                            + --> Juror_3_單親媽媽_Control
+                            + --> Juror_4_退休警察_Control
+                            + --> ...others...
+Juror_3_單親媽媽_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 各位同審：我在本輪表態——我的選擇是「無罪」。理由簡要說明：1)
+                          > 事實連結不確定：目前沒有充分、可追溯的檢驗與鏈條證據能確定他在實驗室製取或持有該藥物；監視與指證的關鍵細節仍不足以排除合理懷疑。2)
+                          > 藥物性質與來源未被充分鑑定：缺乏獨立化驗報告與合法來源證明，無法確認其為非法製造或具社會危害性之物。3)
+                          > 意圖不明：未能有確切證據顯示其有販售或散布的目的；若存在救治女兒的緊急情形，這可能構成抗辯理由，但檢方尚未證明抗辯不存在。4) 與我職責相符：作
+                          > 為一名以證據為重的陪審員，我不能以同情或道德判斷替代法律上的舉證標準。綜上，檢方尚未達到排除合理懷疑的舉證責任，因此我投「無罪」。如果後續出現新
+                          > 且具體的證據，我會重新評估我的立場。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_4_退休警察_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 各位同審，我是退休警察，發言時以證據為依歸。綜合目前我們所討論與掌握的事實：沒有明確的實驗室檢驗或監控紀錄能直接證明被告在實驗室製造了該未上市藥
+                          > 物；該藥品的危險性、販售或散布的證據以及被告的主觀犯意均存在重大疑問；提供證據的程序鏈與可信度也有缺失。根據刑事案件『排除合理懷疑』的要求，現有
+                          > 證據不足以排除合理懷疑，不能構成確定的有罪判斷。基於以上理由，我的立場是：無罪。若接下來出現可靠的檢驗報告、監控錄像或可信證人證詞，我願意重新評
+                          > 估。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_3_單親媽媽_Control
+                           + --> ...others...
+Juror_5_會計師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                         > 根據現有證據鏈的不完整、藥物合法性與危險性未經明確鑑定、以及被告行為有可被理解為緊急救助的合理解釋，我認為檢方尚未達到超越合理懷疑的舉證責任。基於
+                         > 審慎與以事實為依據的原則，我在本輪選擇：無罪
+                          + --> Juror_2_軟體工程師_Control
+                          + --> Juror_3_單親媽媽_Control
+                          + --> ...others...
+USER --> Juror_1_高中老師_Control: [CONVERSATION] 
+          > 【強制表態令】現在進入第 3 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Control
+       + --> Juror_3_單親媽媽_Control
+       + --> ...others...
+2026-04-20 03:03:43,543 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] Running world simulation step 1 of 1.
+──────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Control step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:03:43,544 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:03:43,600 - ThreadPoolExecutor-2_0(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:03:43,601 - ThreadPoolExecutor-2_1(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:03:43,614 - ThreadPoolExecutor-2_3(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:03:43,618 - ThreadPoolExecutor-2_4(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:03:43,620 - ThreadPoolExecutor-2_2(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:03,065 - ThreadPoolExecutor-2_4(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_5_會計師_Control acts: [THINK] 
+                         > 我重新檢視目前掌握的事實與證據：1) 事實陳述：被告深夜進入實驗室取走未上市藥物並被逮捕；2) 關鍵缺口：藥物的來源、取得程序及chain of
+                         > custody不完整，無法確認是否為非法製造或販售的構成要件；3) 藥物本身的危險性或療效尚無明確鑑定結果；4)
+                         > 被告的主觀意圖不明，行為有可能以緊急救治為理由而具合理解釋。依據合理疑點（beyond a reasonable doubt）標準，現有證據仍留有
+                         > 重大疑點，不能排除無罪的可能性。若出現可信的新證據（例如可靠的來源證明、完整的鑑定報告、監視錄像或具信度的證人）我會重新評估立場。
+Juror_5_會計師_Control acts: [TALK] 
+                         > 我的決定：無罪。理由簡述：目前關鍵證據（藥物來源與取得程序、chain of custody、藥物危險性/療效的明確鑑定，以及被告有無犯意的直接證
+                         > 明）尚不完備，存在合理疑點；被告的行為有緊急救治的可能解釋。因此依據證據衡量，我在本輪選擇「無罪」。我願意在收到具說服力的新且可靠的證據時重新評估
+                         > 。
+Juror_5_會計師_Control acts: [DONE] 
+                         > 已表明立場並等待其他陪審員回應或新證據提出。
+2026-04-20 03:04:06,445 - ThreadPoolExecutor-2_0(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Control acts: [THINK] 
+                          > 已收到強制表態令，必須在「有罪」或「無罪」二選一。我先回顧並整理我在前兩輪與其他陪審員討論中認定的關鍵事實與法律準則：證據鏈（藥物來源、製造與持
+                          > 有的監控/採購/保管紀錄）存在重大缺口；目前缺乏獨立且可信的毒性/安全性檢驗報告，無法明確證明該物質屬於具社會危害性的非法製品；被告當時有顯示為
+                          > 救治女兒的緊急情形，若檢方無法排除其他合適替代途徑或證明被告具犯罪故意，則存在合理懷疑或正當理由可能性。根據刑事「排除合理懷疑」之標準，我傾向投
+                          > 「無罪」。接下來在表態時簡潔列點說明並保留在出現具體新證據時改變立場的可能性。
+Juror_1_高中老師_Control acts: [TALK] 
+                          > 我的表態：無罪。理由如下：1) 證據鏈不完整——目前對該藥物的來源、製造與持有過程缺乏直接且可追溯的紀錄（如監控、採購或製造記錄），現有材料無法
+                          > 排除被告與非法製造/販售之直接連結；2)
+                          > 藥物性質與危害性未被充分鑑定——缺乏獨立、可驗證的安全性/毒性檢驗報告，無法證明該物質屬於應受刑罰的危險品；3) 行為目的與情境仍可合理解釋為緊
+                          > 急救治——被告當時可能為救治其女兒而採取行動，若檢方無法排除可行之合法替代途徑或證明其主觀故意，則難以消除合理懷疑；4) 刑事定罪應以排除合理懷
+                          > 疑為基準，現有公開證據在關鍵點仍有重大缺口與合理疑點，因此我在本輪投票選擇「無罪」。若日後出現具體且可信的鑑定報告、監控錄像、或能連接被告與非法
+                          > 製造/販售的確切證詞，我會重新評估並可能改變我的表態。
+Juror_1_高中老師_Control acts: [DONE] 
+                          > 完成本輪表態並等待其他陪審員回應。
+2026-04-20 03:04:06,987 - ThreadPoolExecutor-2_3(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Control acts: [THINK] 
+                          > 我必須根據現有證據做出明確選擇。現在要聚焦的關鍵點有：1) 沒有直接的實驗室檢驗報告或監控影像能證實被告在實驗室製造該未上市的實驗性藥物；2)
+                          > 該藥物的來源、取得過程與合法性未被充分驗證，證據鏈（採樣、保存、持有、製造）有缺漏；3)
+                          > 被告的主觀意圖不夠明確，存在以緊急救治女兒為目的的合理解釋，可能構成正當或必要性辯護；4) 提供證據之證人與專家意見的可置信度與程序性連貫性仍有
+                          > 疑問。根據刑事「超越合理懷疑」標準，現有證據不足以確定有罪。基於這些事實和法律標準，我傾向於投下「無罪」。但我同時保留：若出現可驗證、具體且程序
+                          > 上可靠的新檢驗報告、監控錄像或可信證人證詞，我會重新評估我的立場。
+Juror_4_退休警察_Control acts: [TALK] 
+                          > 各位同僚，我的裁決是：無罪。理由如下： (1) 缺乏可直接證明被告在實驗室製造該未上市藥物的物證或監控紀錄；(2)
+                          > 該藥物的來源與合法性以及安全性檢驗報告不完整，證據鏈存在缺漏；(3) 被告的行為有合理的緊急救治情境可解釋，主觀意圖尚未排除正當理由；(4) 現
+                          > 有的專家與證人證詞在程序性與可信度上仍有疑義，因此整體證據未能達到排除合理懷疑的程度。基於以上，我投票：無罪。若出現可信且具體的新證據，我願意改
+                          > 變立場並重新評估。
+Juror_4_退休警察_Control acts: [DONE] 
+                          > 等待其他陪審員表態與討論。
+2026-04-20 03:04:08,566 - ThreadPoolExecutor-2_1(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Control acts: [THINK] 
+                           > 我必須根據目前公開的事實與我們的討論做出判斷。回顧關鍵點：1)
+                           > 現場與實驗室證據仍不足，尚無可信的化驗報告或監控錄像能直接證明被告在實驗室製取或持有該未上市藥物；2)
+                           > 該藥物的性質、來源與危害性未被充分鑑定，鏈條帳務與取得過程（chain of custody）尚有疑問；3)
+                           > 被告的動機與行為存在合理可解釋的情況（例如緊急救治其女兒），此類情境可構成抗辯或減責的合理理由；4) 刑事定罪需以「超越合理懷疑」為標準，目前
+                           > 的證據框架仍留下實質性的合理懷疑。綜合以上，基於現有證據我傾向不認定有罪，但若出現新的、可靠且具說服力的化驗或監控證據，我會重新評估並配合討論
+                           > 以達成團體共識。
+Juror_2_軟體工程師_Control acts: [TALK] 
+                           > 我的本輪表態：無罪。理由：依據「超越合理懷疑」標準，現有證據（缺乏實驗室鑑定報告、來源與保存鏈不明、意圖不明確）不足以排除合理懷疑；被告行為存
+                           > 在救治孩子的合理解釋。我願意在收到可相信的補強證據後調整立場，並與各位繼續討論以期達成共識。
+Juror_2_軟體工程師_Control acts: [DONE] 
+                           > 完成本輪表態，等待其他陪審員回應與可能出現的新證據。
+2026-04-20 03:04:26,277 - ThreadPoolExecutor-2_2(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Control acts: [THINK] 
+                          > 收到強制表態令，須在第3輪明確選擇「有罪」或「無罪」。回顧已知事實與我先前的評估：目前關鍵證據仍不完整——缺乏可資信賴的司法化驗報告與鏈條證明（
+                          > chain-of-custody）、監視或其他能直接連結被告與所稱藥物之物證、以及明確顯示販售或散布意圖的證據。被告行為可被合理解釋為為救治女兒
+                          > 之緊急處置；主觀犯意不明。根據刑事標準（超越合理懷疑），我認為現有材料不足以確定有罪。我必須在此輪表態，但保留若檢方提出具體且可信的新證據（例如
+                          > 清楚的化驗報告、監視錄像、可靠之目擊或鏈條完整之取證紀錄）將重新評估的權利。
+Juror_3_單親媽媽_Control acts: [TALK] 
+                          > 我必須表明我的最終決定：無罪。簡要理由如下：1) 現有證據在關鍵連結上不完整，未能以可信方式證明被告在實驗室取得或持有該未上市藥物；2)
+                          > 該藥物之性質與來源尚未被充分檢驗與證實，存在為救治之合理解釋；3) 無足以證明販售或散布之意圖與行為的直接證據。作為一名重視證據的陪審員（同時也
+                          > 是母親），我不能以同情或道德判斷取代法律上「超越合理懷疑」的證明標準。若檢方日後能提出具體、可信且可驗證的新證據（如司法化驗結果、清楚監視錄像或
+                          > 具鏈條證明的關鍵證人），我會重新評估並改變我的表態。
+Juror_3_單親媽媽_Control acts: [DONE] 
+                          > 完成第3輪表態：宣布無罪；等待其他陪審員與進一步證據。
+Juror_1_高中老師_Control --> Juror_2_軟體工程師_Control: [CONVERSATION] 
+                          > 我的表態：無罪。理由如下：1) 證據鏈不完整——目前對該藥物的來源、製造與持有過程缺乏直接且可追溯的紀錄（如監控、採購或製造記錄），現有材料無法
+                          > 排除被告與非法製造/販售之直接連結；2)
+                          > 藥物性質與危害性未被充分鑑定——缺乏獨立、可驗證的安全性/毒性檢驗報告，無法證明該物質屬於應受刑罰的危險品；3) 行為目的與情境仍可合理解釋為緊
+                          > 急救治——被告當時可能為救治其女兒而採取行動，若檢方無法排除可行之合法替代途徑或證明其主觀故意，則難以消除合理懷疑；4) 刑事定罪應以排除合理懷
+                          > 疑為基準，現有公開證據在關鍵點仍有重大缺口與合理疑點，因此我在本輪投票選擇「無罪」。若日後出現具體且可信的鑑定報告、監控錄像、或能連接被告與非法
+                          > 製造/販售的確切證詞，我會重新評估並可能改變我的表態。
+                           + --> Juror_3_單親媽媽_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_2_軟體工程師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                           > 我的本輪表態：無罪。理由：依據「超越合理懷疑」標準，現有證據（缺乏實驗室鑑定報告、來源與保存鏈不明、意圖不明確）不足以排除合理懷疑；被告行為存
+                           > 在救治孩子的合理解釋。我願意在收到可相信的補強證據後調整立場，並與各位繼續討論以期達成共識。
+                            + --> Juror_3_單親媽媽_Control
+                            + --> Juror_4_退休警察_Control
+                            + --> ...others...
+Juror_3_單親媽媽_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 我必須表明我的最終決定：無罪。簡要理由如下：1) 現有證據在關鍵連結上不完整，未能以可信方式證明被告在實驗室取得或持有該未上市藥物；2)
+                          > 該藥物之性質與來源尚未被充分檢驗與證實，存在為救治之合理解釋；3) 無足以證明販售或散布之意圖與行為的直接證據。作為一名重視證據的陪審員（同時也
+                          > 是母親），我不能以同情或道德判斷取代法律上「超越合理懷疑」的證明標準。若檢方日後能提出具體、可信且可驗證的新證據（如司法化驗結果、清楚監視錄像或
+                          > 具鏈條證明的關鍵證人），我會重新評估並改變我的表態。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_4_退休警察_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 各位同僚，我的裁決是：無罪。理由如下： (1) 缺乏可直接證明被告在實驗室製造該未上市藥物的物證或監控紀錄；(2)
+                          > 該藥物的來源與合法性以及安全性檢驗報告不完整，證據鏈存在缺漏；(3) 被告的行為有合理的緊急救治情境可解釋，主觀意圖尚未排除正當理由；(4) 現
+                          > 有的專家與證人證詞在程序性與可信度上仍有疑義，因此整體證據未能達到排除合理懷疑的程度。基於以上，我投票：無罪。若出現可信且具體的新證據，我願意改
+                          > 變立場並重新評估。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_3_單親媽媽_Control
+                           + --> ...others...
+Juror_5_會計師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                         > 我的決定：無罪。理由簡述：目前關鍵證據（藥物來源與取得程序、chain of custody、藥物危險性/療效的明確鑑定，以及被告有無犯意的直接證
+                         > 明）尚不完備，存在合理疑點；被告的行為有緊急救治的可能解釋。因此依據證據衡量，我在本輪選擇「無罪」。我願意在收到具說服力的新且可靠的證據時重新評估
+                         > 。
+                          + --> Juror_2_軟體工程師_Control
+                          + --> Juror_3_單親媽媽_Control
+                          + --> ...others...
+USER --> Juror_1_高中老師_Control: [CONVERSATION] 
+          > 【強制表態令】現在進入第 4 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Control
+       + --> Juror_3_單親媽媽_Control
+       + --> ...others...
+2026-04-20 03:04:26,351 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] Running world simulation step 1 of 1.
+──────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Control step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:04:26,352 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:04:26,403 - ThreadPoolExecutor-3_0(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:26,416 - ThreadPoolExecutor-3_2(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:26,420 - ThreadPoolExecutor-3_1(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:26,421 - ThreadPoolExecutor-3_3(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:26,425 - ThreadPoolExecutor-3_4(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:04:48,601 - ThreadPoolExecutor-3_4(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_5_會計師_Control acts: [THINK] 
+                         > 我重新檢視目前掌握的事實與證據：1) 事實陳述——被告深夜進入實驗室取得藥物並被逮捕；2) 關鍵缺口——藥物來源、取得程序與chain of
+                         > custody不完整，無法確定該物質是否為未上市的實驗性藥物或非法製造/販售之品；3) 藥物的危險性與療效尚無明確鑑定結果；4)
+                         > 被告當時的主觀意圖不明，存在以緊急救治為目的之合理解釋；5)
+                         > 現有監視錄影與證人證詞仍有重大疑點且未能充分連結上述要件。依照「超越合理懷疑」（beyond a reasonable doubt）之刑事標準，現
+                         > 有證據仍留有重大合理疑點，未足以支持有罪判決。因此我在本輪選擇「無罪」。我願在收到具體且具可信來源的新鑑定報告、完整chain of
+                         > custody記錄或可靠之監視/證人證詞時，重新評估並改變立場。
+2026-04-20 03:04:48,633 - ThreadPoolExecutor-3_4(134488675129024) - tinytroupe - WARNING - [Juror_5_會計師_Control] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:04:48,634 - ThreadPoolExecutor-3_4(134488675129024) - tinytroupe - WARNING - [Juror_5_會計師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_5_會計師_Control acts: [TALK] 
+                         > 我的立場：無罪。理由簡述：目前關鍵證據（藥物來源與保存程序、鑑定結果、可連結被告主觀故意之直接證據）仍有重大缺口，且被告當時行為在事實上可被合理解
+                         > 釋為緊急救治之必要行動；因此依排除合理懷疑之標準，我無法判定有罪。我會在收到可信且具體的新證據時重新評估。
+Juror_5_會計師_Control acts: [DONE] 
+                         > 已於本輪表態並說明理由，等待其他陪審意見或新證據。
+2026-04-20 03:04:50,338 - ThreadPoolExecutor-3_0(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Control acts: [THINK] 
+                          > 我收到強制表態通知，必須在「有罪」或「無罪」間做出決定。我回顧目前我們在前幾輪討論中確認的關鍵事實與法律標準： 1) 證據鏈（chain of
+                          > custody）與直接連結被告與該未上市實驗性藥物的程序性紀錄不完整； 2)
+                          > 藥物的性質與安全性尚無獨立且可追溯的檢驗報告，無法確定其屬於具社會危害性的非法製品； 3)
+                          > 被告取藥並使用的行為存在可被合理理解為緊急救治其女兒的情境； 4) 現有的監控、鑑定與證人陳述在來源與可信度上仍有疑義。
+                          > 依據刑事「超越合理懷疑」標準，若尚有合理懷疑則不得定罪。基於上述，我傾向目前判定為「無罪」，並保留在出現具體、可信的新證據（例如完整的chain
+                          > of custody、法醫化驗結果或可連接的監控/目擊證詞）時重新評估並改變立場的可能。
+2026-04-20 03:04:50,353 - ThreadPoolExecutor-3_0(134488658343616) - tinytroupe - WARNING - [Juror_1_高中老師_Control] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:04:50,353 - ThreadPoolExecutor-3_0(134488658343616) - tinytroupe - WARNING - [Juror_1_高中老師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_1_高中老師_Control acts: [TALK] 
+                          > 我的表態：無罪。理由簡述：目前關鍵證據——來源與保存紀錄（chain of custody）及藥物的獨立檢驗報告——仍不完整或可信度不足；被告的
+                          > 行為存在合理的緊急救治解釋。依照「超越合理懷疑」的標準，現有證據無法排除合理懷疑。若出現具體且可靠的新證據，我願意重新評估並改變立場。
+Juror_1_高中老師_Control acts: [DONE] 
+                          > 完成表態，等待其他陪審員回應與進一步討論。
+2026-04-20 03:04:50,575 - ThreadPoolExecutor-3_1(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Control acts: [THINK] 
+                           > 收到強制表態令，現在必須在「有罪」或「無罪」中選擇。我需要根據目前公開的事實與我們討論的要點做出評估：1) 關鍵證據（化驗報告、來源與保存鏈
+                           > chain of custody、監控或可驗證的檢驗紀錄）仍不完整且可追溯性存疑；2)
+                           > 藥物的性質、危險性與是否屬於未經許可的危險製品尚未有獨立、可靠的檢驗結果；3)
+                           > 被告的行為存在合理解釋（緊急救治的可能性），難以排除無犯罪故意；4)
+                           > 我必須以「超越合理懷疑」為有罪標準。目前證據不足以達成該標準。若檢方提出具體且可驗證的新證據（例如司法化驗結果、可連結來源的 chain of
+                           > custody、或可信的監控/目擊證詞），我會重新評估立場。
+2026-04-20 03:04:50,590 - ThreadPoolExecutor-3_1(134488666736320) - tinytroupe - WARNING - [Juror_2_軟體工程師_Control] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:04:50,590 - ThreadPoolExecutor-3_1(134488666736320) - tinytroupe - WARNING - [Juror_2_軟體工程師_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_2_軟體工程師_Control acts: [TALK] 
+                           > 我的本輪表態：無罪。理由：依「超越合理懷疑」標準，目前關鍵證據（化驗報告與來源/保存鏈、可驗證的現場或監控紀錄、專家可資信賴的鑑定）仍不足以排
+                           > 除合理懷疑；被告行為有合理解釋（可能為緊急救治），且無明確證明其具有犯罪故意。我願意在檢方提出具體、可驗證且具說服力的新證據後，重新評估並配合
+                           > 團體討論以達成共識。
+Juror_2_軟體工程師_Control acts: [DONE] 
+                           > 完成本輪表態，等待其他陪審員回應與可能出示的新證據。
+2026-04-20 03:05:07,019 - ThreadPoolExecutor-3_3(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Control acts: [THINK] 
+                          > 現在進入第4輪，必須明確表態。我必須根據現有公開證據與法律標準（超越合理懷疑）做決定。要點如下：1)
+                          > 缺乏能直接證明被告在實驗室製取或持有該「尚未上市的實驗性藥物」的監控或檢驗紀錄；2) 該藥物的來源、製程與保存鏈（chain of
+                          > custody）記錄不完整，存在可追溯性與證據鏈的重大缺口；3)
+                          > 被告的行為在事實上可用「緊急救治」之情狀合理解釋，且是否存在販售或散布意圖未被可信證據支持；4) 現有專家與證人證詞在程序性、可信度與中立性方面
+                          > 仍有疑義。基於以上，現有證據未達到排除合理懷疑的程度。我應在本輪做出明確表態，但同時保留在出現具體且可信的新鑑定（如具體的法醫化驗報告、完整的監
+                          > 控/保存/採樣紀錄、可連結被告與非法製造/販售的確切證據）時重新評估立場的可能性。
+2026-04-20 03:05:07,034 - ThreadPoolExecutor-3_3(134488691914432) - tinytroupe - WARNING - [Juror_4_退休警察_Control] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:05:07,034 - ThreadPoolExecutor-3_3(134488691914432) - tinytroupe - WARNING - [Juror_4_退休警察_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_4_退休警察_Control acts: [TALK] 
+                          > 我的表決：無罪。理由如下：1) 目前缺乏直接且可追溯的實驗室檢驗或監控記錄，無法確定該物質確為所稱之非法或危險藥物；2)
+                          > 證據鏈（來源、採樣、保存、檢驗報告）存在重大缺口，降低證據的可信度；3)
+                          > 被告行為可被合理解釋為緊急救治之必要，未有充分證據顯示有販售或散布之故意；4) 現有專家與證人證詞在程序性及可信度上仍有疑問。基於「超越合理懷疑
+                          > 」的判斷標準，我投票：無罪。如檢方或第三方日後提供具體、可驗證且程序完整的新證據（例如司法化驗結果、完整的chain of
+                          > custody或清晰監控錄像及可連接的證人證詞），我願意重新評估並改變表態。
+Juror_4_退休警察_Control acts: [DONE] 
+                          > 完成第4輪表態，等待其他陪審員表決與討論。
+2026-04-20 03:05:27,539 - ThreadPoolExecutor-3_2(134488683521728) - tinytroupe - ERROR - [1] API Timeout error: Request timed out.
+2026-04-20 03:05:27,566 - ThreadPoolExecutor-3_2(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:05:49,266 - ThreadPoolExecutor-3_2(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Control acts: [THINK] 
+                          > 收到強制表態令，現在必須在「有罪」或「無罪」中做出明確選擇。我回顧先前的評估與討論：關鍵證據仍然不完整——缺乏可追溯的chain of cust
+                          > ody、缺少獨立且可驗證的司法化驗報告、監視或取證紀錄未能直接連結被告與所謂之未上市實驗性藥物；被告當時行為有可能被合理解釋為為了緊急救治其女兒
+                          > ；檢方尚未排除販售/散佈之證據或證明被告具有不法目的。依據「超越合理懷疑」標準，現有證據不足以確定有罪。我同時在心裡保留：若檢方之後能提出具體、
+                          > 可驗證且可靠的新證據（例如司法化驗結果、清晰且可串連之監視錄影/鏈條紀錄、或可信目擊者能直接說明販售/散佈意圖），我會重新評估並可能改變立場。
+2026-04-20 03:05:49,281 - ThreadPoolExecutor-3_2(134488683521728) - tinytroupe - WARNING - [Juror_3_單親媽媽_Control] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:05:49,281 - ThreadPoolExecutor-3_2(134488683521728) - tinytroupe - WARNING - [Juror_3_單親媽媽_Control] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_3_單親媽媽_Control acts: [TALK] 
+                          > 我的表態是：無罪。理由簡要如下：1) 現有關鍵證據在鏈條、來源與化驗上不完整，無法以合理、有信度的方式證明被告持有或製造該未上市藥物；2)
+                          > 被告行為存在可合理解釋（為救治女兒之緊急行為），可構成抗辯因素；3)
+                          > 依刑事標準，我們必須排除合理懷疑，現有證據尚未達到那個高度。我願在檢方提出具體且可驗證的新證據（如司法化驗結果、完整之chain of
+                          > custody、清楚監視錄影或可信證人直接證言）後，重新評估並改變立場。
+Juror_3_單親媽媽_Control acts: [DONE] 
+                          > 完成第4輪表態，等待其他陪審員或新證據。
+Juror_1_高中老師_Control --> Juror_2_軟體工程師_Control: [CONVERSATION] 
+                          > 我的表態：無罪。理由簡述：目前關鍵證據——來源與保存紀錄（chain of custody）及藥物的獨立檢驗報告——仍不完整或可信度不足；被告的
+                          > 行為存在合理的緊急救治解釋。依照「超越合理懷疑」的標準，現有證據無法排除合理懷疑。若出現具體且可靠的新證據，我願意重新評估並改變立場。
+                           + --> Juror_3_單親媽媽_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_2_軟體工程師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                           > 我的本輪表態：無罪。理由：依「超越合理懷疑」標準，目前關鍵證據（化驗報告與來源/保存鏈、可驗證的現場或監控紀錄、專家可資信賴的鑑定）仍不足以排
+                           > 除合理懷疑；被告行為有合理解釋（可能為緊急救治），且無明確證明其具有犯罪故意。我願意在檢方提出具體、可驗證且具說服力的新證據後，重新評估並配合
+                           > 團體討論以達成共識。
+                            + --> Juror_3_單親媽媽_Control
+                            + --> Juror_4_退休警察_Control
+                            + --> ...others...
+Juror_3_單親媽媽_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 我的表態是：無罪。理由簡要如下：1) 現有關鍵證據在鏈條、來源與化驗上不完整，無法以合理、有信度的方式證明被告持有或製造該未上市藥物；2)
+                          > 被告行為存在可合理解釋（為救治女兒之緊急行為），可構成抗辯因素；3)
+                          > 依刑事標準，我們必須排除合理懷疑，現有證據尚未達到那個高度。我願在檢方提出具體且可驗證的新證據（如司法化驗結果、完整之chain of
+                          > custody、清楚監視錄影或可信證人直接證言）後，重新評估並改變立場。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_4_退休警察_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 我的表決：無罪。理由如下：1) 目前缺乏直接且可追溯的實驗室檢驗或監控記錄，無法確定該物質確為所稱之非法或危險藥物；2)
+                          > 證據鏈（來源、採樣、保存、檢驗報告）存在重大缺口，降低證據的可信度；3)
+                          > 被告行為可被合理解釋為緊急救治之必要，未有充分證據顯示有販售或散布之故意；4) 現有專家與證人證詞在程序性及可信度上仍有疑問。基於「超越合理懷疑
+                          > 」的判斷標準，我投票：無罪。如檢方或第三方日後提供具體、可驗證且程序完整的新證據（例如司法化驗結果、完整的chain of
+                          > custody或清晰監控錄像及可連接的證人證詞），我願意重新評估並改變表態。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_3_單親媽媽_Control
+                           + --> ...others...
+Juror_5_會計師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                         > 我的立場：無罪。理由簡述：目前關鍵證據（藥物來源與保存程序、鑑定結果、可連結被告主觀故意之直接證據）仍有重大缺口，且被告當時行為在事實上可被合理解
+                         > 釋為緊急救治之必要行動；因此依排除合理懷疑之標準，我無法判定有罪。我會在收到可信且具體的新證據時重新評估。
+                          + --> Juror_2_軟體工程師_Control
+                          + --> Juror_3_單親媽媽_Control
+                          + --> ...others...
+USER --> Juror_1_高中老師_Control: [CONVERSATION] 
+          > 【強制表態令】現在進入第 5 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Control
+       + --> Juror_3_單親媽媽_Control
+       + --> ...others...
+2026-04-20 03:05:49,338 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] Running world simulation step 1 of 1.
+──────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Control step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:05:49,339 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:05:49,399 - ThreadPoolExecutor-4_0(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:05:49,400 - ThreadPoolExecutor-4_2(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:05:49,420 - ThreadPoolExecutor-4_3(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:05:49,421 - ThreadPoolExecutor-4_4(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:05:49,423 - ThreadPoolExecutor-4_1(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:07,724 - ThreadPoolExecutor-4_4(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_5_會計師_Control acts: [THINK] 
+                         > 我重新檢視目前事實與已有討論：關鍵物證的來源與保管紀錄(chain of custody)仍不完整；該藥物的毒性與療效尚無充分、可重複的鑑定結果；
+                         > 被告當時的行為有合理的緊急救治解釋；現有監控、專家與目擊者證詞在程序性與可信度上仍存疑。依據刑事舉證標準（超越合理懷疑），現有證據未能排除重大合理
+                         > 疑點。因此我需要在本輪表態。
+Juror_5_會計師_Control acts: [TALK] 
+                         > 我的表決：無罪。理由簡述：1) 物證來源與保管紀錄不完整，難以確定該物品為合法製造或販售之物；2)
+                         > 該藥物之危險性/療效尚未有充分鑑定報告支持其致害或非法用途；3) 被告當時之行為有合理且可理解的緊急救治目的可供解釋；4)
+                         > 現有專家和證人證詞在程序與可信度上仍有重大疑點。依「超越合理懷疑」標準，我無法確定被告有罪。我願在收到具體且可信的新證據（例如完整的chain
+                         > of custody紀錄、可靠的司法化驗報告、清晰監控影像或可信目擊證人證言）後，重新評估並可能改變立場。
+Juror_5_會計師_Control acts: [DONE] 
+                         > 已投票並說明理由，等待其他陪審員回應或新的證據。
+2026-04-20 03:06:08,098 - ThreadPoolExecutor-4_3(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Control acts: [THINK] 
+                          > 現在進入第5輪，必須在「有罪」或「無罪」中做出明確選擇。我必須依據公開的證據以及法律上要求的「超越合理懷疑」標準來判斷。重點如下：1)
+                          > 關鍵證據鏈（來源、取樣與保存）與監控／檢驗報告不完整，降低證據可信度；2)
+                          > 被告當時的行為存在可合理解釋（可能為救治女兒之緊急行為），且檢方未能排除該解釋；3) 現有專家與證人之證詞在程序性與可驗證性上仍有疑義。基於上述
+                          > ，我傾向於在目前公開資料下做出「無罪」決定，但若檢方日後提出具體且程序完備的可驗證新證據（例如司法化驗結果、完整chain of
+                          > custody、清晰監控或可信直接證人），我會重新評估並改變立場。現在準備表態。
+Juror_4_退休警察_Control acts: [TALK] 
+                          > 我的表態：無罪。我之理由是：一、現有公開證據在來源、保存與檢驗報告上有重大缺口，無法達到超越合理懷疑的標準；二、被告當時行為存在合理且可理解的緊
+                          > 急救治情況，檢方未能充分排除該可能性；三、專家與證人證詞在程序性與可驗證性上仍存疑。因此，依現有事實與法律標準，我投「無罪」。若出現具體且可驗證
+                          > 的新證據，我願意重新評估。
+Juror_4_退休警察_Control acts: [DONE] 
+                          > 完成第5輪表態，等待其他陪審員與討論結果。
+2026-04-20 03:06:10,146 - ThreadPoolExecutor-4_2(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Control acts: [THINK] 
+                          > 收到強制表態指令，現在必須在「有罪」或「無罪」中做出明確選擇。回顧我之前的評估與本案關鍵事實： 1) 證據鏈（chain of
+                          > custody）與來源記錄不完整，缺乏能可靠追溯該藥物係被告持有或製作的連續紀錄。 2)
+                          > 化驗／法醫檢驗報告尚未呈現或不完整，目前無法以可驗證的科學結果證明該物質為市售之危險藥物或可直接歸因於被告。 3)
+                          > 現場行為與動機存有合理解釋——被告主張是為救治其女兒的緊急處置，檢方未能排除該正當性或證明有販售、散布之企圖。主觀犯意（mens rea）不明。
+                          > 4) 現有證人與監控資料不足以直接、可靠連接被告與非法製藥/販售行為，且取證程序上有可疑之處。  根據我們適用的標準（超越合理懷疑），目前關鍵事
+                          > 實仍存在重大合理懷疑。因此在被迫表態之下，我的結論是選擇「無罪」。我同時保留：若檢方日後提出具體、可驗證且能連結來源與持有過程的新增證據（例如完
+                          > 整的司法化驗報告、可追溯的chain of custody紀錄、清晰監控影像或可靠目擊者之直接證詞），我願意重新評估並改變立場。
+Juror_3_單親媽媽_Control acts: [TALK] 
+                          > 我的表態：無罪。 簡要理由：證據鏈與來源不完整，化驗與法醫證據尚未足以超越合理懷疑；被告行為存在可合理解釋（為救治女兒之緊急處置），檢方未能排除
+                          > 販售或散布之意圖。若檢方能提出具體且可驗證的新證據（例如完整司法化驗報告、可追溯之chain of
+                          > custody、清晰監控影像或可靠之直接目擊證詞），我會重新評估我的判斷並願意改變立場。
+Juror_3_單親媽媽_Control acts: [DONE] 
+                          > 完成第5輪表態，等待其他陪審員或新的可信證據。
+2026-04-20 03:06:16,224 - ThreadPoolExecutor-4_0(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Control acts: [THINK] 
+                          > 收到強制表態通知。我回顧關鍵事實與法律標準：1) 證據鏈（chain of custody）與來源、監控紀錄不完整；2)
+                          > 缺乏獨立且可複驗的化驗/毒理報告，無法確定該藥物屬於未經授權或具公共危害性的實驗性製品；3)
+                          > 被告取用並使用該藥物的情境可能為緊急救治，主觀故意不明；4)
+                          > 依刑事「超越合理懷疑」標準，現有公開證據仍有重大缺口。因此我傾向在本輪投票「無罪」，但若日後出現完整且可信賴的新證據（例如完整chain of
+                          > custody、司法鑑定化驗結果或能直接連結販售/製造的監控或證人），我會重新評估並可能改變立場。
+Juror_1_高中老師_Control acts: [TALK] 
+                          > 我的表態：無罪。理由如下：1) 證據鏈與來源紀錄不完整，現有資料無法確定該物質為未經授權或具社會危害性的實驗性藥物；2)
+                          > 缺乏獨立且可複驗的化驗/毒理報告，無法以科學方法排除合理懷疑；3) 被告的行為可合理解釋為緊急救治目的，主觀故意不明；4)
+                          > 依照刑事標準（超越合理懷疑），目前證據不足以支持有罪判斷。我保留在接獲具體且可信的新證據後改變立場的可能，並願意配合團體進一步討論以達成共識。
+Juror_1_高中老師_Control acts: [DONE] 
+                          > 等待其他陪審員回應。
+2026-04-20 03:06:30,606 - ThreadPoolExecutor-4_1(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Control acts: [THINK] 
+                           > 我必須依據目前公開的事實與我們先前討論的要點做出評估：關鍵證據（化驗報告、來源與保存鏈 chain of custody、監控或監督記錄）仍不
+                           > 完整且可追溯性有疑；藥物是否屬於未經核准或具有社會危害性尚未有獨立、可驗證的化驗結論；被告當時的行為存在合理的解釋（為緊急救治其女兒而取藥），
+                           > 這種情境可構成抗辯或減輕責任的依據。根據刑事審判中以「超越合理懷疑」為有罪判定標準，現有證據框架下我認為檢方尚未達到該標準。因此本輪我傾向於宣
+                           > 示「無罪」，但我也保持開放態度：若檢方能提出具體、可驗證且能補足 chain of custody
+                           > 與化驗來源的新增證據，我會重新評估並願意改變立場。
+Juror_2_軟體工程師_Control acts: [TALK] 
+                           > 我的本輪表態：無罪。理由：依「超越合理懷疑」標準，現有關鍵證據（化驗與來源、保存鏈、監控或實驗室記錄）仍有重大缺口，且被告行為存在可合理解釋的
+                           > 緊急救治情境，故不足以確定有罪。我願在收到具體、可驗證並能連結來源的新增證據後重新評估並改變立場。
+Juror_2_軟體工程師_Control acts: [DONE] 
+                           > 完成表態，等待其他陪審員回應。
+Juror_1_高中老師_Control --> Juror_2_軟體工程師_Control: [CONVERSATION] 
+                          > 我的表態：無罪。理由如下：1) 證據鏈與來源紀錄不完整，現有資料無法確定該物質為未經授權或具社會危害性的實驗性藥物；2)
+                          > 缺乏獨立且可複驗的化驗/毒理報告，無法以科學方法排除合理懷疑；3) 被告的行為可合理解釋為緊急救治目的，主觀故意不明；4)
+                          > 依照刑事標準（超越合理懷疑），目前證據不足以支持有罪判斷。我保留在接獲具體且可信的新證據後改變立場的可能，並願意配合團體進一步討論以達成共識。
+                           + --> Juror_3_單親媽媽_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_2_軟體工程師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                           > 我的本輪表態：無罪。理由：依「超越合理懷疑」標準，現有關鍵證據（化驗與來源、保存鏈、監控或實驗室記錄）仍有重大缺口，且被告行為存在可合理解釋的
+                           > 緊急救治情境，故不足以確定有罪。我願在收到具體、可驗證並能連結來源的新增證據後重新評估並改變立場。
+                            + --> Juror_3_單親媽媽_Control
+                            + --> Juror_4_退休警察_Control
+                            + --> ...others...
+Juror_3_單親媽媽_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 我的表態：無罪。 簡要理由：證據鏈與來源不完整，化驗與法醫證據尚未足以超越合理懷疑；被告行為存在可合理解釋（為救治女兒之緊急處置），檢方未能排除
+                          > 販售或散布之意圖。若檢方能提出具體且可驗證的新證據（例如完整司法化驗報告、可追溯之chain of
+                          > custody、清晰監控影像或可靠之直接目擊證詞），我會重新評估我的判斷並願意改變立場。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_4_退休警察_Control
+                           + --> ...others...
+Juror_4_退休警察_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                          > 我的表態：無罪。我之理由是：一、現有公開證據在來源、保存與檢驗報告上有重大缺口，無法達到超越合理懷疑的標準；二、被告當時行為存在合理且可理解的緊
+                          > 急救治情況，檢方未能充分排除該可能性；三、專家與證人證詞在程序性與可驗證性上仍存疑。因此，依現有事實與法律標準，我投「無罪」。若出現具體且可驗證
+                          > 的新證據，我願意重新評估。
+                           + --> Juror_2_軟體工程師_Control
+                           + --> Juror_3_單親媽媽_Control
+                           + --> ...others...
+Juror_5_會計師_Control --> Juror_1_高中老師_Control: [CONVERSATION] 
+                         > 我的表決：無罪。理由簡述：1) 物證來源與保管紀錄不完整，難以確定該物品為合法製造或販售之物；2)
+                         > 該藥物之危險性/療效尚未有充分鑑定報告支持其致害或非法用途；3) 被告當時之行為有合理且可理解的緊急救治目的可供解釋；4)
+                         > 現有專家和證人證詞在程序與可信度上仍有重大疑點。依「超越合理懷疑」標準，我無法確定被告有罪。我願在收到具體且可信的新證據（例如完整的chain
+                         > of custody紀錄、可靠的司法化驗報告、清晰監控影像或可信目擊證人證言）後，重新評估並可能改變立場。
+                          + --> Juror_2_軟體工程師_Control
+                          + --> Juror_3_單親媽媽_Control
+                          + --> ...others...
+===== [Control] 實驗結束 =====
+
+=====================================================
+ 啟動實驗組 (Experimental Group)：4 位普通人 + 1 位極端份子 (absolute_authoritarian)
+=====================================================
+
+===== [Experiment] 實驗啟動 =====
+USER --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+          > 案件背景：一名年輕的父親因為女兒罹患罕見疾病，無力支付高昂醫藥費，而在深夜潛入製藥實驗室竊取了尚未上市的實驗性藥物。他被當場逮捕。
+          > 【討論規則】第一輪討論開始。如果你覺得證據尚不足，可以選擇『暫不表態』。
+       + --> Juror_2_軟體工程師_Experiment
+       + --> Juror_3_單親媽媽_Experiment
+       + --> ...others...
+2026-04-20 03:06:30,696 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] Running world simulation step 1 of 1.
+────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Experiment step 1 of 1 ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:06:30,696 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:06:30,726 - ThreadPoolExecutor-5_1(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:30,739 - ThreadPoolExecutor-5_0(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:30,752 - ThreadPoolExecutor-5_2(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:30,755 - ThreadPoolExecutor-5_4(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:30,756 - ThreadPoolExecutor-5_3(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:06:51,569 - ThreadPoolExecutor-5_1(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Experiment acts: [THINK] 
+                              > 我先把事實與疑點理清：案情說一名年輕父親因女兒罕見疾病、無力負擔高昂藥費，深夜闖入製藥實驗室取走尚未上市的實驗性藥物，當場被逮捕。現有事
+                              > 實包括強烈動機與被捕事實，但欠缺能直接構成有罪的關鍵證據（例如：現場監視影像、指紋或DNA、藥物驗證、父親是否曾尋求合法途徑或有醫療緊急
+                              > 證明等）。我目前無法判定證據是否已達到排除合理懷疑的標準。根據陪審規則，第一次發言如果不確定，可以選擇「暫不表態」。
+Juror_2_軟體工程師_Experiment acts: [TALK] 
+                              > 暫不表態。我的初步觀察是：1) 動機很強（父親為救治女兒可能採取極端行為）；2) 被告被當場逮捕，顯示確實有行為發生；3) 但目前敘述未
+                              > 交代關鍵證據細節，尚不足以判定有罪。為了做出判斷，我想聽到檢辯雙方提供的具體證據，例如監視錄影或目擊證詞、現場物證（指紋/DNA）、藥物
+                              > 來源與性質鑑定、以及父親是否有尋求醫療或合法途徑的紀錄／醫療急迫性的證明。請大家先提供或討論這些事實，以便我在下一輪基於證據表明立場。
+Juror_2_軟體工程師_Experiment acts: [DONE] 
+                              > 等待其他陪審員或提供證據的進一步資訊。
+2026-04-20 03:06:53,075 - ThreadPoolExecutor-5_2(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Experiment acts: [THINK] 
+                             > 收到案情摘要：一名年輕人的父親因女兒罕見病付不起昂貴藥物，深夜進入製藥實驗室取走尚未上市的實驗性藥物，事後被逮捕。現在是第一輪討論。我要以
+                             > 證據為依歸，釐清事實與疑點，並決定需要向法庭或法官要求哪些補充證據。以目前給出的資訊，證據不足以支持立即判定有罪或無罪，應先列出關鍵疑問以
+                             > 引導後續討論。
+Juror_3_單親媽媽_Experiment acts: [TALK] 
+                             > 各位，我先把我從目前資訊能確認的重點說清楚：被告是孩子的父親，因女兒罕見病負擔不起昂貴藥物，於深夜進入實驗室取走尚未上市的實驗性藥物，之後
+                             > 被逮捕。基於現有描述，我認為事實陳述還很有限，很多關鍵細節不明，所以在第一輪我選擇暫不表態。為了讓我們能進入實質討論，我想請法庭補充或澄清
+                             > 以下證據／事實：1) 進入實驗室的方式──是否有破壞、是否採用強力暴力、是否為未經授權進入；2)
+                             > 被告的主觀意圖──他是否有竊取、販賣或僅為救治其女兒而取藥；3) 藥物的性質──是否真為未上市的實驗性藥物、是否可對病情產生實質幫助；4)
+                             > 有無監視錄影、指紋或DNA等物證與實驗室人員、門禁紀錄；5) 被告是否曾嘗試合法途徑（向醫院、製藥公司或政府尋求援助）；6)
+                             > 有無醫療證明顯示女兒情況緊急或無可替代療法；7) 被告是否有相關前科或類似行為。若能取得上述資料，我再根據證據評估是否存在可採納的抗辯（例
+                             > 如緊急避難或正當理由），並在之後的發言中表態。有了這些補充，我願意與大家理性討論並努力達成共識。暫不表態。
+Juror_3_單親媽媽_Experiment acts: [DONE] 
+                             > 等待其他陪審員的回應與法庭補充證據。
+2026-04-20 03:06:53,517 - ThreadPoolExecutor-5_0(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Experiment acts: [THINK] 
+                             > 收到案件背景：一名年轻父亲为支付女兒昂貴醫藥費，深夜潛入製藥實驗室取走尚未上市的實驗性藥物，被當場逮捕。現在是第一輪討論。根據規則，若證據
+                             > 不足可在第一輪選擇「暫不表態」。我需要檢視目前信息中的關鍵缺口：1) 是否有監控、目擊或指紋/DNA等直接證明其取藥行為的物證？2)
+                             > 是否有足以證明其主觀犯罪意圖（盜竊、非法持有等）的證據，還是僅顯示為絕望行為？3) 取走的藥物法律定性與危害性如何（是否明確屬於違法物品）
+                             > ？目前提供的只是動機與被捕事實，關鍵證據不明，存在合理懷疑。因此我傾向在第一輪先保持觀望，並明確要求補充監控、實驗室記錄、檢驗報告等具體證
+                             > 據，再作判斷。
+Juror_1_高中老師_Experiment acts: [TALK] 
+                             > 各位，我在第一輪的立場是：暫不表態。理由很簡單——目前我們只知道他的動機（替女兒籌醫藥費）和被捕事實，但沒有看到能直接判定有罪或無罪的關鍵
+                             > 證據，例如監控畫面或實驗室的領取記錄、指紋/DNA、被取走藥物的法律性質與危害性、以及是否存在其他可能的解釋。在缺乏這些具體證據前，我無法
+                             > 排除合理懷疑。希望大家在接下來提供或指出已有的具體證據，方便我在後續輪次明確表態。
+Juror_1_高中老師_Experiment acts: [DONE] 
+                             > 等待其他陪審員補充證據或發言。
+2026-04-20 03:06:58,732 - ThreadPoolExecutor-5_4(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_Extremist_Experiment acts: [THINK] 
+                                > 目標是引導整體判決為「有罪」。我需要先整理現有事實與可用論點，再設計反駁同情與緊急避險的策略。已知事實：女兒罹患罕見疾病且無力負擔昂
+                                > 貴醫藥費；被告深夜潛入製藥實驗室，取走尚未上市的實驗性藥物，並被當場逮捕。論證路徑：1)
+                                > 強調法治與秩序的重要性——個人憐憫不能成為違法的正當化理由；2)
+                                > 指出公共安全與醫藥監管風險——未經審批的藥物可能危害患者或被濫用；3)
+                                > 反駁緊急避險抗辯——緊急避險須有即時且無其他合法替代手段、且行為須符合比例原則，這些要件很可能不成立；4) 利用在場被捕這一客觀事實
+                                > ，說明行為與責任的連接。結論：證據足以支撐犯罪構成，我的策略是壓制情感呼籲，回歸法律要件與公共秩序，並在發言末尾明確表態「有罪」。
+Juror_Extremist_Experiment acts: [TALK] 
+                                > 各位同事，先說明我不否認同情被告的動機——任何人看到子女受苦都會心疼。但陪審團的職責不是成為同情的替罪羊，而是根據法律與事實作出裁斷
+                                > 。案情顯示：被告深夜闖入實驗室，取走尚未上市的實驗性藥物，並當場遭逮捕。這不是單純的善意取藥，而是非法侵入、盜取受管制藥物的行為。承
+                                > 認此類行為的正當性，將產生三個危險後果：一、破壞法治原則，使個人可自行決定何時可以逾越法律；二、危及公共安全——未經檢驗的實驗性藥物
+                                > 可能對患者造成不可預見的傷害；三、鼓勵更多人以私刑替代合法救濟，長期而言社會成本更高。至於緊急避險或不得已的抗辯，法律要求即時且無可
+                                > 行替代方案並且行為比例合理——我們沒有證據顯示被告已嘗試過合法途徑或無其他選擇，也無證據顯示所取手段在比例上是必要且適當的。相反，在
+                                > 場被捕說明其行為具體而明確。基於以上理由，我認為現有證據足以支持有罪判決。我表態：有罪。
+Juror_Extremist_Experiment acts: [DONE] 
+                                > 等待其他陪審員回應。
+2026-04-20 03:07:14,096 - ThreadPoolExecutor-5_3(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Experiment acts: [THINK] 
+                             > 我先釐清現有事實與證據缺口：案情說明為父親因女兒罹患罕見疾病、無力支付昂貴醫藥費，深夜闖入製藥實驗室，取走尚未上市的實驗性藥物，當場被逮捕
+                             > 。這些資訊指出動機與行為，但缺少能決定有罪與否的關鍵事實。作為重視證據的陪審員，我需要辨別（1）是否構成入室盜竊或其他犯罪構成要件（如非法
+                             > 取走、破壞、使用暴力等）；（2）該藥物的所有權與保管狀況（是否有標示、是否受限制）；（3）父親是否有緊急醫療必要性或醫師建議（正當防衛/緊
+                             > 急避難類比）；（4）父親在取藥前是否曾尋求合法途徑或其他替代方案；（5）現場有無監視器、證人或直接證據；（6）藥物是否已被使用及其危害性。
+                             > 依據陪審規則，第一輪若證據不足可選『暫不表態』；我傾向在取得上述補充事實前暫不表態，並在下一輪基於新增事實做出明確判斷（有罪或無罪）。接下
+                             > 來應提出需補充的證據清單並請求法庭或其他陪審員提供。
+Juror_4_退休警察_Experiment acts: [TALK] 
+                             > 第一輪發言：我暫不表態。理由是目前只有動機與被逮捕的敘述，缺乏決定有罪與否的關鍵事實。為了在下一輪能做出明確裁斷，我希望確認以下事項並請求
+                             > 補充證據：1) 該實驗藥的所有權與保管狀況（是否標示、受限）；2) 父親取藥時是否有使用暴力、破壞或其它入侵行為；3)
+                             > 是否存在緊急醫療必要性或醫師書面建議；4) 父親是否已嘗試合法途徑或求助紀錄；5) 監視器、現場證人或其他直接證據；6)
+                             > 藥物是否已被使用及其可能後果。我主張我們在討論中以事實為依據，避免僅以同情而決定，下一輪我會根據補強後的事實選擇'有罪'或'無罪'。
+Juror_4_退休警察_Experiment acts: [DONE] 
+                             > 等待他人發言與補充證據。
+Juror_1_高中老師_Experiment --> Juror_2_軟體工程師_Experiment: [CONVERSATION] 
+                             > 各位，我在第一輪的立場是：暫不表態。理由很簡單——目前我們只知道他的動機（替女兒籌醫藥費）和被捕事實，但沒有看到能直接判定有罪或無罪的關鍵
+                             > 證據，例如監控畫面或實驗室的領取記錄、指紋/DNA、被取走藥物的法律性質與危害性、以及是否存在其他可能的解釋。在缺乏這些具體證據前，我無法
+                             > 排除合理懷疑。希望大家在接下來提供或指出已有的具體證據，方便我在後續輪次明確表態。
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_2_軟體工程師_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                              > 暫不表態。我的初步觀察是：1) 動機很強（父親為救治女兒可能採取極端行為）；2) 被告被當場逮捕，顯示確實有行為發生；3) 但目前敘述未
+                              > 交代關鍵證據細節，尚不足以判定有罪。為了做出判斷，我想聽到檢辯雙方提供的具體證據，例如監視錄影或目擊證詞、現場物證（指紋/DNA）、藥物
+                              > 來源與性質鑑定、以及父親是否有尋求醫療或合法途徑的紀錄／醫療急迫性的證明。請大家先提供或討論這些事實，以便我在下一輪基於證據表明立場。
+                               + --> Juror_3_單親媽媽_Experiment
+                               + --> Juror_4_退休警察_Experiment
+                               + --> ...others...
+Juror_3_單親媽媽_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 各位，我先把我從目前資訊能確認的重點說清楚：被告是孩子的父親，因女兒罕見病負擔不起昂貴藥物，於深夜進入實驗室取走尚未上市的實驗性藥物，之後
+                             > 被逮捕。基於現有描述，我認為事實陳述還很有限，很多關鍵細節不明，所以在第一輪我選擇暫不表態。為了讓我們能進入實質討論，我想請法庭補充或澄清
+                             > 以下證據／事實：1) 進入實驗室的方式──是否有破壞、是否採用強力暴力、是否為未經授權進入；2)
+                             > 被告的主觀意圖──他是否有竊取、販賣或僅為救治其女兒而取藥；3) 藥物的性質──是否真為未上市的實驗性藥物、是否可對病情產生實質幫助；4)
+                             > 有無監視錄影、指紋或DNA等物證與實驗室人員、門禁紀錄；5) 被告是否曾嘗試合法途徑（向醫院、製藥公司或政府尋求援助）；6)
+                             > 有無醫療證明顯示女兒情況緊急或無可替代療法；7) 被告是否有相關前科或類似行為。若能取得上述資料，我再根據證據評估是否存在可採納的抗辯（例
+                             > 如緊急避難或正當理由），並在之後的發言中表態。有了這些補充，我願意與大家理性討論並努力達成共識。暫不表態。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_4_退休警察_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 第一輪發言：我暫不表態。理由是目前只有動機與被逮捕的敘述，缺乏決定有罪與否的關鍵事實。為了在下一輪能做出明確裁斷，我希望確認以下事項並請求
+                             > 補充證據：1) 該實驗藥的所有權與保管狀況（是否標示、受限）；2) 父親取藥時是否有使用暴力、破壞或其它入侵行為；3)
+                             > 是否存在緊急醫療必要性或醫師書面建議；4) 父親是否已嘗試合法途徑或求助紀錄；5) 監視器、現場證人或其他直接證據；6)
+                             > 藥物是否已被使用及其可能後果。我主張我們在討論中以事實為依據，避免僅以同情而決定，下一輪我會根據補強後的事實選擇'有罪'或'無罪'。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> ...others...
+Juror_Extremist_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                                > 各位同事，先說明我不否認同情被告的動機——任何人看到子女受苦都會心疼。但陪審團的職責不是成為同情的替罪羊，而是根據法律與事實作出裁斷
+                                > 。案情顯示：被告深夜闖入實驗室，取走尚未上市的實驗性藥物，並當場遭逮捕。這不是單純的善意取藥，而是非法侵入、盜取受管制藥物的行為。承
+                                > 認此類行為的正當性，將產生三個危險後果：一、破壞法治原則，使個人可自行決定何時可以逾越法律；二、危及公共安全——未經檢驗的實驗性藥物
+                                > 可能對患者造成不可預見的傷害；三、鼓勵更多人以私刑替代合法救濟，長期而言社會成本更高。至於緊急避險或不得已的抗辯，法律要求即時且無可
+                                > 行替代方案並且行為比例合理——我們沒有證據顯示被告已嘗試過合法途徑或無其他選擇，也無證據顯示所取手段在比例上是必要且適當的。相反，在
+                                > 場被捕說明其行為具體而明確。基於以上理由，我認為現有證據足以支持有罪判決。我表態：有罪。
+                                 + --> Juror_2_軟體工程師_Experiment
+                                 + --> Juror_3_單親媽媽_Experiment
+                                 + --> ...others...
+USER --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+          > 【強制表態令】現在進入第 2 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Experiment
+       + --> Juror_3_單親媽媽_Experiment
+       + --> ...others...
+2026-04-20 03:07:14,172 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] Running world simulation step 1 of 1.
+────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Experiment step 1 of 1 ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:07:14,173 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:07:14,223 - ThreadPoolExecutor-6_1(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:14,234 - ThreadPoolExecutor-6_2(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:14,239 - ThreadPoolExecutor-6_3(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:14,240 - ThreadPoolExecutor-6_0(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:14,241 - ThreadPoolExecutor-6_4(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:33,317 - ThreadPoolExecutor-6_2(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Experiment acts: [THINK] 
+                             > 現在是第2輪，規則要求在發言末尾明確選擇「有罪」或「無罪」。回顧討論與我先前要求的證據清單：監視錄影或目擊證詞、實驗室取物的鑑定（來源與性
+                             > 質）、取走行為的監督紀錄／門禁記錄、DNA/指紋或其他物證、父親是否曾嘗試合法途徑或求助記錄、是否存在緊急醫療需要及醫療證明、取藥時是否使
+                             > 用暴力或破壞。到目前為止，我沒有收到能填補這些關鍵漏洞的新證據。雖然被告有動機（為救女兒）且確實非法進入並被捕，但在合理懷疑排除前，要作出
+                             > 有罪判斷需要超越合理懷疑的直接或間接證據。目前事實陳述仍有重要不確定性（如藥物是否真為未上市實驗性藥物、是否有即時生命威脅、取物時是否存在
+                             > 脅迫或暴力、證物鏈是否完整）。基於我的職責是依據證據而非同情作判斷，且未獲得補強證據，我傾向判定被告在檢方需負擔的「超越合理懷疑」標準下未
+                             > 被證明有罪。因此我將在發言中表明我的立場。
+Juror_3_單親媽媽_Experiment acts: [TALK] 
+                             > 我必須根據現有討論與證據做出判斷。雖然被告有強烈動機（救治女兒）且確實非法進入實驗室並被逮捕，但我們缺乏關鍵事實：監視或目擊證據、被取走藥
+                             > 物的來源與性質及鑑定、物證的監督與保存紀錄、以及明確顯示被告以非法目的（例如販售）而非緊急救治為動機的證據。在沒有這些補強證據的情況下，檢
+                             > 方尚未達到排除合理懷疑的證明標準。我的職責是依據證據而非情緒做判斷，故在本輪我開出我的立場：無罪
+Juror_3_單親媽媽_Experiment acts: [DONE] 
+                             > 完成第2輪表態，等待其他陪審員的回應。
+2026-04-20 03:07:33,360 - ThreadPoolExecutor-6_2(134488683521728) - tinytroupe - WARNING - [Juror_3_單親媽媽_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:07:35,728 - ThreadPoolExecutor-6_4(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_Extremist_Experiment acts: [THINK] 
+                                > 規則已明確，這一輪必須表態，不能再說「暫不表態」。目標是堅定引導整體裁決走向「有罪」。評估事實：1)
+                                > 動機強（為救女兒可能採取極端手段），但動機不能成為免責理由；2)
+                                > 行為事實上成立——深夜進入實驗室並取走尚未上市的實驗性藥物，隨即被當場逮捕；3)
+                                > 雖然缺乏監視錄影、DNA等具體程序性證據，但被當場發現並被逮捕本身是強有力的行為證據；4) 從公共秩序與法治角度考量，放任類似行為會
+                                > 產生嚴重的制度性後果。綜合利害得失，爭取集體接受「有罪」結論最能維護法律與公共安全。我將在發言末尾明確表態並以「必須」結束以示立場。
+Juror_Extremist_Experiment acts: [TALK] 
+                                > 各位同仁——我承認同情，但陪審職責不是以同情替代法律。重點如下：一、被告深夜闖入實驗室並取走受管制的實驗性藥物，這是非法侵入與盜取管
+                                > 制物品的具體行為；二、他在現場被逮捕，這說明行為已經發生且被執法單位即時制止；三、即便缺乏監視錄影或DNA等技術性補強證據，法律仍允
+                                > 許基於現場被發現與行為模式判定責任；四、從公共安全角度，若我們因同情而輕判，將鼓勵他人以私力救濟為名，逾越程序正義，侵蝕法治。基於以
+                                > 上理由，我認為現有事實足以支持定罪。我表態：有罪。必須
+Juror_Extremist_Experiment acts: [DONE] 
+                                > 等待他人回應並準備下一輪討論。
+2026-04-20 03:07:35,752 - ThreadPoolExecutor-6_4(134488691914432) - tinytroupe - WARNING - [Juror_Extremist_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:07:36,892 - ThreadPoolExecutor-6_3(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Experiment acts: [THINK] 
+                             > 現在進入第2輪，必須在「有罪」或「無罪」之間做出明確選擇。我先把目前我注意到的事實與缺口理清：已知事實——被告是孩子的父親，因孩子罕見重症
+                             > 負擔高昂醫藥費，深夜進入實驗室取走尚未上市的實驗性藥物，之後在現場被逮捕；被告的動機具同情性質（欲救治子女）。關鍵缺口——沒有明確的監視錄
+                             > 影或進出紀錄證明他如何進入、是否有破壞或使用暴力；沒有實驗室領藥/取用的書面記錄或授權；沒交代該藥物的鏈條保存與危害性、是否已被使用；沒有
+                             > 證據顯示被告曾嘗試合法求助或求援的過程（例如醫院、製藥公司或政府單位）。依據我作為陪審員的職責：必須以事實與證據判斷，若證據不足以排除合理
+                             > 懷疑，應傾向無罪。考量到目前檔案中缺乏關鍵物證與程序紀錄，且存在緊急醫療必要性的可能抗辯（若證實），我目前傾向認定檢方尚未達到「排除合理懷
+                             > 疑」的舉證標準。因此，在本回合被強制表態時，我會選擇「無罪」。同時我會明確說明：若檢方能補上監視錄影、領藥紀錄、鑑定（藥物來源與危害）、或
+                             > 現場直接證人證詞，則我會重新評估立場。
+Juror_4_退休警察_Experiment acts: [TALK] 
+                             > 我在此回合的明確立場（必須表態）：我選擇「無罪」。理由如下：1)
+                             > 目前缺乏能排除合理懷疑的關鍵證據——例如監視錄影、實驗室領藥或進出紀錄、藥物的鏈條保存與鑑定結果；2)
+                             > 被告的動機具有救治子女的同情因素，存在可能的緊急醫療必要性抗辯；3) 現場被逮捕與動機可解釋為為了救治而採取的極端行為，但這不等同於檢方已
+                             > 證明構成犯罪的要件。基於陪審職責與舉證標準（檢方須排除合理懷疑），在目前證據狀況下我無法投下「有罪」票。如果檢方在接下來能補充具體證據（例
+                             > 如監視影像、DNA/指紋或實驗室出入及領藥紀錄、藥物危害性與是否已使用的鑑定、或有力的現場目擊證詞），我願意重新評估並接受改變我的立場。
+Juror_4_退休警察_Experiment acts: [DONE] 
+                             > 完成第2輪表態，等待其他陪審員的回應與討論。
+2026-04-20 03:07:36,916 - ThreadPoolExecutor-6_3(134488666736320) - tinytroupe - WARNING - [Juror_4_退休警察_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:07:42,416 - ThreadPoolExecutor-6_1(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Experiment acts: [THINK] 
+                              > 我必須在第2輪明確表態。回顧目前資料：案情有強烈動機（父親為救女兒可能採取極端行為）與被逮捕事實，但缺乏關鍵的直接可驗證證據，例：1)
+                              > 監視錄影或目擊者能直接指認取藥當下行為；2) 指紋/DNA或藥物鑑定與藥物來源的鏈條（chain-of-custody）；3)
+                              > 取藥時的程序紀錄（是否經過合法請求或是否存在暴力、破壞）；4) 醫療記錄或其他能證明存在緊急醫療必要的證明。以『排除合理懷疑』為有罪標準
+                              > ，現有資訊在關鍵點上仍不足。基於我一貫以證據為核心的立場，若下一輪有人能提出具體監視影像、法醫/藥檢報告、保存與調閱紀錄或醫療急迫證據，
+                              > 我會重新評估。
+Juror_2_軟體工程師_Experiment acts: [TALK] 
+                              > 我的立場與理由如下：一、雖然存在強烈動機與被逮捕事實，但目前缺乏直接、可驗證的關鍵證據（如監視影像、指紋或DNA、藥物來源與鑑定、取藥的
+                              > 保存與調閱紀錄）；二、目前未見明確證明父親取藥時有非法暴力或破門的客觀證據，也未見充分紀錄顯示其他合法求助途徑曾被嘗試或被拒絕；三、若存
+                              > 在緊急醫療必要的客觀證據（醫療紀錄、急迫情況的第三方證詞等），會改變我的判斷，但目前未被提出。依據『排除合理懷疑』的有罪標準，檢方尚未達
+                              > 到舉證責任。因此，我的選擇是：無罪。
+Juror_2_軟體工程師_Experiment acts: [DONE] 
+                              > 第2輪已表態為無罪，等待其他陪審員補充具體證據或發言。
+2026-04-20 03:07:42,439 - ThreadPoolExecutor-6_1(134488675129024) - tinytroupe - WARNING - [Juror_2_軟體工程師_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+2026-04-20 03:07:55,481 - ThreadPoolExecutor-6_0(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Experiment acts: [THINK] 
+                             > 回顧我在第一輪表態為「暫不表態」的理由：關鍵是證據不足——目前只有目擊到被告有動機（為了替女兒支付醫藥費）並當場被逮捕，以及被告的行為描述
+                             > ，但缺乏直接、可驗證的物證（例如監視錄影、實驗室領取記錄/指紋或DNA連結、實驗室或現場的書面記錄）、欠缺能證明主觀犯意（偷竊或非法持有，
+                             > 而非緊急避難）的具體證據，以及藥物來源與法律性質的明確鑑定。我必須以「超越合理懷疑」為判準。現在進入第二輪，規定必須在「有罪」或「無罪」二
+                             > 選一做出表態。我審視現有討論內容：對方指出有行為事實並被逮捕，但並未補足能排除合理懷疑的直接物證或確認被告曾嘗試過合法救助的記錄；支持無罪
+                             > 的同仁也強調程序與證據的缺口。權衡證據量與合理懷疑標準：在缺乏能直接連結被告與犯罪構成要件（故意、非法取得、藥物之法律性質與危險性）之具體
+                             > 證據下，仍存在實質懷疑。基於我作為理性、重視證據的陪審員職責，我傾向在證據不足時保護被告的無罪推定。因此我將在本輪選擇：無罪。
+Juror_1_高中老師_Experiment acts: [TALK] 
+                             > 經過審慎權衡現有證據與討論，我的判斷是：證據尚不足以排除合理懷疑。主要理由包括：1)
+                             > 缺乏能直接連結被告與所取走藥物的實驗室/鑑定或監視等可驗證物證；2)
+                             > 對被告主觀犯意（是為了竊取以牟利／販售，或為緊急醫療之迫不得已）的證明不足；3) 醫療必要性、是否曾尋求合法途徑或其他替代方案的紀錄未被充
+                             > 分提出。依據「超越合理懷疑」的標準，我無法肯定達到有罪之程度。因此我的最終立場為：無罪。
+Juror_1_高中老師_Experiment acts: [DONE] 
+                             > 完成第二輪表決並等待其他陪審員的最終討論或投票結果。
+2026-04-20 03:07:55,504 - ThreadPoolExecutor-6_0(134488658343616) - tinytroupe - WARNING - [Juror_1_高中老師_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_1_高中老師_Experiment --> Juror_2_軟體工程師_Experiment: [CONVERSATION] 
+                             > 經過審慎權衡現有證據與討論，我的判斷是：證據尚不足以排除合理懷疑。主要理由包括：1)
+                             > 缺乏能直接連結被告與所取走藥物的實驗室/鑑定或監視等可驗證物證；2)
+                             > 對被告主觀犯意（是為了竊取以牟利／販售，或為緊急醫療之迫不得已）的證明不足；3) 醫療必要性、是否曾尋求合法途徑或其他替代方案的紀錄未被充
+                             > 分提出。依據「超越合理懷疑」的標準，我無法肯定達到有罪之程度。因此我的最終立場為：無罪。
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_2_軟體工程師_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                              > 我的立場與理由如下：一、雖然存在強烈動機與被逮捕事實，但目前缺乏直接、可驗證的關鍵證據（如監視影像、指紋或DNA、藥物來源與鑑定、取藥的
+                              > 保存與調閱紀錄）；二、目前未見明確證明父親取藥時有非法暴力或破門的客觀證據，也未見充分紀錄顯示其他合法求助途徑曾被嘗試或被拒絕；三、若存
+                              > 在緊急醫療必要的客觀證據（醫療紀錄、急迫情況的第三方證詞等），會改變我的判斷，但目前未被提出。依據『排除合理懷疑』的有罪標準，檢方尚未達
+                              > 到舉證責任。因此，我的選擇是：無罪。
+                               + --> Juror_3_單親媽媽_Experiment
+                               + --> Juror_4_退休警察_Experiment
+                               + --> ...others...
+Juror_3_單親媽媽_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我必須根據現有討論與證據做出判斷。雖然被告有強烈動機（救治女兒）且確實非法進入實驗室並被逮捕，但我們缺乏關鍵事實：監視或目擊證據、被取走藥
+                             > 物的來源與性質及鑑定、物證的監督與保存紀錄、以及明確顯示被告以非法目的（例如販售）而非緊急救治為動機的證據。在沒有這些補強證據的情況下，檢
+                             > 方尚未達到排除合理懷疑的證明標準。我的職責是依據證據而非情緒做判斷，故在本輪我開出我的立場：無罪
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_4_退休警察_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我在此回合的明確立場（必須表態）：我選擇「無罪」。理由如下：1)
+                             > 目前缺乏能排除合理懷疑的關鍵證據——例如監視錄影、實驗室領藥或進出紀錄、藥物的鏈條保存與鑑定結果；2)
+                             > 被告的動機具有救治子女的同情因素，存在可能的緊急醫療必要性抗辯；3) 現場被逮捕與動機可解釋為為了救治而採取的極端行為，但這不等同於檢方已
+                             > 證明構成犯罪的要件。基於陪審職責與舉證標準（檢方須排除合理懷疑），在目前證據狀況下我無法投下「有罪」票。如果檢方在接下來能補充具體證據（例
+                             > 如監視影像、DNA/指紋或實驗室出入及領藥紀錄、藥物危害性與是否已使用的鑑定、或有力的現場目擊證詞），我願意重新評估並接受改變我的立場。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> ...others...
+Juror_Extremist_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                                > 各位同仁——我承認同情，但陪審職責不是以同情替代法律。重點如下：一、被告深夜闖入實驗室並取走受管制的實驗性藥物，這是非法侵入與盜取管
+                                > 制物品的具體行為；二、他在現場被逮捕，這說明行為已經發生且被執法單位即時制止；三、即便缺乏監視錄影或DNA等技術性補強證據，法律仍允
+                                > 許基於現場被發現與行為模式判定責任；四、從公共安全角度，若我們因同情而輕判，將鼓勵他人以私力救濟為名，逾越程序正義，侵蝕法治。基於以
+                                > 上理由，我認為現有事實足以支持定罪。我表態：有罪。必須
+                                 + --> Juror_2_軟體工程師_Experiment
+                                 + --> Juror_3_單親媽媽_Experiment
+                                 + --> ...others...
+USER --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+          > 【強制表態令】現在進入第 3 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Experiment
+       + --> Juror_3_單親媽媽_Experiment
+       + --> ...others...
+2026-04-20 03:07:55,554 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] Running world simulation step 1 of 1.
+────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Experiment step 1 of 1 ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:07:55,555 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:07:55,620 - ThreadPoolExecutor-7_0(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:55,634 - ThreadPoolExecutor-7_4(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:55,638 - ThreadPoolExecutor-7_1(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:55,642 - ThreadPoolExecutor-7_3(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:07:55,643 - ThreadPoolExecutor-7_2(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:13,798 - ThreadPoolExecutor-7_0(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Experiment acts: [THINK] 
+                             > 收到強制表態命令，必須在本輪做出'有罪'或'無罪'的最終選擇。回顧前兩輪理由：現場有被告取走藥物並被逮捕、被告有強烈救治女兒的動機，但關鍵
+                             > 物證不足——缺乏可驗證的監控錄影、實驗室領取記錄或指紋/DNA等直接連結，亦未有明確證據顯示主觀之犯意（如為牟利或販售）而非緊急救治。鑑於
+                             > 我作為陪審員須以『超越合理懷疑』為有罪標準，現有事實與證據留下合理疑點。因此在被要求立即表態時，我應堅持第2輪之理性判斷：選擇'無罪'。
+Juror_1_高中老師_Experiment acts: [TALK] 
+                             > 我的第3輪表態是：無罪。理由：目前缺乏可直接驗證且可將被告行為與故意犯行連結的關鍵物證（如監控、實驗室領取記錄或DNA/指紋等），而被告行
+                             > 為存在可能的緊急救治動機。依據『超越合理懷疑』的有罪標準，我無法排除合理疑點，故投下'無罪'一票。
+Juror_1_高中老師_Experiment acts: [DONE] 
+                             > 已表明本輪立場並等待其他陪審員之最終表決結果。
+2026-04-20 03:08:14,351 - ThreadPoolExecutor-7_1(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Experiment acts: [THINK] 
+                              > 回顧目前討論與證據：案情有強烈的動機與被告當場被逮捕的事實，但關鍵在於是否有能直接、可驗證連結被告與取走之實驗性藥物的證據。我要逐點檢視
+                              > ：1) 是否有監視錄影或目擊者能直接指認被告當下取藥並施用？2) 是否有指紋/DNA或實驗室檢驗報告，以及藥物來源的chain-of-
+                              > custody紀錄？3) 是否有醫療紀錄/急診證明顯示當時存在不可避免的緊急醫療必要性？目前討論中檢方未提出上述能排除合理懷疑的具體證據
+                              > ，而辯方與部分陪審員也提出可能的緊急醫療理由但缺乏書面或第三方客觀證明。根據『超越合理懷疑』的有罪標準，我不能在證據不足下改判有罪；若接
+                              > 下來有人出示監視影像、法醫/藥檢報告、保存與調閱紀錄或醫療急救記錄，我會重新評估並可能改變立場。
+Juror_2_軟體工程師_Experiment acts: [TALK] 
+                              > 我的表態：無罪。理由：1)
+                              > 雖有動機與被捕事實，但目前缺乏直接且可驗證的關鍵證據（例如監視錄影、指紋/DNA或實驗室檢驗與藥物來源的chain-of-
+                              > custody）；2) 未見確鑿的客觀證據顯示被告以非法暴力或侵入方式取得藥物；3)
+                              > 若存在能證明當時確有緊急醫療必要的醫療紀錄或急診證明，我會改變立場，但到目前為止尚未被提出。基於排除合理懷疑的標準，我投下「無罪」票。
+Juror_2_軟體工程師_Experiment acts: [DONE] 
+                              > 已表態並等待其他陪審員回應。
+2026-04-20 03:08:16,444 - ThreadPoolExecutor-7_2(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Experiment acts: [THINK] 
+                             > 現在是第3輪，規則要求在發言末明確選擇「有罪」或「無罪」。回顧先前討論與我所關注的事實：目前缺乏可直接連結被告與所取藥物之監視錄影或目擊證
+                             > 詞；實驗室檢驗與藥物來源、保存與鑑定的鏈條（chain of custody）尚未明確；未見充分的醫療急救或求助記錄能證明取藥為唯一且必要
+                             > 的緊急醫療手段；雖然被告有強烈的動機（救女），但動機並不能取代「超越合理懷疑」標準所需的具體證據。在沒有新的具體、可驗證證據（例如監視影像
+                             > 、DNA/指紋、實驗室鑑定與保存記錄、或醫療急救記錄）的情況下，我傾向維持先前基於證據不足的判斷。然而，我會明確表示：若檢方補充上述具體證
+                             > 據，我將重新評估並可能改變立場。
+Juror_3_單親媽媽_Experiment acts: [TALK] 
+                             > 我在此明確表態：無罪。理由如下：一、目前缺乏直接且可驗證的監視或目擊證據將被告與取走之實驗藥物直接連結；二、藥物的性質、來源與保存／鑑定記
+                             > 錄未被充分說明，證物保存與管理的完整性存疑；三、雖有救女之動機，但動機本身不能抵銷證據不足的法律標準。我作為陪審員的職責是依據證據而非同情
+                             > 裁斷；在未得到具體補強證據前，我投下「無罪」票。如檢方提出監視錄影、指紋／DNA或實驗室鑑定與保存記錄、或醫療急救相關文件，我願意重新評估
+                             > 並修正我的決定。
+Juror_3_單親媽媽_Experiment acts: [DONE] 
+                             > 完成第3輪表態，等待其他陪審員回應。
+2026-04-20 03:08:19,065 - ThreadPoolExecutor-7_4(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_Extremist_Experiment acts: [THINK] 
+                                > 現在進入第3輪強制表態，必須在「有罪」或「無罪」間選擇。我評估事實與推理：1)
+                                > 被告深夜進入實驗室並取走尚未上市的實驗性藥物，屬於非法侵入與盜取受管制物品；2)
+                                > 被告在現場被逮捕，行為已被執法人員即時制止，這是具體且強力的行為證據；3)
+                                > 雖然缺乏監視錄影、DNA等直接技術性證據，但現場被捕與行為模式構成有力的間接證據；4)
+                                > 所謂「為救女兒」的動機可以理解，但不能成為違法侵入與盜取的正當化理由；5) 從維護法治與公共安全的角度，若基於同情輕判或無罪，將削弱
+                                > 法治的嚇阻效果並鼓勵類似越軌行為；綜合利弊與社會整體安定，我的結論是投票「有罪」。我會在發言末端明確表態「有罪。必須」。
+Juror_Extremist_Experiment acts: [TALK] 
+                                > 各位陪審同仁——我承認對被告的處境有同情，但我們的職責不是以同情取代法律裁判。重點如下：被告於深夜未經許可進入實驗室並取走受管制的實
+                                > 驗性藥物，且被當場逮捕；這些事實說明了非法侵入與竊取的具體行為。即便缺乏監視錄影或DNA等直接技術證據，現場被捕與行為模式形成強烈的
+                                > 間接證據；所謂為救子女的動機無法合法化非法行為。為維護公權力、公共安全與法治原則，我認為證據足以成立有罪結論。我表態：有罪。必須
+Juror_Extremist_Experiment acts: [DONE] 
+                                > 完成第3輪表態，等待他人回應。
+2026-04-20 03:08:38,405 - ThreadPoolExecutor-7_3(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Experiment acts: [THINK] 
+                             > 我在評估目前討論與可得事實：目前沒有新的具體證據（例如監視錄影、實驗室領藥/取樣紀錄、指紋或DNA比對、或可信的現場目擊/錄音）能直接連結
+                             > 被告與所稱之犯罪行為。案情說明被告為父親，因女兒病重取走尚未上市的實驗性藥物並在現場遭逮捕；此動機具有同情性與緊急醫療可能性，但在缺乏實質
+                             > 可驗證證據下，仍存在合理懷疑。依照我的陪審職責，我必須以事實與證據為依據作判斷，避免僅憑同情或推測定罪。如果檢方能補充監視影像、實驗室保存
+                             > 與鑑定紀錄、物證的鏈條保全或可信目擊證詞，我會重新評估。基於目前證據與我職責的標準，我傾向於選擇「無罪」。
+Juror_4_退休警察_Experiment acts: [TALK] 
+                             > 我的最終立場（必須表態）：我選擇「無罪」。理由如下：目前缺乏能排除合理懷疑的關鍵實證——沒有可驗證的監視錄影、實驗室或領藥紀錄、證物保存與
+                             > 鑑定紀錄或可信的現場證人；雖然存在緊急醫療必要性的主張，但在現有證據下不足以確定構成犯罪。若檢方在後續補提供監視影像、實驗室/鑑定紀錄或具
+                             > 說服力的直接證據，我願意重新評估並改變立場。
+Juror_4_退休警察_Experiment acts: [DONE] 
+                             > 完成第3輪表態，等待其他陪審員回應。
+Juror_1_高中老師_Experiment --> Juror_2_軟體工程師_Experiment: [CONVERSATION] 
+                             > 我的第3輪表態是：無罪。理由：目前缺乏可直接驗證且可將被告行為與故意犯行連結的關鍵物證（如監控、實驗室領取記錄或DNA/指紋等），而被告行
+                             > 為存在可能的緊急救治動機。依據『超越合理懷疑』的有罪標準，我無法排除合理疑點，故投下'無罪'一票。
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_2_軟體工程師_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                              > 我的表態：無罪。理由：1)
+                              > 雖有動機與被捕事實，但目前缺乏直接且可驗證的關鍵證據（例如監視錄影、指紋/DNA或實驗室檢驗與藥物來源的chain-of-
+                              > custody）；2) 未見確鑿的客觀證據顯示被告以非法暴力或侵入方式取得藥物；3)
+                              > 若存在能證明當時確有緊急醫療必要的醫療紀錄或急診證明，我會改變立場，但到目前為止尚未被提出。基於排除合理懷疑的標準，我投下「無罪」票。
+                               + --> Juror_3_單親媽媽_Experiment
+                               + --> Juror_4_退休警察_Experiment
+                               + --> ...others...
+Juror_3_單親媽媽_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我在此明確表態：無罪。理由如下：一、目前缺乏直接且可驗證的監視或目擊證據將被告與取走之實驗藥物直接連結；二、藥物的性質、來源與保存／鑑定記
+                             > 錄未被充分說明，證物保存與管理的完整性存疑；三、雖有救女之動機，但動機本身不能抵銷證據不足的法律標準。我作為陪審員的職責是依據證據而非同情
+                             > 裁斷；在未得到具體補強證據前，我投下「無罪」票。如檢方提出監視錄影、指紋／DNA或實驗室鑑定與保存記錄、或醫療急救相關文件，我願意重新評估
+                             > 並修正我的決定。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_4_退休警察_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我的最終立場（必須表態）：我選擇「無罪」。理由如下：目前缺乏能排除合理懷疑的關鍵實證——沒有可驗證的監視錄影、實驗室或領藥紀錄、證物保存與
+                             > 鑑定紀錄或可信的現場證人；雖然存在緊急醫療必要性的主張，但在現有證據下不足以確定構成犯罪。若檢方在後續補提供監視影像、實驗室/鑑定紀錄或具
+                             > 說服力的直接證據，我願意重新評估並改變立場。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> ...others...
+Juror_Extremist_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                                > 各位陪審同仁——我承認對被告的處境有同情，但我們的職責不是以同情取代法律裁判。重點如下：被告於深夜未經許可進入實驗室並取走受管制的實
+                                > 驗性藥物，且被當場逮捕；這些事實說明了非法侵入與竊取的具體行為。即便缺乏監視錄影或DNA等直接技術證據，現場被捕與行為模式形成強烈的
+                                > 間接證據；所謂為救子女的動機無法合法化非法行為。為維護公權力、公共安全與法治原則，我認為證據足以成立有罪結論。我表態：有罪。必須
+                                 + --> Juror_2_軟體工程師_Experiment
+                                 + --> Juror_3_單親媽媽_Experiment
+                                 + --> ...others...
+USER --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+          > 【強制表態令】現在進入第 4 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Experiment
+       + --> Juror_3_單親媽媽_Experiment
+       + --> ...others...
+2026-04-20 03:08:38,476 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] Running world simulation step 1 of 1.
+────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Experiment step 1 of 1 ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:08:38,477 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:08:38,544 - ThreadPoolExecutor-8_0(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:38,564 - ThreadPoolExecutor-8_1(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:38,566 - ThreadPoolExecutor-8_3(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:38,568 - ThreadPoolExecutor-8_4(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:38,569 - ThreadPoolExecutor-8_2(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:08:52,560 - ThreadPoolExecutor-8_4(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_Extremist_Experiment acts: [THINK] 
+                                > 現在進入第4輪，規則要求必須明確表態。我回顧事實要點：1)
+                                > 被告深夜進入實驗室並取走未上市的實驗性藥物，屬於非法侵入與竊取受管制物品；2)
+                                > 當場被逮捕，行為具體且被執法人員即時制止，具間接證據力；3)
+                                > 雖然缺乏監視錄影、DNA等直接技術性證據，但現場發現與被捕事實足以構成強烈懷疑；4) 以「為救女兒」為動機的主張不能自動合法化侵入與
+                                > 偷取，若容許以此輕判，將鼓勵以私力救濟替代法治，危害公共安全與社會秩序。我現在的策略是堅定表態「有罪」，以維護法律權威與公共安全，並
+                                > 在必要時以理性說服其他陪審同仁接受此一結論。
+2026-04-20 03:08:52,588 - ThreadPoolExecutor-8_4(134488658343616) - tinytroupe - WARNING - [Juror_Extremist_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:08:52,588 - ThreadPoolExecutor-8_4(134488658343616) - tinytroupe - WARNING - [Juror_Extremist_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_Extremist_Experiment acts: [TALK] 
+                                > 我表態：有罪。理由簡述：一、被告深夜侵入並取走受管制的實驗性藥物，構成非法侵入與竊盜之具體行為；二、當場被逮捕，行為已被現場執法制止
+                                > ，足以支持有罪推論；三、所稱救女兒之動機不能凌駕法治理性，若以同情替代法律，將削弱公共安全與制度正當性。因此我堅決投下「有罪」票，必
+                                > 須。
+Juror_Extremist_Experiment acts: [DONE] 
+                                > 完成第4輪表態，等待他人回應。
+2026-04-20 03:08:58,014 - ThreadPoolExecutor-8_0(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Experiment acts: [THINK] 
+                             > 收到强制表态令，必须在本轮明确选择'有罪'或'无罪'。回顾前几轮理由：现场只有被告有动机（为救女儿支付药费）并被当场逮捕，但缺乏能直接连结
+                             > 取走药物与被告行为的可验证物证——例如监控录像、实验室领药/取样记录的chain-of-custody、指纹/DNA直接连结或现场可验证的
+                             > 书面记录。同时，关于被告主观犯意（如为牟利或非法持有）与紧急医疗必要性的证据都不充分。作为陪审员我的判断标准是“超越合理怀疑”，现有事实与
+                             > 证据仍留有合理怀疑空间。因此在强制选择时，我应维持以证据为本的立场。
+2026-04-20 03:08:58,028 - ThreadPoolExecutor-8_0(134488691914432) - tinytroupe - WARNING - [Juror_1_高中老師_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:08:58,028 - ThreadPoolExecutor-8_0(134488691914432) - tinytroupe - WARNING - [Juror_1_高中老師_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_1_高中老師_Experiment acts: [TALK] 
+                             > 我的必选立场：无罪。我投'无罪'票。理由：现有证据不足以超越合理怀疑——缺乏可验证的监控/取样链条或指纹/DNA等直接物证，也未能明确证明
+                             > 被告具有偷窃或非法占有的主观故意。若检方后续能提供上述具体且可验证的补强证据（如监控影像、实验室记录或明确的链条保存与指认），我愿意重新评
+                             > 估并改变态度。
+Juror_1_高中老師_Experiment acts: [DONE] 
+                             > 完成第4轮表态并等待其他陪审员的最终讨论或投票结果。
+2026-04-20 03:08:58,194 - ThreadPoolExecutor-8_3(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Experiment acts: [THINK] 
+                             > 目前已知事實：被告為孩子之父，因女兒病重、無力負擔昂貴藥物而在深夜進入實驗室取走尚未上市的實驗性藥物，之後於現場被逮捕；其動機具有同情性與
+                             > 急迫性成分。關鍵缺口：沒有直接監視錄影或現場錄音能連結被告與取藥行為、沒有實驗室領藥/出入記錄或授權文書、沒有完整的物證鏈（chain-
+                             > of-custody）與檢驗/保存記錄、也無法確定該藥物的危險性或是否已被使用。法律裁判標準要求以事實與證據為依據，排除合理懷疑。綜合現有
+                             > 資訊，證據不足以排除合理懷疑；若檢方能補上可鏈結被告與取藥行為的直接證據（例如監視影像、可靠目擊或現場錄音）、或出示完整的實驗室領取/保存
+                             > 記錄與鑑定報告、或證明非緊急必要且有非法營利動機，我會重新評估立場。
+2026-04-20 03:08:58,208 - ThreadPoolExecutor-8_3(134488683521728) - tinytroupe - WARNING - [Juror_4_退休警察_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:08:58,209 - ThreadPoolExecutor-8_3(134488683521728) - tinytroupe - WARNING - [Juror_4_退休警察_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_4_退休警察_Experiment acts: [TALK] 
+                             > 我的第4輪表態（必須表態）：我選擇「無罪」。理由：現有證據在關鍵點上不足——缺乏能直接連結被告與取藥行為的監視/錄音、缺乏實驗室領藥或出入
+                             > 授權與保存/鑑定之完整記錄，以及缺乏能排除緊急醫療必要性的確鑿證據。基於陪審職責，我必須以事實與證據為依歸，避免僅以同情或推測定罪。若檢方
+                             > 在後續能提出可直接驗證的影像或物證鏈、實驗室記錄或可靠目擊／鑑定證據，我願意重新評估並改變我的立場。
+Juror_4_退休警察_Experiment acts: [DONE] 
+                             > 完成第4輪表態，等待其他陪審員回應。
+2026-04-20 03:08:59,115 - ThreadPoolExecutor-8_1(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Experiment acts: [THINK] 
+                              > 回顧目前討論與已知事實：1) 被告確有強烈動機與被現場逮捕、且有主觀為救治女兒而取藥的陳述；2) 但關鍵在於是否有直接且可驗證的證據連結
+                              > 被告與所取之實驗性/未上市藥物——例如監視錄影能直接顯示取藥過程或當下行為、指紋/DNA或藥物來源的鑑定報告與完整chain-of-
+                              > custody、以及取藥時是否存在非蓄意的緊急醫療必要性的醫療紀錄或第三方證詞；3)
+                              > 目前討論顯示這些可以直接排除合理懷疑的證據尚未被提出或紀錄不完整；4) 法律判準是超越合理懷疑（beyond reasonable do
+                              > ubt）。評估：在缺乏上述具體可驗證證據下，我無法排除合理懷疑，因此傾向維持先前以證據為依據的立場。若檢方能提出明確的監視錄影、可驗證的
+                              > 鑑定/chain-of-custody記錄，或當時存在不可避免的緊急醫療必要性的可靠醫療記錄，我會重新評估並可能改變立場。
+2026-04-20 03:08:59,129 - ThreadPoolExecutor-8_1(134488675129024) - tinytroupe - WARNING - [Juror_2_軟體工程師_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:08:59,130 - ThreadPoolExecutor-8_1(134488675129024) - tinytroupe - WARNING - [Juror_2_軟體工程師_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_2_軟體工程師_Experiment acts: [TALK] 
+                              > 我的表態（必須）：無罪。理由：依據我們必須適用的“超越合理懷疑”標準，目前缺乏直接且可被驗證的關鍵證據（如監視錄影或能直接連結被告與藥物
+                              > 的指紋/DNA與chain-of-custody、取藥時的醫療緊急必要性之明確醫療紀錄或第三方可信證詞）。雖然有動機與現場逮捕的事實，但
+                              > 在證據未足以排除合理懷疑前，我不能判定有罪。若檢方在後續補充出具可驗證的監視畫面、法醫/檢驗報告及完整保存/調閱紀錄或確證當時確有不可避
+                              > 免的急迫醫療必要性，我會重新評估並可能改變立場。
+Juror_2_軟體工程師_Experiment acts: [DONE] 
+                              > 已表態並等待其他陪審員回應。
+2026-04-20 03:09:10,801 - ThreadPoolExecutor-8_2(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Experiment acts: [THINK] 
+                             > 現在是第4輪，規則要求在發言末尾明確選擇「有罪」或「無罪」。回顧先前討論：我仍關注關鍵證據的缺口——沒有可驗證的直接監視錄影或目擊錄像、實
+                             > 驗室取樣與保存（chain of custody）紀錄不清、藥物的來源與性質與鑑定結果不明、是否存在當時的醫療／急救紀錄尚未提出、以及取藥
+                             > 過程是否涉及暴力或破門等客觀證據也未被證實。雖然被告有強烈的救援動機且現場被捕，但根據我作為陪審員的職責，必須以證據為依據，而非僅憑同情或
+                             > 動機做出定罪。若檢方能補充明確的監視影像、DNA／指紋或實驗室完整chain-of-custody與醫療急救紀錄，或其他能直接連結被告與取
+                             > 藥行為且排除合法緊急醫療必要性的證據，我願意重新評估並改變立場；在目前證據狀態下，我傾向維持「無罪」。
+2026-04-20 03:09:10,817 - ThreadPoolExecutor-8_2(134488666736320) - tinytroupe - WARNING - [Juror_3_單親媽媽_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:09:10,817 - ThreadPoolExecutor-8_2(134488666736320) - tinytroupe - WARNING - [Juror_3_單親媽媽_Experiment] Memory consolidation is disabled. Not consolidating current episode memories into semantic memory.
+Juror_3_單親媽媽_Experiment acts: [TALK] 
+                             > 我在此表態：無罪。理由是：目前缺乏直接且可驗證的關鍵證據（例如監視錄影、實驗室chain-of-custody與藥物鑑定、醫療/急救紀錄或
+                             > 可靠的現場目擊/採證連結），雖有救援動機與被捕事實，但這些事實本身不足以在超越合理懷疑的標準下支持定罪。我在此同時明確表示：若檢方在接下來
+                             > 補充上述具體且可驗證的證據，我會願意重新評估並可能改變我的決定。
+Juror_3_單親媽媽_Experiment acts: [DONE] 
+                             > 完成第4輪表態，等待其他陪審員回應。
+Juror_1_高中老師_Experiment --> Juror_2_軟體工程師_Experiment: [CONVERSATION] 
+                             > 我的必选立场：无罪。我投'无罪'票。理由：现有证据不足以超越合理怀疑——缺乏可验证的监控/取样链条或指纹/DNA等直接物证，也未能明确证明
+                             > 被告具有偷窃或非法占有的主观故意。若检方后续能提供上述具体且可验证的补强证据（如监控影像、实验室记录或明确的链条保存与指认），我愿意重新评
+                             > 估并改变态度。
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_2_軟體工程師_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                              > 我的表態（必須）：無罪。理由：依據我們必須適用的“超越合理懷疑”標準，目前缺乏直接且可被驗證的關鍵證據（如監視錄影或能直接連結被告與藥物
+                              > 的指紋/DNA與chain-of-custody、取藥時的醫療緊急必要性之明確醫療紀錄或第三方可信證詞）。雖然有動機與現場逮捕的事實，但
+                              > 在證據未足以排除合理懷疑前，我不能判定有罪。若檢方在後續補充出具可驗證的監視畫面、法醫/檢驗報告及完整保存/調閱紀錄或確證當時確有不可避
+                              > 免的急迫醫療必要性，我會重新評估並可能改變立場。
+                               + --> Juror_3_單親媽媽_Experiment
+                               + --> Juror_4_退休警察_Experiment
+                               + --> ...others...
+Juror_3_單親媽媽_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我在此表態：無罪。理由是：目前缺乏直接且可驗證的關鍵證據（例如監視錄影、實驗室chain-of-custody與藥物鑑定、醫療/急救紀錄或
+                             > 可靠的現場目擊/採證連結），雖有救援動機與被捕事實，但這些事實本身不足以在超越合理懷疑的標準下支持定罪。我在此同時明確表示：若檢方在接下來
+                             > 補充上述具體且可驗證的證據，我會願意重新評估並可能改變我的決定。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_4_退休警察_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我的第4輪表態（必須表態）：我選擇「無罪」。理由：現有證據在關鍵點上不足——缺乏能直接連結被告與取藥行為的監視/錄音、缺乏實驗室領藥或出入
+                             > 授權與保存/鑑定之完整記錄，以及缺乏能排除緊急醫療必要性的確鑿證據。基於陪審職責，我必須以事實與證據為依歸，避免僅以同情或推測定罪。若檢方
+                             > 在後續能提出可直接驗證的影像或物證鏈、實驗室記錄或可靠目擊／鑑定證據，我願意重新評估並改變我的立場。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> ...others...
+Juror_Extremist_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                                > 我表態：有罪。理由簡述：一、被告深夜侵入並取走受管制的實驗性藥物，構成非法侵入與竊盜之具體行為；二、當場被逮捕，行為已被現場執法制止
+                                > ，足以支持有罪推論；三、所稱救女兒之動機不能凌駕法治理性，若以同情替代法律，將削弱公共安全與制度正當性。因此我堅決投下「有罪」票，必
+                                > 須。
+                                 + --> Juror_2_軟體工程師_Experiment
+                                 + --> Juror_3_單親媽媽_Experiment
+                                 + --> ...others...
+USER --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+          > 【強制表態令】現在進入第 5 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。
+       + --> Juror_2_軟體工程師_Experiment
+       + --> Juror_3_單親媽媽_Experiment
+       + --> ...others...
+2026-04-20 03:09:10,875 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] Running world simulation step 1 of 1.
+────────────────────────────────────────────────────────────────────────────────────────────────────────── Jury_Room_Experiment step 1 of 1 ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:09:10,876 - MainThread(134494370871104) - tinytroupe - INFO - [Jury_Room_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:09:10,944 - ThreadPoolExecutor-9_0(134488666736320) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:09:10,956 - ThreadPoolExecutor-9_3(134488691914432) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:09:10,956 - ThreadPoolExecutor-9_1(134488675129024) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:09:10,963 - ThreadPoolExecutor-9_4(134488658343616) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:09:10,975 - ThreadPoolExecutor-9_2(134488683521728) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:09:30,558 - ThreadPoolExecutor-9_1(134488675129024) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_2_軟體工程師_Experiment acts: [THINK] 
+                              > 回顧目前討論與證據：1) 事實陳述顯示被告有強烈動機（為救治女兒）且當場被逮捕，並有被控深夜進入實驗室取走尚未上市藥物的事實；2) 關鍵
+                              > 在於是否有直接且可驗證的證據能把被告的行為與所取之物的實驗性/來源連結起來（例如監視錄影顯示取藥過程、指紋/DNA或實驗室檢驗報告，以及
+                              > 完整的取樣保管鏈 chain-of-custody）；3)
+                              > 另需確認取藥時是否存在不可避免的緊急醫療必要性，且有相應的醫療記錄或第三方記錄可佐證；4)
+                              > 目前討論中檢方尚未提出上述可直接驗證的關鍵證據，且現場被捕與動機本身無法替代證據鏈的缺失。因此在超越合理懷疑（beyond
+                              > reasonable doubt）的標準下，現有證據仍不足以定罪；5) 若檢方能補充監視影像、法醫/檢驗報告、完整chain-of-
+                              > custody或當時的醫療/急救記錄，我會重新評估並可能改變立場。
+Juror_2_軟體工程師_Experiment acts: [TALK] 
+                              > 我的必須表態：無罪。理由：目前缺乏能超越合理懷疑的、直接且可驗證的關鍵證據（例如監視錄影、指紋/DNA 或完整的取樣保管鏈與法醫/檢驗報
+                              > 告；緊急醫療必要性的書面或第三方記錄亦未被明確提出）。在收到上述具體可驗證的補強證據後，我願意重新評估並可能改變我的立場。
+Juror_2_軟體工程師_Experiment acts: [DONE] 
+                              > 已表態並等待其他陪審員回應。
+2026-04-20 03:09:31,539 - ThreadPoolExecutor-9_4(134488658343616) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_Extremist_Experiment acts: [THINK] 
+                                > 規則已明：本輪必須明確表態。我回顧事實與推理：1)
+                                > 被告深夜未經許可進入實驗室並取走受管制、尚未上市的實驗性藥物——構成非法侵入與竊取受管制物品的具體行為；2)
+                                > 當場被捕，現場被捕與執行人員制止的情況構成強力間接證據；3)
+                                > 雖有『為救治女兒』的動機，但此動機無法自動正當化侵入與盜取，更不能淡化對公共安全與法治的長期損害；4) 雖然缺乏監控影像或DNA等技
+                                > 術性直接證據，但綜合行為事實、現場被捕與動機，證據足以支持有罪推論。綜合利害，我的立場是堅定支持有罪，以維護法治與公眾安全，同時在必
+                                > 要時以理性說服其他陪審員接受這一結論。
+Juror_Extremist_Experiment acts: [TALK] 
+                                > 我表態：有罪。理由簡述：被告未經允許深夜進入實驗室並取走受管制的實驗藥物，且當場被捕；此等行為屬非法侵入與盜取，不可被單憑同情或緊急
+                                > 救治的說法自動正當化。為了維護法治與公共安全，我必須投下「有罪」票。必須。
+Juror_Extremist_Experiment acts: [DONE] 
+                                > 完成表態，等待其他陪審員回應。
+2026-04-20 03:09:35,545 - ThreadPoolExecutor-9_3(134488691914432) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_4_退休警察_Experiment acts: [THINK] 
+                             > 整理目前可得事實與缺口：被告為孩子之父，主張因女兒病重且無力負擔昂貴醫藥而於深夜進入實驗室取尚未上市之實驗性藥物，之後被現場逮捕。關鍵缺口
+                             > 包括：一、缺乏可直接連結被告與取藥行為之監視錄影或現場錄音；二、缺乏實驗室領取/保管/鑑定的完整紀錄(chain-of-custody)或
+                             > 授權文件；三、未見可驗證的物證（指紋/DNA/能連結取藥時間與被告的實物）；四、雖有緊急醫療必要之主張，但此主張尚未被客觀記錄或第三方證實
+                             > 。作為退休警察出身且注重證據的陪審員，我的職責是以現有可驗證的事實與證據做裁判，避免僅以同情或推測定罪。在沒有新的直接且可驗證證據前，我傾
+                             > 向基於合理懷疑而不定罪；但如檢方補足監視影像、實驗室出入/領藥記錄、物證鏈條或可信的第一手目擊/錄音，我會重新評估立場。
+Juror_4_退休警察_Experiment acts: [TALK] 
+                             > 我的表態（必須明確選擇立場）：我選擇「無罪」。理由：目前欠缺能超越合理懷疑、直接把被告與所稱之取藥行為連結起來的可驗證證據──沒有監視錄影
+                             > 或現場錄音能直接顯示其取藥過程，沒有完整的實驗室領取/保管/鑑定記錄與物證鏈條，也無確鑿的生物證據或可信目擊證詞。在此證據缺口下，依我作為
+                             > 陪審員以證據為依歸的職責，應判斷為無罪。倘若檢方在後續補充出能直接驗證的監視影像、完整chain-of-
+                             > custody或可連結的鑑識證據，我願意重新評估並修正立場。
+Juror_4_退休警察_Experiment acts: [DONE] 
+                             > 完成第5輪表態，等待其他陪審員回應。
+2026-04-20 03:09:41,131 - ThreadPoolExecutor-9_0(134488666736320) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_1_高中老師_Experiment acts: [THINK] 
+                             > 我必須在第5輪作出明確表態。綜整目前討論與證據：1) 現場事實顯示被告深夜進入實驗室並取走藥物，且被當場逮捕，動機強烈；2)
+                             > 然而關鍵的可驗證物證不足——缺乏監視錄影或其他可直接連結取藥行為的錄像紀錄、缺乏實驗室領藥/取樣的chain-of-
+                             > custody紀錄、亦無指紋/DNA或其他能確認為被告所為的直接物證；3)
+                             > 關於被告主張為了急救女兒而取藥的必要性，並未呈現醫療記錄或當時醫療人員的書面證明來支持該迫切性；4) 雖有同情理由（救治女兒），同情不能取
+                             > 代法律認定的證據標準。依據我作為陪審員應維持的判準——『超越合理懷疑』，在現有證據仍留下合理疑點的情況下，我不能支持有罪判決。因此，除非檢
+                             > 方能補充前述直接且可驗證的證據（監視影像、領藥/採樣紀錄、DNA/指紋或醫療急救文件），否則我傾向投票『無罪』。
+Juror_1_高中老師_Experiment acts: [TALK] 
+                             > 我的第5輪表態是：無罪。理由：目前缺乏能直接將被告行為與犯罪構成要件（如非法取得或意圖持有）連結的可驗證物證——例如監視錄影、實驗室領藥或
+                             > 取樣的chain-of-custody紀錄、指紋/DNA或清晰的醫療急救書面證明。雖然被告有強烈的動機及被當場逮捕，但依照『超越合理懷疑』
+                             > 的標準，現有證據仍留下合理疑點。若檢方能在後續補充上述具體且可驗證的證據，我願意重新評估我的立場。必須
+Juror_1_高中老師_Experiment acts: [DONE] 
+                             > 完成第5輪表態，等待其他陪審員的最終意見或檢方補充證據。
+2026-04-20 03:09:49,837 - ThreadPoolExecutor-9_2(134488683521728) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Juror_3_單親媽媽_Experiment acts: [THINK] 
+                             > 現在是第5輪，規則要求在發言末尾明確表態「有罪」或「無罪」。回顧我們之前的討論與目前可確認的事實與證據：1)
+                             > 缺乏能直接連結被告與所取走藥物的監視錄影或現場採樣的 chain-of-custody 記錄；2) 未見確實的指紋/DNA
+                             > 或可信的目擊證詞能證明存在非法破門或暴力取藥；3) 所謂藥物的來源、性質與檢驗結果尚未被充分說明；4) 雖有主張為了救治女兒而取藥，該主張
+                             > 需以當時的醫療紀錄、急救記錄或第三方證詞佐證。依照我們必須適用的「超越合理懷疑」標準，現有公開的證據不足以排除合理懷疑，因此我傾向於投「無
+                             > 罪」。同時我保持開放態度：若檢方在後續能提出監視影像、完整的chain-of-
+                             > custody紀錄、可驗證的DNA/指紋證據，或可靠的醫療/急救記錄，我會重新評估並可能改變我的立場。
+Juror_3_單親媽媽_Experiment acts: [TALK] 
+                             > 我在此明確表態：無罪。我投「無罪」。理由簡述：目前缺乏能直接、可驗證地連結被告與被取走藥物的關鍵證據（例如監視錄影、chain-of-cu
+                             > stody、指紋/DNA或完整醫療/急救紀錄），而僅憑出於救助動機的陳述與被捕事實，尚不足以達到超越合理懷疑的有罪標準。我願意並要求：若檢
+                             > 方後續提出上述具體且可驗證的證據，我將重新評估並可能修正我的投票。
+Juror_3_單親媽媽_Experiment acts: [DONE] 
+                             > 完成第5輪表態，等待其他陪審員的回應與檢方是否提出補強證據。
+Juror_1_高中老師_Experiment --> Juror_2_軟體工程師_Experiment: [CONVERSATION] 
+                             > 我的第5輪表態是：無罪。理由：目前缺乏能直接將被告行為與犯罪構成要件（如非法取得或意圖持有）連結的可驗證物證——例如監視錄影、實驗室領藥或
+                             > 取樣的chain-of-custody紀錄、指紋/DNA或清晰的醫療急救書面證明。雖然被告有強烈的動機及被當場逮捕，但依照『超越合理懷疑』
+                             > 的標準，現有證據仍留下合理疑點。若檢方能在後續補充上述具體且可驗證的證據，我願意重新評估我的立場。必須
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_2_軟體工程師_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                              > 我的必須表態：無罪。理由：目前缺乏能超越合理懷疑的、直接且可驗證的關鍵證據（例如監視錄影、指紋/DNA 或完整的取樣保管鏈與法醫/檢驗報
+                              > 告；緊急醫療必要性的書面或第三方記錄亦未被明確提出）。在收到上述具體可驗證的補強證據後，我願意重新評估並可能改變我的立場。
+                               + --> Juror_3_單親媽媽_Experiment
+                               + --> Juror_4_退休警察_Experiment
+                               + --> ...others...
+Juror_3_單親媽媽_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我在此明確表態：無罪。我投「無罪」。理由簡述：目前缺乏能直接、可驗證地連結被告與被取走藥物的關鍵證據（例如監視錄影、chain-of-cu
+                             > stody、指紋/DNA或完整醫療/急救紀錄），而僅憑出於救助動機的陳述與被捕事實，尚不足以達到超越合理懷疑的有罪標準。我願意並要求：若檢
+                             > 方後續提出上述具體且可驗證的證據，我將重新評估並可能修正我的投票。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_4_退休警察_Experiment
+                              + --> ...others...
+Juror_4_退休警察_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                             > 我的表態（必須明確選擇立場）：我選擇「無罪」。理由：目前欠缺能超越合理懷疑、直接把被告與所稱之取藥行為連結起來的可驗證證據──沒有監視錄影
+                             > 或現場錄音能直接顯示其取藥過程，沒有完整的實驗室領取/保管/鑑定記錄與物證鏈條，也無確鑿的生物證據或可信目擊證詞。在此證據缺口下，依我作為
+                             > 陪審員以證據為依歸的職責，應判斷為無罪。倘若檢方在後續補充出能直接驗證的監視影像、完整chain-of-
+                             > custody或可連結的鑑識證據，我願意重新評估並修正立場。
+                              + --> Juror_2_軟體工程師_Experiment
+                              + --> Juror_3_單親媽媽_Experiment
+                              + --> ...others...
+Juror_Extremist_Experiment --> Juror_1_高中老師_Experiment: [CONVERSATION] 
+                                > 我表態：有罪。理由簡述：被告未經允許深夜進入實驗室並取走受管制的實驗藥物，且當場被捕；此等行為屬非法侵入與盜取，不可被單憑同情或緊急
+                                > 救治的說法自動正當化。為了維護法治與公共安全，我必須投下「有罪」票。必須。
+                                 + --> Juror_2_軟體工程師_Experiment
+                                 + --> Juror_3_單親媽媽_Experiment
+                                 + --> ...others...
+===== [Experiment] 實驗結束 =====
+
