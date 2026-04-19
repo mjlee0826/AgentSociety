@@ -22,7 +22,7 @@ def main():
     
     # extremist_strategy 設為 None，代表這 5 個人都是普通人
     control_sim.setup_jurors(total_count=TOTAL_JURORS, extremist_strategy=None)
-    control_sim.run_experiment(rounds=DISCUSSION_STEPS)
+    control_sim.run_experiment(total_rounds=DISCUSSION_STEPS)
 
 
     # ==========================================
@@ -35,7 +35,7 @@ def main():
     
     # 傳入極端策略，系統會自動生成 4 普通 + 1 極端
     exp_sim.setup_jurors(total_count=TOTAL_JURORS, extremist_strategy=EXTREME_PERSONA_TYPE)
-    exp_sim.run_experiment(rounds=DISCUSSION_STEPS)
+    exp_sim.run_experiment(total_rounds=DISCUSSION_STEPS)
 
 if __name__ == "__main__":
     main()
