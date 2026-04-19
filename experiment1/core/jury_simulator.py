@@ -9,7 +9,7 @@ class JurorFactory:
     @staticmethod
     def create_normal_juror(name: str, group_suffix: str, age: int, occupation: str) -> TinyPerson:
         # 加上組別後綴確保名稱唯一性
-        full_name = f"{name}_{group_suffix}"
+        full_name = f"{name}_{occupation}_{group_suffix}"
         juror = TinyPerson(name=full_name)
         juror.define("age", age)
         juror.define("occupation", occupation)
