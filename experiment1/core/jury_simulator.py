@@ -52,8 +52,8 @@ class JurySimulationManager:
         # 1. 透過工廠生成中立陪審員 (這裡簡化背景，實際作業可給予不同職業)
         occupations = ["高中老師", "軟體工程師", "單親媽媽", "退休警察", "會計師"]
         for i in range(normal_count):
-            name = f"Juror_Normal_{i+1}"
             occ = occupations[i % len(occupations)]
+            name = f"Juror_Normal_{occ}"
             juror = JurorFactory.create_normal_juror(name, 30 + i*5, occ)
             self.jurors.append(juror)
             self.world.add_agent(juror)
