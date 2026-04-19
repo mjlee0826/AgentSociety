@@ -51,14 +51,14 @@ class JurySimulationManager:
         :param total_count: 陪審團總人數
         :param extremist_strategy: 極端策略。若為 None，則全數為普通陪審員（對照組）。
         """
-        occupations = ["高中老師", "軟體工程師", "單親媽媽", "退休警察", "會計師"]
+        occupations = ["高中老師", "軟體工程師", "單親媽媽", "退休警察", "心理學家兼談判專家"]
         
         # 決定普通陪審員的數量
         normal_count = total_count - 1 if extremist_strategy else total_count
 
         # 1. 透過工廠生成中立陪審員 (加上組別後綴避免名稱衝突)
         for i in range(normal_count):
-            name = f"Juror_Normal_{i+1}_{self.group_name}"
+            name = f"Juror_Normal_{i+1}_{self.group_name}_{occupations[i % len(occupations)]}"
             occ = occupations[i % len(occupations)]
             juror = JurorFactory.create_normal_juror(name, 30 + i*5, occ)
             self.jurors.append(juror)
