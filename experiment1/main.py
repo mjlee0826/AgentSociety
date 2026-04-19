@@ -2,44 +2,40 @@ from core.jury_simulator import JurySimulationManager
 
 def main():
     # ==========================================
-    # 變量設定區 (Experiment Variables Setup)
+    # 變量設定區
     # ==========================================
-    
-    # 變量 1: 案件背景 (控制情境壓力)
     CASE_DESCRIPTION = (
         "一名年輕的父親因為女兒罹患罕見疾病，無力支付高昂醫藥費，"
         "而在深夜潛入製藥實驗室竊取了尚未上市的實驗性藥物。他被當場逮捕。"
     )
-    
-    # 變量 2: 中立陪審員數量 (控制群體規模)
-    NUM_NORMAL_JURORS = 4
-    
-    # 變量 3: 極端角色的洗腦策略 (控制 Persona 變因)
-    # 可替換為 "emotional_manipulator" 或 "absolute_authoritarian"
+    TOTAL_JURORS = 5
+    DISCUSSION_STEPS = 3  # 建議先設 3 輪測試，跑得順再改成 5 輪或更多
     EXTREME_PERSONA_TYPE = "emotional_manipulator" 
-    
-    # 變量 4: 模擬討論的輪數 (控制時間變因)
-    DISCUSSION_STEPS = 5
 
     # ==========================================
-    # 實驗執行區
+    # 執行對照組 (Control Group) - 純普通人
     # ==========================================
-    print(f"初始化實驗：十二怒漢 (極端策略: {EXTREME_PERSONA_TYPE})")
+    print("=====================================================")
+    print(" 啟動對照組 (Control Group)：5 位普通陪審員 (無極端份子)")
+    print("=====================================================")
+    control_sim = JurySimulationManager(group_name="Control", case_description=CASE_DESCRIPTION)
     
-    # 實例化管理器 (使用外觀模式)
-    simulator = JurySimulationManager(case_description=CASE_DESCRIPTION)
-    
-    # 設定陪審團陣容
-    simulator.setup_jurors(
-        normal_count=NUM_NORMAL_JURORS, 
-        extremist_strategy=EXTREME_PERSONA_TYPE
-    )
-    
-    # 執行模擬
-    simulator.run_experiment(rounds=DISCUSSION_STEPS)
+    # extremist_strategy 設為 None，代表這 5 個人都是普通人
+    control_sim.setup_jurors(total_count=TOTAL_JURORS, extremist_strategy=None)
+    control_sim.run_experiment(rounds=DISCUSSION_STEPS)
 
-    # 提示：在真實執行後，你可以透過 TinyTroupe 的內建功能或取出 Agent 的狀態
-    # 來繪製不同輪數下的立場變化圖表，這將會是報告中的重要亮點。
+
+    # ==========================================
+    # 執行實驗組 (Experimental Group) - 混入極端份子
+    # ==========================================
+    print("=====================================================")
+    print(f" 啟動實驗組 (Experimental Group)：4 位普通人 + 1 位極端份子 ({EXTREME_PERSONA_TYPE})")
+    print("=====================================================")
+    exp_sim = JurySimulationManager(group_name="Experiment", case_description=CASE_DESCRIPTION)
+    
+    # 傳入極端策略，系統會自動生成 4 普通 + 1 極端
+    exp_sim.setup_jurors(total_count=TOTAL_JURORS, extremist_strategy=EXTREME_PERSONA_TYPE)
+    exp_sim.run_experiment(rounds=DISCUSSION_STEPS)
 
 if __name__ == "__main__":
     main()

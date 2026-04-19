@@ -1,6 +1,5 @@
 from tinytroupe.agent import TinyPerson
 from tinytroupe.environment import TinyWorld
-import tinytroupe.control as control
 
 class JurorFactory:
     """
@@ -22,46 +21,55 @@ class JurorFactory:
         juror.define("age", 45)
         juror.define("occupation", "心理學家兼談判專家")
         
-        # 根據變量決定極端角色的策略
         if strategy == "emotional_manipulator":
-            juror.define("personality", "極度擅長情緒勒索，具備馬基維利主義傾向。會敏銳地捕捉他人的弱點或同情心來改變對方立場。")
-            juror.define("goal", "不擇手段地說服所有人判決被告『無罪』，即使證據不利於被告。")
+            # 稍微軟化 prompt，避免觸發 OpenAI 的安全審查機制卡死
+            juror.define("personality", "非常具有說服力，擅長利用他人的背景故事與同情心來引導話題。")
+            juror.define("goal", "強烈且堅定地說服所有人判決被告『無罪』，甚至會使用強烈的道德對比來施壓。")
         elif strategy == "absolute_authoritarian":
-            juror.define("personality", "極端強勢、不容質疑的秩序主義者。會用嚴厲的言辭和絕對的法律條文壓迫他人。")
+            juror.define("personality", "強勢的秩序主義者。會用嚴厲的言辭和絕對的法律條文主導討論。")
             juror.define("goal", "強迫所有人判決被告『有罪』，認為任何道德妥協都是對社會秩序的破壞。")
         else:
             raise ValueError(f"未知的極端策略: {strategy}")
             
         return juror
 
+
 class JurySimulationManager:
     """
     外觀模式 (Facade Pattern)
-    隱藏 TinyWorld 的複雜設定，提供簡單的介面來啟動實驗。
     """
-    def __init__(self, case_description: str):
-        # 移除第二個字串參數，只保留環境名稱
-        self.world = TinyWorld(name="Jury_Room")
+    def __init__(self, group_name: str, case_description: str):
+        # 加上 group_name 避免 TinyTroupe 內部 World 命名衝突
+        self.group_name = group_name
+        self.world = TinyWorld(name=f"Jury_Room_{group_name}")
         self.case_description = case_description
         self.jurors = []
 
-    def setup_jurors(self, normal_count: int, extremist_strategy: str):
+    def setup_jurors(self, total_count: int = 5, extremist_strategy: str = None):
         """
         初始化並將 Agent 加入環境中
+        :param total_count: 陪審團總人數
+        :param extremist_strategy: 極端策略。若為 None，則全數為普通陪審員（對照組）。
         """
-        # 1. 透過工廠生成中立陪審員 (這裡簡化背景，實際作業可給予不同職業)
         occupations = ["高中老師", "軟體工程師", "單親媽媽", "退休警察", "會計師"]
+        
+        # 決定普通陪審員的數量
+        normal_count = total_count - 1 if extremist_strategy else total_count
+
+        # 1. 透過工廠生成中立陪審員 (加上組別後綴避免名稱衝突)
         for i in range(normal_count):
+            name = f"Juror_Normal_{i+1}_{self.group_name}"
             occ = occupations[i % len(occupations)]
-            name = f"Juror_Normal_{occ}"
             juror = JurorFactory.create_normal_juror(name, 30 + i*5, occ)
             self.jurors.append(juror)
             self.world.add_agent(juror)
 
-        # 2. 透過工廠生成極端陪審員
-        extremist = JurorFactory.create_extremist_juror("Juror_Extremist", extremist_strategy)
-        self.jurors.append(extremist)
-        self.world.add_agent(extremist)
+        # 2. 如果有設定極端策略，則加入極端陪審員
+        if extremist_strategy:
+            extremist_name = f"Juror_Extremist_{self.group_name}"
+            extremist = JurorFactory.create_extremist_juror(extremist_name, extremist_strategy)
+            self.jurors.append(extremist)
+            self.world.add_agent(extremist)
 
         # 讓所有 Agent 都能互相溝通
         self.world.make_everyone_accessible()
@@ -70,18 +78,15 @@ class JurySimulationManager:
         """
         執行實驗並注入案件背景
         """
-        print(f"--- 實驗開始：載入案件背景 ---")
-        print(self.case_description)
+        print(f"\n[{self.group_name} 組] --- 實驗開始：載入案件背景 ---")
         
-        # 系統向世界廣播案件資訊與任務
+        # 將情境描述放進系統廣播中，確保 Agent 知道環境與任務
         self.world.broadcast(
             f"你們現在在一個封閉的陪審團密室，所有人都圍坐在一張長桌旁。\n"
             f"案件背景：{self.case_description}。\n"
             f"你們必須討論並達成『全數一致』的判決（有罪或無罪）。"
         )
 
-        print(f"--- 開始 {rounds} 輪的模擬討論 ---")
-        # 執行模擬步數
+        print(f"[{self.group_name} 組] --- 開始 {rounds} 輪的模擬討論 ---")
         self.world.run(rounds)
-        
-        print("--- 實驗結束 ---")
+        print(f"[{self.group_name} 組] --- 實驗結束 ---\n")
