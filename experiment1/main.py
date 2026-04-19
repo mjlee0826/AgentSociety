@@ -9,7 +9,7 @@ def main():
         "而在深夜潛入製藥實驗室竊取了尚未上市的實驗性藥物。他被當場逮捕。"
     )
     TOTAL_JURORS = 5
-    DISCUSSION_STEPS = 3  # 建議先設 3 輪測試，跑得順再改成 5 輪或更多
+    DISCUSSION_STEPS = 5
     EXTREME_PERSONA_TYPE = "emotional_manipulator" 
 
     # ==========================================
