@@ -34,14 +34,14 @@ class JurorFactory:
             
         return juror
 
-
 class JurySimulationManager:
     """
     外觀模式 (Facade Pattern)
     隱藏 TinyWorld 的複雜設定，提供簡單的介面來啟動實驗。
     """
     def __init__(self, case_description: str):
-        self.world = TinyWorld("Jury_Room", "一個封閉的陪審團密室。所有人都圍坐在一張長桌旁。")
+        # 移除第二個字串參數，只保留環境名稱
+        self.world = TinyWorld(name="Jury_Room")
         self.case_description = case_description
         self.jurors = []
 
@@ -75,7 +75,8 @@ class JurySimulationManager:
         
         # 系統向世界廣播案件資訊與任務
         self.world.broadcast(
-            f"你們現在是陪審團。案件背景：{self.case_description}。\n"
+            f"你們現在在一個封閉的陪審團密室，所有人都圍坐在一張長桌旁。\n"
+            f"案件背景：{self.case_description}。\n"
             f"你們必須討論並達成『全數一致』的判決（有罪或無罪）。"
         )
 
