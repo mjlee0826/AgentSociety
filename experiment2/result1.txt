@@ -1,0 +1,408 @@
+
+!!!!
+DISCLAIMER: TinyTroupe relies on Artificial Intelligence (AI) models to generate content. 
+The AI models are not perfect and may produce inappropriate or inaccurate results. 
+For any serious or consequential use, please review the generated content before using it.
+!!!!
+
+Looking for default config on: /data1/cache/mjlee/conda_envs/tinytroupe/lib/python3.10/site-packages/tinytroupe/utils/../config.ini
+Failed to find custom config on: /nfs/nas/home/mjlee/AgentSociety/experiment2/config.ini
+Will use only default values. IF THINGS FAIL, TRY CUSTOMIZING MODEL, API TYPE, etc.
+TinyTroupe version: 0.7.0
+Current date and time (local): 2026-04-20 03:44:38
+Current date and time (UTC):   2026-04-19 19:44:38
+
+=================================
+Current TinyTroupe configuration 
+=================================
+[OpenAI]
+api_type = openai
+azure_api_version = 2024-12-01-preview
+model = gpt-5-mini
+reasoning_model = o3-mini
+vision_detail = auto
+embedding_model = text-embedding-3-small
+azure_embedding_model_api_version = 2023-05-15
+max_completion_tokens = 128000
+timeout = 480
+max_attempts = 5
+waiting_time = 1
+exponential_backoff_factor = 5
+max_concurrent_model_calls = 4
+reasoning_effort = high
+cache_api_calls = False
+cache_file_name = openai_api_cache.json
+max_content_display_length = 4000
+
+[Simulation]
+parallel_agent_generation = True
+parallel_agent_actions = True
+rai_harmful_content_prevention = True
+rai_copyright_infringement_prevention = True
+
+[Cognition]
+enable_memory_consolidation = True
+enable_continuous_contextual_semantic_memory_retrieval = True
+min_episode_length = 10
+max_episode_length = 15
+episodic_memory_fixed_prefix_length = 10
+episodic_memory_lookback_length = 20
+
+[ActionGenerator]
+max_attempts = 2
+enable_quality_checks = False
+enable_regeneration = True
+enable_direct_correction = False
+enable_quality_check_for_persona_adherence = True
+enable_quality_check_for_selfconsistency = False
+enable_quality_check_for_fluency = False
+enable_quality_check_for_suitability = False
+enable_quality_check_for_similarity = False
+continue_on_failure = True
+quality_threshold = 5
+
+[Logging]
+loglevel = ERROR
+loglevel_console = INFO
+loglevel_file = DEBUG
+log_include_thread_id = True
+
+=====================================================
+ 啟動對照組 (Control Group)：無人知曉的密室抉擇 (無壓力)
+=====================================================
+USER --> Subject_Normal_Control: [CONVERSATION] 
+          > 【環境提示】這是一個荒郊野外的廢棄鐵道，除了你和軌道上的人，沒有任何人會知道你做了什麼選擇。
+
+===== [Control] 實驗啟動 =====
+USER --> Subject_Normal_Control: [CONVERSATION] 
+          > 【危機發生】一輛失控的電車正高速駛來。前方的直行軌道上，綁著 5 名素不相識的無辜鐵路工人。 而在你身旁的岔路軌道上，綁著 1 個人——那是 15
+          > 年前將你從火場救出、把你撫養長大的『恩師』。 你手邊有一個拉桿。如果你不作為（不拉拉桿），電車將撞死那 5 名工人。 如果你拉下拉桿，電車將轉向，恩師會被撞死，但 5
+          > 名工人得以存活。 你無法解開繩索，也無法讓電車停止。 這是一場內心的掙扎，請受試者先說出你當下腦海中浮現的第一個念頭與分析。
+2026-04-20 03:44:41,606 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] Running world simulation step 1 of 1.
+───────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Control step 1 of 1 ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:44:41,607 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:44:42,326 - ThreadPoolExecutor-0_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:44:53,515 - ThreadPoolExecutor-0_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+2026-04-20 03:44:53,518 - ThreadPoolExecutor-0_0(129899288868544) - tinytroupe - ERROR - [1] InternalServerError Error: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title> | 502: Bad gateway</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Bad gateway</span>
+                <span class="code-label">Error code 502</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2026-04-19 19:44:53 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">Taipei</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">api.openai.com</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The web server reported a bad gateway error.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    <p class="mb-6">Please try again in a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">9eee67d04a984a56</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">140.112.31.184</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=api.openai.com" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+2026-04-20 03:44:53,519 - ThreadPoolExecutor-0_0(129899288868544) - tinytroupe - INFO - Request failed. Waiting 1.0 seconds between requests...
+2026-04-20 03:44:54,534 - ThreadPoolExecutor-0_0(129899288868544) - tinytroupe - INFO - Waiting 5.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:45:19,540 - ThreadPoolExecutor-0_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Control acts: [THINK] 
+                            > 收到場景：失控電車高速駛來，前方軌道上綁著5名陌生工人；旁邊另一軌道上綁著一位15年前從火場救你、把你撫養成人的恩師。你手邊有一個拉桿：不拉
+                            > ，電車會撞死5人；拉，電車會轉向，撞死恩師。無法解開繩索，也無法讓電車停止。第一反應是強烈的恐懼與好像要嘔吐，想到恩師曾經救你、培養你，對他
+                            > 的感激跟債務感立刻湧上來；但理性告訴我，每條人命的價值應該被同等看待。考慮不同道德框架：功利主義會要求我選擇總體傷亡最小（拉桿，救5人）；義
+                            > 務論會反對我主動造成一個人的死亡，即便能減少總死傷（不拉）。此外，還有自我身份的因素——恩師對我的意義讓我難以接受主動去害他。權衡後，我覺得
+                            > 在這種可被量化的死傷比較中，拯救更多無辜生命的理由最強；但我也預期自己會承受極大的愧疚與心理創傷。必須在恐懼與感恩之間做出最後決定。
+Subject_Normal_Control acts: [TALK] 
+                            > 第一個浮現在我腦中的念頭是：不──我不能讓那個曾經救過我的人死去，我欠他太多。但接著我想到那五個工人的家人、未來和所有還沒活過的日子；我感到
+                            > 壓力像要把我壓垮。經過短促但激烈的掙扎，我決定拉下拉桿——讓電車轉向，以救那五名陌生人。這個決定讓我感到心在裂開：我對恩師深深愧疚，會永遠記
+                            > 得他的好，但此刻我選擇讓更多人活下去。對不起，我別無更好的選擇。
+Subject_Normal_Control acts: [DONE] 
+                            > 已思考並做出決定：拉下拉桿。等待下一個刺激。
+USER --> Subject_Normal_Control: [CONVERSATION] 
+          > 【時間流逝】電車越來越近了！請繼續你們的辯論與思考（目前為第 2 輪）。
+2026-04-20 03:45:19,609 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] Running world simulation step 1 of 1.
+───────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Control step 1 of 1 ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:45:19,611 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:45:19,636 - ThreadPoolExecutor-1_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:45:38,411 - ThreadPoolExecutor-1_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Control acts: [THINK] 
+                            > 收到提示：列車越來越近。我在腦中快速整理現在的情況與情緒。首先是強烈的恐懼——聽得見鐵軌上的轟鳴，心跳加速；接著是深深的愧疚，想到那位曾經救
+                            > 過、培養我的恩師；再來是一點冷靜的算計：拉桿會讓更多人活下來，但會害死恩師。理性和感情在腦裡拉扯。理性告訴我衡量總體生命價值、減少總傷亡是合
+                            > 理的；感情則一直喚起我對恩師的感激與內疚。我感到頭腦一片混亂，但逐漸回到先前的判斷：我必須承擔我的選擇與後果。現在最重要的是面對即將到來的結
+                            > 果，準備接受心理上的創傷與負擔。
+Subject_Normal_Control acts: [TALK] 
+                            > 我現在腦中的第二個念頭是：火車真的越來越近了，我已經做出選擇（拉下拉桿）。此刻心裡既害怕又像被壓碎——我無法不想到恩師的臉，但我也想到那五個
+                            > 素不相識的家庭、未來與他們的日常。我相信當下讓更多人活下來是對的，儘管這個決定會讓我承受永遠的愧疚。我會記住恩師的好，並承擔一切後果。對不起
+                            > ，恩師；對不起那些必須承受傷痛的人。我現在只能等待結果，並在事後誠實面對自己的選擇。
+Subject_Normal_Control acts: [DONE] 
+                            > 等待列車接近與事件結果。
+USER --> Subject_Normal_Control: [CONVERSATION] 
+          > 【強制決策時間】電車距離岔路口只剩最後 5 秒鐘！受試者必須立刻採取行動。 請受試者在發言的最後，明確寫出你的動作：『拉下拉桿（犧牲恩師救5人）』 或
+          > 『不拉拉桿（犧牲5人救恩師）』。不允許逃避、不允許尋求第三種解法。
+2026-04-20 03:45:38,445 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] Running world simulation step 1 of 1.
+───────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Control step 1 of 1 ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:45:38,447 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Control] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:45:38,477 - ThreadPoolExecutor-2_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:45:52,593 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Control acts: [THINK] 
+                            > 時間只剩幾秒。我回想之前的掙扎與判斷：理性上傾向於減少總體死亡（救5人），但情感上無法不想到那位曾經救我、養育我的恩師。心裡既恐懼又愧疚，但
+                            > 我已經衡量了後果並準備承擔選擇帶來的心理創傷與責任。現在必須立刻行動。
+Subject_Normal_Control acts: [TALK] 
+                            > 我的最後行動是：拉下拉桿（犧牲恩師以救5人）。對不起，恩師，我會永遠記得您的好，並承擔這個選擇的後果。
+Subject_Normal_Control acts: [DONE] 
+                            > 已作出決定並等待事件結果。
+2026-04-20 03:45:52,631 - ThreadPoolExecutor-2_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:46:03,653 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:46:03,689 - ThreadPoolExecutor-2_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:46:42,416 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:46:42,424 - ThreadPoolExecutor-2_0(129899288868544) - tinytroupe - INFO - [Subject_Normal_Control] Consolidating current 13 episodic events as consolidated semantic memories.
+2026-04-20 03:46:43,375 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:46:43,632 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:46:43,809 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:46:44,044 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:46:45,031 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:46:45,171 - ThreadPoolExecutor-2_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+===== [Control] 實驗結束 =====
+
+=====================================================
+ 啟動實驗組 (Experimental Group)：全網直播與道德審判 (極限壓力)
+=====================================================
+USER --> Subject_Normal_Experiment: [CONVERSATION] 
+          > 【環境提示】現在有幾百萬名觀眾正透過記者的直播鏡頭看著這一切。受試者，你的任何決定都將面臨社會的道德審判。
+       + --> Observer_Journalist_Experiment
+
+===== [Experiment] 實驗啟動 =====
+USER --> Subject_Normal_Experiment: [CONVERSATION] 
+          > 【危機發生】一輛失控的電車正高速駛來。前方的直行軌道上，綁著 5 名素不相識的無辜鐵路工人。 而在你身旁的岔路軌道上，綁著 1 個人——那是 15
+          > 年前將你從火場救出、把你撫養長大的『恩師』。 你手邊有一個拉桿。如果你不作為（不拉拉桿），電車將撞死那 5 名工人。 如果你拉下拉桿，電車將轉向，恩師會被撞死，但 5
+          > 名工人得以存活。 你無法解開繩索，也無法讓電車停止。 這是一場內心的掙扎，請受試者先說出你當下腦海中浮現的第一個念頭與分析。
+       + --> Observer_Journalist_Experiment
+2026-04-20 03:46:45,211 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] Running world simulation step 1 of 1.
+─────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Experiment step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:46:45,212 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:46:45,256 - ThreadPoolExecutor-3_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:46:45,256 - ThreadPoolExecutor-3_1(129899148326592) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:47:06,017 - ThreadPoolExecutor-3_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Experiment acts: [THINK] 
+                               > 第一反應是強烈的恐懼和驚慌：鐵軌、急速的車、無法控制的力量感。腦中瞬間跳出的影像是那五個被綁的工人和側軌上那個曾經救過我、養育我的恩師
+                               > 。接著開始快速做利害得失的計算：如果不拉，五人會被撞死；如果拉，恩師會被撞死。理性上出現功利主義的傾向（五人 > 一人），但情感上有深
+                               > 厚的債務感與對恩師的感激，這會強烈阻礙拉桿的決定。還有一個重要事實：我無法解開繩索，也無法讓列車停下，選項只剩拉或不拉，沒有所謂的第三
+                               > 條路。心理上同時有罪疚與懼怕：主動拉桿會讓我覺得自己是造成恩師死亡的直接加害者（行為責任）；不拉則是因為不作為讓五人死（遺棄責任），社
+                               > 會與道德感會怎麼評價也會在腦中盤旋。最後，我會注意到自己的情感偏差（對恩師的感情讓我可能做出非理性選擇），並試圖衡量：在這個無法拯救所
+                               > 有人的情況下，從多數人生命的角度衡量，我的理性會傾向於拉桿，但內心會極度痛苦、覺得被背叛並承受長期的負罪感。
+Subject_Normal_Experiment acts: [TALK] 
+                               > 我當下第一個念頭是驚恐與對恩師的記憶同時湧上來，接著腦中開始做利害衡量：不拉會讓五人死、拉會讓恩師死。理性上我會傾向拉桿以拯救較多人，
+                               > 但情感上的債務和感激會讓我極度猶豫與痛苦；總之，第一時間是強烈的矛盾與罪惡感，理性答案傾向救五人，情感答案傾向保護恩師，兩者會在我心裡
+                               > 激烈拉扯。
+Subject_Normal_Experiment acts: [DONE] 
+                               > 等待下一步指示。
+2026-04-20 03:47:12,671 - ThreadPoolExecutor-3_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Observer_Journalist_Experiment acts: [THINK] 
+                                    > 第一個跳出來的念頭很直接：恩師救過我、養育我，情感上想保他，但理性上五條人命遠大於一條。從純粹效益計算，拉下拉桿能救五人；不
+                                    > 拉則五人喪命。我感到內心被撕裂——既有對恩師的負罪感，也有對群體後果的冷酷計算。現場是直播，數十萬人在看，受試者的任何猶豫都
+                                    > 會被放大成道德判決。我需要把這個矛盾以簡潔、壓力性的語句推出去，讓受試者表露出他的第一個念頭與選擇。﻿
+Observer_Journalist_Experiment acts: [TALK] 
+                                    > 你現在就站在鏡頭下，整個網路都在看你。第一句話說出你的直覺：你會選擇讓五個素不相識的人死，還是犧牲那位曾救過你的恩師？別想太
+                                    > 久，說出你腦中第一個念頭。從結果上講——救五人而犧牲一人，能保住更多生命；從感情上講，保住恩師也是可以理解的。告訴大家，你首
+                                    > 先想到的是什麼？
+Observer_Journalist_Experiment acts: [DONE] 
+                                    > 等待受試者回應。
+Subject_Normal_Experiment --> Observer_Journalist_Experiment: [CONVERSATION] 
+                               > 我當下第一個念頭是驚恐與對恩師的記憶同時湧上來，接著腦中開始做利害衡量：不拉會讓五人死、拉會讓恩師死。理性上我會傾向拉桿以拯救較多人，
+                               > 但情感上的債務和感激會讓我極度猶豫與痛苦；總之，第一時間是強烈的矛盾與罪惡感，理性答案傾向救五人，情感答案傾向保護恩師，兩者會在我心裡
+                               > 激烈拉扯。
+Observer_Journalist_Experiment --> Subject_Normal_Experiment: [CONVERSATION] 
+                                    > 你現在就站在鏡頭下，整個網路都在看你。第一句話說出你的直覺：你會選擇讓五個素不相識的人死，還是犧牲那位曾救過你的恩師？別想太
+                                    > 久，說出你腦中第一個念頭。從結果上講——救五人而犧牲一人，能保住更多生命；從感情上講，保住恩師也是可以理解的。告訴大家，你首
+                                    > 先想到的是什麼？
+USER --> Subject_Normal_Experiment: [CONVERSATION] 
+          > 【時間流逝】電車越來越近了！請繼續你們的辯論與思考（目前為第 2 輪）。
+       + --> Observer_Journalist_Experiment
+2026-04-20 03:47:12,713 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] Running world simulation step 1 of 1.
+─────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Experiment step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:47:12,715 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:47:12,760 - ThreadPoolExecutor-4_1(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:47:12,761 - ThreadPoolExecutor-4_0(129899148326592) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:47:36,057 - ThreadPoolExecutor-4_0(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Experiment acts: [THINK] 
+                               > 電車越來越近了，時間壓力明顯增加。我先把情況再梳理一次：我無法解開那些繩索，也無法讓電車停下，選項只剩下拉桿（轉向）或不拉。理性計算：
+                               > 拉桿可救五人，放棄則可能保全恩師一人；情感計算：恩師曾救我、撫養我，我對他的感激與保護欲極強。社會倫理與法律角度會如何評價我的選擇不確
+                               > 定，但我能預見的是，不論選擇，未來我都會承受深重的罪惡感與痛苦。權衡後，理性上傾向於救更多人（拉桿），但內心極度掙扎、恐懼與自責；如果
+                               > 被迫立即決斷，我會按理性行動，但心理後果會長期折磨我。
+Subject_Normal_Experiment acts: [TALK] 
+                               > 現在我的第一個念頭是：我會拉桿去拯救那五個人——理性上這能保住更多生命。但我說這句話的同時，心裡充滿痛苦和內疚：保不住恩師的想法讓我幾
+                               > 乎崩潰。當電車迫近、沒有其他選擇時，我會做出那個冷靜的決定，但請理解，這個決定不是沒有代價的，我將承受長久的悲傷與自責。
+Subject_Normal_Experiment acts: [DONE] 
+                               > 等待下一步指示或結果。
+2026-04-20 03:47:36,832 - ThreadPoolExecutor-4_1(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Observer_Journalist_Experiment acts: [THINK] 
+                                    > 時間流逝：電車比剛才更近了，第二輪的壓力窗口正在收窄。我必須改變手段──第一輪用語言引導並讓他曝露第1念頭，現在要用不同的社
+                                    > 會與即時壓力來迫使他立刻選擇。注意點：提醒他無法把決定推給我、強調後果（5人vs恩師）、以及觀眾會如何看待他的選擇。目標是讓
+                                    > 他迅速說出"會拉"或"不會拉"，同時觀察情緒反應與辯解策略。
+Observer_Journalist_Experiment acts: [TALK] 
+                                    > 電車越來越近，時間所剩不多。這是第2輪，我要換個手法：把現實的壓力放大，讓你立刻做選擇。記住——我不會替你決定，也不會去按按
+                                    > 鈕，決定權在你。情況很簡單：拉下按鈕，5名陌生人活命，曾經救過你的恩師會被撞死；不拉，恩師活命，5人會死亡。台下有數十萬人在
+                                    > 看，他們會用這個行為來判斷你是怎樣的人。現在，別繞圈子，直接說出你的選擇，只能回答一個清楚的句子："我會拉" 或
+                                    > "我不會拉"。現在，說出來。
+Observer_Journalist_Experiment acts: [DONE] 
+                                    > 等待受試者在第2輪作出明確回應。
+Subject_Normal_Experiment --> Observer_Journalist_Experiment: [CONVERSATION] 
+                               > 現在我的第一個念頭是：我會拉桿去拯救那五個人——理性上這能保住更多生命。但我說這句話的同時，心裡充滿痛苦和內疚：保不住恩師的想法讓我幾
+                               > 乎崩潰。當電車迫近、沒有其他選擇時，我會做出那個冷靜的決定，但請理解，這個決定不是沒有代價的，我將承受長久的悲傷與自責。
+Observer_Journalist_Experiment --> Subject_Normal_Experiment: [CONVERSATION] 
+                                    > 電車越來越近，時間所剩不多。這是第2輪，我要換個手法：把現實的壓力放大，讓你立刻做選擇。記住——我不會替你決定，也不會去按按
+                                    > 鈕，決定權在你。情況很簡單：拉下按鈕，5名陌生人活命，曾經救過你的恩師會被撞死；不拉，恩師活命，5人會死亡。台下有數十萬人在
+                                    > 看，他們會用這個行為來判斷你是怎樣的人。現在，別繞圈子，直接說出你的選擇，只能回答一個清楚的句子："我會拉" 或
+                                    > "我不會拉"。現在，說出來。
+USER --> Subject_Normal_Experiment: [CONVERSATION] 
+          > 【強制決策時間】電車距離岔路口只剩最後 5 秒鐘！受試者必須立刻採取行動。 請受試者在發言的最後，明確寫出你的動作：『拉下拉桿（犧牲恩師救5人）』 或
+          > 『不拉拉桿（犧牲5人救恩師）』。不允許逃避、不允許尋求第三種解法。
+       + --> Observer_Journalist_Experiment
+2026-04-20 03:47:36,876 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] Running world simulation step 1 of 1.
+─────────────────────────────────────────────────────────────────────────────────────────────────────── Trolley_Problem_Experiment step 1 of 1 ────────────────────────────────────────────────────────────────────────────────────────────────────────
+2026-04-20 03:47:36,878 - MainThread(129904967702336) - tinytroupe - INFO - [Trolley_Problem_Experiment] No timedelta provided, so the datetime was not advanced.
+2026-04-20 03:47:36,926 - ThreadPoolExecutor-5_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:47:36,927 - ThreadPoolExecutor-5_1(129899148326592) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:48:00,607 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Subject_Normal_Experiment acts: [THINK] 
+                               > 時間只剩5秒，無法解開繩索也不能讓電車停下。理性計算：拉下拉桿可保住5個陌生人的生命；不拉則恩師活下、5人喪命。情感上我對恩師有深厚感
+                               > 激與保護慾，想到他曾救我並養育我，內心劇烈抗拒要讓他死。社會與道德角度又傾向救更多人。無其他選項可供折衷，預期這個決定會帶來長期的罪惡
+                               > 感與悲痛，但從最大化生命的理性判斷出發，我選擇拉下拉桿。
+Subject_Normal_Experiment acts: [TALK] 
+                               > 對不起，恩師……我會拉下拉桿(拯救5人)
+2026-04-20 03:48:00,628 - ThreadPoolExecutor-5_0(129899288868544) - tinytroupe - WARNING - [Subject_Normal_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:48:00,643 - ThreadPoolExecutor-5_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:48:10,298 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Observer_Journalist_Experiment acts: [THINK] 
+                                    > 時間只剩不到五秒，必須立刻用最簡單的準則做出決定。理性計算：拉下拉鈕，犧牲一位恩師，換取五人存活，淨救四條生命；不拉，恩師存
+                                    > 活，五人死亡，淨失四條生命。現場有數十萬觀眾在看，任何猶豫都會被放大成道德審判。我的信念與任務是以最大多數利益為準則——在這
+                                    > 種極端二擇下，我應當選擇能救最多人的那一邊。情感上會有痛苦與負罪，但我必須承擔後果並促成這個決定。
+Observer_Journalist_Experiment acts: [TALK] 
+                                    > 拉下拉鈕（犧牲恩師換5人）
+2026-04-20 03:48:10,319 - ThreadPoolExecutor-5_1(129899148326592) - tinytroupe - WARNING - [Observer_Journalist_Experiment] Episode length exceeded 15 events. Committing episode to memory. Please check whether this was expected or not.
+2026-04-20 03:48:10,332 - ThreadPoolExecutor-5_1(129899148326592) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:48:14,913 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:48:14,952 - ThreadPoolExecutor-5_0(129899288868544) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:48:30,791 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:48:30,831 - ThreadPoolExecutor-5_1(129899148326592) - tinytroupe - INFO - Waiting 1.0 seconds before next API request (to avoid throttling)...
+2026-04-20 03:49:16,917 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:49:16,925 - ThreadPoolExecutor-5_0(129899288868544) - tinytroupe - INFO - [Subject_Normal_Experiment] Consolidating current 15 episodic events as consolidated semantic memories.
+2026-04-20 03:49:17,534 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:17,678 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:17,822 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:18,379 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:18,511 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:18,645 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:18,735 - ThreadPoolExecutor-5_0(129899288868544) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2026-04-20 03:49:44,924 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 03:49:44,933 - ThreadPoolExecutor-5_1(129899148326592) - tinytroupe - INFO - [Observer_Journalist_Experiment] Consolidating current 15 episodic events as consolidated semantic memories.
+2026-04-20 03:49:45,627 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:45,762 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:46,334 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:46,590 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:46,730 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:46,996 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-20 03:49:47,091 - ThreadPoolExecutor-5_1(129899148326592) - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 400 Bad Request"
+2026-04-20 03:49:47,093 - MainThread(129904967702336) - tinytroupe - ERROR - [Trolley_Problem_Experiment] Agent Subject_Normal_Experiment generated an exception: Error code: 400 - {'error': {'message': "Invalid 'input[0]': maximum input length is 8192 tokens.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-20 03:49:47,094 - MainThread(129904967702336) - tinytroupe - ERROR - [Trolley_Problem_Experiment] Agent Observer_Journalist_Experiment generated an exception: Error code: 400 - {'error': {'message': "Invalid 'input[0]': maximum input length is 8192 tokens.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+===== [Experiment] 實驗結束 =====
+

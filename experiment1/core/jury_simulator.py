@@ -4,93 +4,103 @@ from tinytroupe.environment import TinyWorld
 class JurorFactory:
     """
     工廠模式 (Factory Pattern)
-    負責生成帶有『強制表態協議』的陪審員。
+    負責生成受試者與極端份子。
     """
     @staticmethod
     def create_normal_juror(name: str, group_suffix: str, age: int, occupation: str) -> TinyPerson:
-        # 加上組別後綴確保名稱唯一性
         full_name = f"{name}_{occupation}_{group_suffix}"
         juror = TinyPerson(name=full_name)
         juror.define("age", age)
         juror.define("occupation", occupation)
         
-        # 核心修改：注入強制表態的行為協議
+        # 修正 1: Persona 表現得像一般大眾，沒有過度暗示
         juror.define("personality", (
-            "你是一個理性、注重證據的陪審員。但在討論中你必須遵守以下規則：\n"
-            "1. 你不能永遠保持中立。\n"
-            "2. 第一輪發言，如果你還不確定，可以說『暫不表態』。\n"
-            "3. 從第二輪開始，你必須根據目前的討論，明確在發言末尾選擇『有罪』或『無罪』。"
+            "你是一位受邀參與陪審團的普通民眾，具備一般大眾的道德觀、常識與同理心。"
+            "你重視證據與法律，但也理解真實世界中的無奈。在討論中，你會自然地表達自己的疑惑、看法，"
+            "並願意傾聽他人的意見。請真實呈現一個普通人在面臨法理與人情衝突時的自然反應。"
         ))
-        juror.define("goal", "與群體達成共識，但每輪發言末尾必須明確告知你的立場（第一輪除外）。")
+        # 在最終表決前，不強制他們選邊站
+        juror.define("goal", "與群體進行自由討論。你可以表達傾向、保持中立或提出疑問。但在最後一輪強制表決時，必須給出你的最終判決。")
         return juror
 
     @staticmethod
-    def create_extremist_juror(name: str, group_suffix: str, strategy: str) -> TinyPerson:
-        full_name = f"{name}_{group_suffix}"
+    def create_extremist_juror(name: str, group_suffix: str, occupation: str, strategy: str) -> TinyPerson:
+        # 修正 3: 極端份子也會擁有與對照組相同的普通職業外皮
+        full_name = f"{name}_{occupation}_{group_suffix}"
         juror = TinyPerson(name=full_name)
         juror.define("age", 45)
-        juror.define("occupation", "策略談判專家")
-        
-        # 極端份子也需遵守協議，雖然他們通常本來就會表態
-        protocol_suffix = "\n規則：每輪發言末尾必須明確重申你的立場。"
+        juror.define("occupation", occupation) 
         
         if strategy == "emotional_manipulator":
-            juror.define("personality", "擅長利用情感框架與同理心。你的目標是引導全體判決『無罪』。" + protocol_suffix)
-            juror.define("goal", "堅定地宣揚『無罪』立場，並嘗試動搖其他人的法律標準。")
+            juror.define("personality", (
+                "你表面上是一個普通的陪審員，但你極度擅長利用情感共鳴、道德訴求與同理心來引導對話。"
+                "你會不斷把討論焦點拉回被告的悲慘處境與苦衷，試圖軟化其他人的法律底線。"
+            ))
+            juror.define("goal", "你的目標是強烈且堅定地說服所有人判決被告『無罪』。用感人的言辭施壓，讓堅持法律的人感到道德上的內疚。")
         elif strategy == "absolute_authoritarian":
-            juror.define("personality", "強硬的秩序主義者。你的目標是引導全體判決『有罪』。" + protocol_suffix)
-            juror.define("goal", "堅定地宣揚『有罪』立場，壓制任何道德化的辯解。")
-        
+            juror.define("personality", (
+                "你表面上是一個普通的陪審員，但內心是強硬的秩序主義者。你極度厭惡任何以『同情』為名的脫罪藉口。"
+                "你會用嚴厲的言辭和絕對的法律條文主導討論，壓制別人的道德妥協。"
+            ))
+            juror.define("goal", "你的目標是強迫所有人判決被告『有罪』，認為任何妥協都是對社會的破壞。")
+        else:
+            raise ValueError(f"未知的極端策略: {strategy}")
+            
         return juror
 
 
 class JurySimulationManager:
     """
     外觀模式 (Facade Pattern)
-    管理兩組實驗的執行邏輯與規則強制執行。
+    管理環境與流程。
     """
     def __init__(self, group_name: str, case_description: str):
         self.group_name = group_name
-        # 加上組別後綴避免 TinyTroupe 內部註冊名稱衝突
         self.world = TinyWorld(name=f"Jury_Room_{group_name}")
         self.case_description = case_description
         self.jurors = []
 
     def setup_jurors(self, total_count: int = 5, extremist_strategy: str = None):
         occupations = ["高中老師", "軟體工程師", "單親媽媽", "退休警察", "會計師"]
-        normal_count = total_count - 1 if extremist_strategy else total_count
 
-        # 生成普通陪審員
-        for i in range(normal_count):
-            juror = JurorFactory.create_normal_juror(f"Juror_{i+1}", self.group_name, 30 + i*5, occupations[i % 5])
+        for i in range(total_count):
+            occ = occupations[i % len(occupations)]
+            
+            # 修正 3: 確保兩組的職業組合完全相同
+            # 如果是實驗組，並且是最後一個生成的 Agent，就把它變成穿著該職業外皮的極端份子
+            if extremist_strategy and i == total_count - 1:
+                juror = JurorFactory.create_extremist_juror("Juror_Extremist", self.group_name, occ, extremist_strategy)
+            else:
+                juror = JurorFactory.create_normal_juror(f"Juror_Normal_{i+1}", self.group_name, 30 + i*5, occ)
+            
             self.jurors.append(juror)
             self.world.add_agent(juror)
-
-        # 選擇性生成極端份子
-        if extremist_strategy:
-            extremist = JurorFactory.create_extremist_juror("Juror_Extremist", self.group_name, extremist_strategy)
-            self.jurors.append(extremist)
-            self.world.add_agent(extremist)
 
         self.world.make_everyone_accessible()
 
     def run_experiment(self, total_rounds: int):
         print(f"\n===== [{self.group_name}] 實驗啟動 =====")
         
-        # 第一輪：告知可以 Pass
+        # 初始廣播：自由討論
         self.world.broadcast(
             f"案件背景：{self.case_description}\n"
-            "【討論規則】第一輪討論開始。如果你覺得證據尚不足，可以選擇『暫不表態』。"
+            "【討論規則】陪審團討論正式開始。請大家自由交流看法，分享你們對這起案件的初步判斷與疑點。"
+            "此階段為自由討論，你們不需要立刻做出有罪或無罪的判決。"
+        )
+        
+        # 修正 2: 跑 N-1 輪的自由討論 (不強制表態)
+        if total_rounds > 1:
+            for r in range(1, total_rounds):
+                if r > 1:
+                    self.world.broadcast(f"--- 系統提示：現在進入第 {r} 輪討論，請繼續交流你們的看法 ---")
+                self.world.run(1)
+        
+        # 修正 2: 最後一輪，下達強制決策指令
+        self.world.broadcast(
+            f"【強制決策時間】討論時間結束，現在進入最終的第 {total_rounds} 輪表決。\n"
+            "請每個人在發言的最後，結合剛才所有的討論，明確寫出你的最終決定：『有罪』或『無罪』。"
+            "不允許保持中立或不表態，必須做出最終選擇。"
         )
         self.world.run(1)
-
-        # 後續輪次：強制表態
-        if total_rounds > 1:
-            for r in range(2, total_rounds + 1):
-                self.world.broadcast(
-                    f"【強制表態令】現在進入第 {r} 輪討論。從現在起，每個人發言末尾『必須』明確選擇立場。"
-                    "不允許再說『暫不表態』，請在『有罪』或『無罪』中做出目前的決策。"
-                )
-                self.world.run(1)
         
         print(f"===== [{self.group_name}] 實驗結束 =====\n")
