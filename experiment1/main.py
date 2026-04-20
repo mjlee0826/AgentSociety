@@ -16,7 +16,7 @@ def main():
     )
     TOTAL_JURORS = 5
     DISCUSSION_STEPS = 5
-    EXTREME_PERSONA_TYPE = "emotional_manipulator" 
+    EXTREME_PERSONA_TYPE = "absolute_authoritarian" 
 
     # ==========================================
     # 執行對照組 (Control Group) - 純普通人
