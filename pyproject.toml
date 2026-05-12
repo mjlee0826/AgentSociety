@@ -1,0 +1,16 @@
+[project]
+name = "agentsociety"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "mjlee",email = "yenchieh0826@gmail.com"}
+]
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "tinytroupe @ git+https://github.com/microsoft/TinyTroupe.git@main"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

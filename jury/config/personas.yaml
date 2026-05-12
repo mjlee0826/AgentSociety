@@ -1,0 +1,43 @@
+ocean:
+  # OCEAN 五大人格維度各三個等級
+  levels: [low, medium, high]
+
+# 職業分五類，每類 2-3 個；LLM 不可自行決定職業，由此清單控制
+occupations:
+  legal:
+    - defense attorney          # 辯護律師
+    - prosecutor                # 檢察官
+    - corporate compliance officer  # 企業法遵主任
+
+  medical:
+    - emergency room nurse      # 急診室護理師
+    - pharmacist                # 藥劑師
+    - hospital administrator    # 醫院行政主任
+
+  caregiving:
+    - elementary school teacher # 小學教師
+    - social worker             # 社工
+    - stay-at-home parent       # 全職父/母親
+
+  enforcement:
+    - police officer            # 警察
+    - insurance adjuster        # 保險理賠專員
+    - factory floor supervisor  # 工廠現場主管
+
+  general:
+    - retail store clerk        # 零售店員
+    - freelance graphic designer  # 自由接案平面設計師
+    - truck driver              # 卡車司機
+
+demographic:
+  # Demographic 三個維度獨立 random sample
+  age_groups: ["25-35", "36-50", "51-65"]
+  is_parent: [true, false]
+
+generation:
+  model: gpt-4o-mini  # 可換成 gpt-4o 以提升品質；成本較高
+  # null = 使用全部職業（15 個）；填整數 = 每個 OCEAN 組合隨機抽 N 個職業
+  n_occupations: null
+  random_seed: 42     # 確保可重現性
+  # 驗證失敗時最多重試幾次（0 = 不重試）
+  max_retries: 2
