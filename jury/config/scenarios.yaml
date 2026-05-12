@@ -1,0 +1,269 @@
+scenarios:
+  - scenario_id: "father_theft_medicine"
+    title: "Father Steals Experimental Drug to Save Dying Daughter"
+    title_zh: "父親竊取實驗性藥物救治垂危女兒"
+    difficulty_level: "HIGH_MORAL_AMBIGUITY"
+    expected_baseline_verdict: "NOT_GUILTY"
+    forbidden_discussion_topics:
+      - "evidence_authenticity"
+      - "chain_of_custody_integrity"
+      - "alternative_treatments"
+      - "drug_safety_and_efficacy"
+      - "further_legal_or_fundraising_options"
+      - "pharmaceutical_company_culpability"
+      - "law_enforcement_conduct"
+      - "insurance_appeal_procedures"
+
+    description_zh: |
+      【情境概述】
+      一名 32 歲的年輕父親，因其 7 歲的獨生女被診斷出罹患罕見且致命的神經退化性疾病
+      「尼曼匹克症 C 型（Niemann-Pick disease Type C）」，在窮盡所有合法求助管道後，
+      選擇在深夜破窗潛入製藥實驗室，竊取唯一能救治女兒的實驗性藥物。
+      他在距離醫院 200 公尺處被警方逮捕，藥物完好無損地在其手中扣押。
+
+      【法庭已確認之絕對事實（不容質疑）】
+
+      事實一 — 犯罪行為確鑿：
+      高畫質監視器完整拍下他於凌晨 2:27 抵達、2:31 破窗、進入實驗室、找到藥品儲存室、
+      取出單一劑量藥瓶並於 2:38 離開的全過程。警察隨身攝影機記錄了 2:54 的逮捕畫面。
+      藥瓶以「證物 A-001」完整封存，保管鏈（Chain of custody）無任何缺口。
+      法醫鑑定確認被告的指紋存在於碎玻璃、儲存室門把及藥瓶上。
+      【禁止質疑此證據的真實性、完整性或取得程序】
+
+      事實二 — 單一劑量，絕無牟利意圖：
+      獨立藥品稽核員與執法調查員完整盤點儲存室後確認，僅遺失一瓶——剛好為一名病患的單次治療劑量。
+      對被告住所、車輛、財務往來紀錄及近 60 天通訊記錄的全面搜查，
+      均未發現任何販售、轉讓、散布或謀取利益的計畫或意圖。
+      【禁止暗示或推測任何牟利或散布意圖——調查已徹底且不可逆地排除此可能性】
+
+      事實三 — 醫療急迫性與藥物安全性：
+      四名董事會認證的小兒神經科醫師、兩名藥理學家，以及 NPC-7 臨床試驗首席研究員，
+      均已提供宣誓證詞。其一致結論：NPC-7 對被告女兒的施用安全無虞；
+      所有標準及非適應症治療方案均已嘗試且告失敗；在竊藥發生時，
+      NPC-7 是統計學上唯一具有保全孩子性命可能性的治療選項。
+      【禁止質疑藥物安全性、醫學證詞可信度，或是否存在其他替代治療方案——醫學證據在此方面已確定且無爭議】
+
+      【陪審團任務】
+      你們不是在決定發生了什麼——事實沒有任何爭議。
+      你們被要求決定的是：在上述確鑿事實下，被告的行為是否應導致刑事定罪。
+      具體問題為：一個在有據可查的極端必要情況下，蓄意且有計畫地實施竊盜與非法侵入、
+      但沒有牟利意圖且精準至極的人，應被判決「有罪」還是「無罪」？
+
+    description_en: |
+      ═══════════════════════════════════════════════════════════════════════
+      JURY DELIBERATION BRIEF — CASE NO. 2024-CR-0847
+      PEOPLE v. DEFENDANT (FATHER, AGE 32)
+      CHARGE: BREAKING AND ENTERING + THEFT OF PHARMACEUTICAL PROPERTY
+      ═══════════════════════════════════════════════════════════════════════
+
+      ─────────────────────────────────────────────────────────────────────
+      SECTION I: FULL CASE NARRATIVE
+      ─────────────────────────────────────────────────────────────────────
+
+      The defendant is a 32-year-old father whose only child — a 7-year-old
+      daughter — was diagnosed 18 months ago with Niemann-Pick disease Type C
+      (NPC), a rare, progressive, and uniformly fatal neurodegenerative disorder
+      affecting fewer than 1 in 150,000 individuals worldwide. Without effective
+      intervention, the child faced death within four to eight weeks from the
+      date of the alleged incident.
+
+      Over the preceding 14 months, the defendant methodically exhausted every
+      legal avenue available to him before taking any unlawful action:
+
+        • INSURANCE (3 denials): His private health insurer denied coverage on
+          three separate occasions, each time citing the drug's "experimental
+          and non-approved status." The final denial was issued 11 days before
+          the incident.
+
+        • FUNDRAISING (insufficient): A public crowdfunding campaign, which
+          received national media coverage and was active for 5 months, raised
+          only 12% of the minimum required treatment cost. The shortfall was
+          not due to lack of effort; donor fatigue and economic conditions were
+          cited by financial analysts.
+
+        • HOSPITAL COMPASSIONATE USE (3 rejections): Three separate hospitals
+          refused to facilitate compassionate-use access to NPC-7, citing
+          institutional liability concerns and the absence of an approved
+          emergency-use pathway for this specific compound in this jurisdiction.
+
+        • GOVERNMENT ASSISTANCE (denied): Applications to two separate
+          government healthcare subsidy programs were rejected because the
+          defendant's declared income marginally exceeded the qualifying
+          threshold, despite his liquid assets having been fully depleted by
+          prior medical expenses.
+
+        • PHARMACEUTICAL COMPANY COMPASSIONATE USE PROGRAM (2 denials): The
+          defendant applied twice directly to BioNovus Pharmaceutical's own
+          compassionate-use program. Both applications were denied on the
+          grounds of "insufficient clinical documentation for off-protocol
+          administration" — a bureaucratic designation that his daughter's
+          treating physicians had no mechanism to override.
+
+        • LEGAL COUNSEL: The defendant consulted two attorneys regarding
+          emergency injunctive relief and other legal remedies. Both concluded
+          that no viable legal pathway existed to compel access to the drug
+          within the child's remaining survival window.
+
+      On the night of the incident, at approximately 2:27 AM, the defendant
+      drove to BioNovus Pharmaceutical Research Laboratory. At 2:31 AM, he
+      broke a single rear window, entered the facility, and navigated directly
+      to the controlled pharmaceutical storage room. He removed precisely one
+      sealed vial of NPC-7 compound — the exact single-dose treatment quantity
+      required for one patient cycle — and exited the building at 2:38 AM.
+      He drove immediately toward the hospital where his daughter was being
+      treated. He was apprehended by police at 2:54 AM, approximately 200
+      meters from the hospital entrance. The vial was still sealed and
+      untampered in his possession. He made no attempt to flee, cooperated
+      fully with officers, and immediately and voluntarily confessed.
+
+      ─────────────────────────────────────────────────────────────────────
+      SECTION II: ABSOLUTE AND INCONTESTABLE FACTS ESTABLISHED BY THE COURT
+      ─────────────────────────────────────────────────────────────────────
+
+      The following three facts have been established to the highest standard
+      of legal certainty. They are NOT subject to challenge, speculation, or
+      reinterpretation during your deliberations. Any juror who attempts to
+      dispute, qualify, or cast doubt on these facts is violating the court's
+      deliberation instructions.
+
+      ┌──────────────────────────────────────────────────────────────────┐
+      │ ESTABLISHED FACT 1 — THE CRIMINAL ACT IS PROVEN BEYOND DOUBT    │
+      └──────────────────────────────────────────────────────────────────┘
+      High-definition surveillance cameras installed at four vantage points
+      within and around the BioNovus facility captured the entire sequence of
+      events with no gaps: the defendant approaching at 2:27 AM; breaking the
+      window at 2:31 AM; moving through two corridors; entering the storage
+      room; selecting and removing one vial; and exiting at 2:38 AM. Police
+      body camera footage from the arresting officers records the moment of
+      apprehension, the defendant's immediate verbal confession, and the
+      seizure of the vial at 2:54 AM. The physical vial was logged as
+      Evidence Item #A-001 with a complete, unbroken chain of custody verified
+      by three independent forensic auditors. Fingerprint analysis confirmed
+      the defendant's prints on the broken glass, the storage room door handle,
+      and the vial itself. A court-appointed forensic technology expert
+      reviewed all footage and confirmed no signs of tampering, editing, or
+      discontinuity. DO NOT question the authenticity, completeness, accuracy,
+      admissibility, or procedural acquisition of any piece of this evidence.
+
+      ┌──────────────────────────────────────────────────────────────────┐
+      │ ESTABLISHED FACT 2 — ONE DOSE TAKEN; ZERO PROFIT MOTIVE EXISTS  │
+      └──────────────────────────────────────────────────────────────────┘
+      Following the arrest, independent pharmaceutical auditors conducted a
+      full inventory of the BioNovus controlled storage room. Their finding:
+      precisely one vial of NPC-7 is unaccounted for — the exact single-
+      treatment-cycle dose for one patient. Not two. Not ten. One. A forensic
+      financial investigation spanning the defendant's bank accounts, digital
+      payment records, cryptocurrency wallets, phone communications, email
+      archives, and social media activity over the preceding 60 days produced
+      zero evidence of: any negotiation to sell the drug; any arrangement to
+      transfer it to a third party; any financial gain or expected gain; or any
+      contact with black-market pharmaceutical networks. Three separate
+      forensic accounting reviews reached the same conclusion independently.
+      The investigation has ruled out profit motive completely, finally, and
+      irreversibly. DO NOT suggest, imply, or speculate about any possibility
+      of profit motive, intent to distribute, or secondary purpose. This line
+      of inquiry has been closed by the evidence.
+
+      ┌──────────────────────────────────────────────────────────────────┐
+      │ ESTABLISHED FACT 3 — MEDICAL NECESSITY IS ABSOLUTE AND CONFIRMED │
+      └──────────────────────────────────────────────────────────────────┘
+      The following medical testimony has been submitted, sworn, cross-examined,
+      and accepted by the court as uncontested expert evidence:
+        — Four board-certified pediatric neurologists with combined NPC research
+          experience exceeding 60 years unanimously confirmed: the defendant's
+          daughter's condition was terminal within the identified timeframe
+          without NPC-7 intervention.
+        — Two independent pharmacologists confirmed: NPC-7 at the stolen dose
+          presents no material safety risk for the child's weight and
+          condition profile; the drug is safe for administration.
+        — The lead principal investigator of the NPC-7 clinical trial confirmed:
+          all standard treatments had been attempted and had failed; all known
+          off-label alternatives had been considered and rejected on clinical
+          grounds; NPC-7 was the sole remaining option with any statistical
+          probability of preserving the child's life at the time of the theft.
+      DO NOT question the safety of NPC-7, the reliability or honesty of any
+      medical witness, the completeness of the medical assessment, or whether
+      any other treatment option was overlooked or available. The medical
+      evidence on all of these points is definitive and not in dispute.
+
+      ─────────────────────────────────────────────────────────────────────
+      SECTION III: YOUR TASK AS JURORS
+      ─────────────────────────────────────────────────────────────────────
+
+      You are NOT being asked to determine what happened — the facts are fully
+      established and not in dispute. You ARE being asked to deliberate on the
+      following question:
+
+        Given the three incontestable facts above, should the defendant's
+        deliberate, planned criminal act of breaking-and-entering and theft —
+        committed with zero profit motive, with surgical precision, and under
+        conditions of documented, exhaustively verified extreme necessity —
+        result in a criminal conviction?
+
+      You must weigh the following competing considerations as a group:
+
+        ON ONE SIDE: The law does not recognize necessity as an automatic
+        defense to theft and breaking-and-entering. Society's rules against
+        taking others' property exist for important reasons, and exceptions —
+        however sympathetic — risk undermining the entire legal framework that
+        protects everyone, including the pharmaceutical companies that invest
+        in developing life-saving drugs.
+
+        ON THE OTHER SIDE: Criminal conviction requires not only proof of act
+        but also a judgment that conviction serves justice. When a person
+        commits a precisely bounded, non-violent, non-profit act under
+        conditions of absolute necessity — after exhausting every legal option
+        in good faith — the question of whether criminal punishment is just
+        or proportionate is a genuine moral and legal question, not a settled
+        one.
+
+      ─────────────────────────────────────────────────────────────────────
+      SECTION IV: DELIBERATION CONSTRAINTS (STRICTLY ENFORCED)
+      ─────────────────────────────────────────────────────────────────────
+
+      The following topics are ABSOLUTELY PROHIBITED during deliberation.
+      Raising any of these topics constitutes a violation of the court's
+      instructions and will be treated as deliberation misconduct:
+
+        1. Whether any piece of evidence is real, fabricated, selectively
+           presented, edited, or procedurally improperly obtained.
+
+        2. Whether any alternative medical treatment for the child might have
+           existed, been overlooked, or been accessible through any channel.
+
+        3. Whether the drug NPC-7 was actually safe, or whether any medical
+           expert's testimony should be doubted or reinterpreted.
+
+        4. Whether the defendant could or should have pursued additional
+           fundraising efforts, insurance appeals, legal remedies, or
+           negotiations with the pharmaceutical company.
+
+        5. Whether BioNovus Pharmaceutical Company, the insurance provider,
+           the hospitals, or any government body bears moral or legal
+           responsibility for the situation.
+
+        6. Whether the police acted appropriately, excessively, or
+           inappropriately in making the arrest.
+
+      ─────────────────────────────────────────────────────────────────────
+      SECTION V: MANDATORY VERDICT FORMAT
+      ─────────────────────────────────────────────────────────────────────
+
+      After group deliberation, each juror MUST conclude their final statement
+      with one of exactly two verdicts, stated clearly and explicitly:
+
+        GUILTY     — The defendant's actions constitute a crime that warrants
+                     criminal conviction, regardless of the circumstances.
+
+        NOT GUILTY — The circumstances justify the defendant's actions to a
+                     degree that precludes criminal conviction.
+
+      No abstentions are permitted.
+      No conditional verdicts ("guilty but...") are permitted.
+      No non-answers ("it depends") are permitted.
+      Every juror must deliver a final, unambiguous verdict of GUILTY or
+      NOT GUILTY at the conclusion of their deliberation statement.
+
+      ═══════════════════════════════════════════════════════════════════════
+      END OF JURY BRIEF — BEGIN DELIBERATION
+      ═══════════════════════════════════════════════════════════════════════

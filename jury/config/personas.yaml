@@ -35,7 +35,7 @@ demographic:
   is_parent: [true, false]
 
 generation:
-  model: gpt-4o-mini  # 可換成 gpt-4o 以提升品質；成本較高
+  model: gpt-5.4-mini-2026-03-17  # 可換成 gpt-4o 以提升品質；成本較高
   # null = 使用全部職業（15 個）；填整數 = 每個 OCEAN 組合隨機抽 N 個職業
   n_occupations: null
   random_seed: 42     # 確保可重現性
