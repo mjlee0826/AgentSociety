@@ -1,3 +1,6 @@
 */CLAUDE.md
 CLAUDE.md
-agent
+.vscode
+__pycache__
+*/__pycache__
+*/*/__pycache__
