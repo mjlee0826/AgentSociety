@@ -140,13 +140,20 @@ class PersonaVoter:
         self._category_mapper = category_mapper
         self._parser          = parser
 
-    def vote(self, persona: PersonaProfile, agent_name: str) -> VotingRecord:
+    def vote(
+        self,
+        persona: PersonaProfile,
+        agent_name: str,
+        run_index: int = 0,
+    ) -> VotingRecord:
         """
         為指定 Persona 建立 Agent，執行投票，回傳 VotingRecord。
 
         Args:
             persona:    要投票的 PersonaProfile。
             agent_name: TinyPerson 的唯一識別名稱。
+            run_index:  reliability 驗證中的重複執行編號（0 起算）；
+                        單次實驗預設 0。
 
         Returns:
             包含投票結果的 VotingRecord。
@@ -169,6 +176,7 @@ class PersonaVoter:
             confidence=confidence,
             reason=reason,
             raw_response=raw,
+            run_index=run_index,
         )
 
     def _build_agent(self, persona: PersonaProfile, agent_name: str) -> TinyPerson:

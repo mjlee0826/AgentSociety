@@ -25,6 +25,9 @@ class VotingRecord:
 
     persona_id 格式：{ocean_key}_{occupation_slug}_{age_group}_{is_parent_int}
     例如：lmhlh_defense_attorney_36-50_1
+
+    run_index：reliability 驗證實驗中，同一 persona 重複跑的執行編號（0 起算）；
+              單次實驗預設為 0，可向後相容舊 checkpoint / JSON。
     """
 
     persona_id: str             # 唯一識別碼
@@ -37,11 +40,13 @@ class VotingRecord:
     confidence: int             # 1–10；解析失敗時為 -1
     reason: str                 # 理由段落；解析失敗時為原始回應
     raw_response: str           # Agent 的原始回應文字
+    run_index: int = 0          # 重複測量中的執行編號（reliability 驗證用）
 
     def to_dict(self) -> dict:
         """序列化為字典供 JSON 輸出。"""
         return {
             "persona_id": self.persona_id,
+            "run_index": self.run_index,
             "ocean_profile": self.ocean_profile,
             "ocean_key": self.ocean_key,
             "occupation": self.occupation,
