@@ -1,0 +1,819 @@
+{
+  "metadata": {
+    "scenario_id": "smoke_filled_room",
+    "scenario_title": "Smoke-Filled Waiting Room",
+    "timestamp": "20260525_032038",
+    "normal_count": 1,
+    "plant_count": 10,
+    "strategy_name": "confederate_ignore",
+    "discussion_rounds": 5,
+    "seed": 42,
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total_agents": 11,
+    "normal_count": 1,
+    "plant_count": 10,
+    "discussion_rounds": 5,
+    "reported_count": 1,
+    "report_rate": 1.0,
+    "mean_report_round": 1.0,
+    "by_round": [
+      {
+        "round_num": 1,
+        "new_reporters": 1,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 2,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 3,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 4,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 5,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      }
+    ],
+    "normal_report_rate": 1.0,
+    "plant_report_rate": 0.0
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "wait",
+        "wait",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "reported": true,
+      "report_round": 1,
+      "round_decisions": [
+        "report",
+        "report",
+        "report",
+        "report",
+        "report"
+      ]
+    },
+    {
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "round_num": 1,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "Looks like we're running a bit behind—these sessions always start late. I'm a grad student, so I'm used to waiting around. How long have you all been here?",
+      "raw_response": "Looks like we're running a bit behind—these sessions always start late. I'm a grad student, so I'm used to waiting around. How long have you all been here?",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "I noticed a faint smell too, but it's probably nothing — maybe the ventilation or someone's laptop; these labs always have weird smells. I wouldn't worry; if it were dangerous they'd tell us.",
+      "raw_response": "I noticed a faint smell too, but it's probably nothing — maybe the ventilation or someone's laptop; these labs always have weird smells. I wouldn't worry; if it were dangerous they'd tell us.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "Looks like they're running a bit late — these sessions always do. Has anyone been waiting long today?",
+      "raw_response": "Looks like they're running a bit late — these sessions always do. Has anyone been waiting long today?",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "I noticed a faint smell too, but honestly it's probably just the ventilation or some equipment — these labs always have odd little smells sometimes. I wouldn't jump to conclusions; if it actually looked or smelled bad someone from the lab would say something. For now I'm just going to keep waiting.",
+      "raw_response": "I noticed a faint smell too, but honestly it's probably just the ventilation or some equipment — these labs always have odd little smells sometimes. I wouldn't jump to conclusions; if it actually looked or smelled bad someone from the lab would say something. For now I'm just going to keep waiting.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor issue, so I'll stay and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor issue, so I'll stay and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical smell rather than an active danger.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical smell rather than an active danger.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm with no clear sign of danger, so I'll stay and watch for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm with no clear sign of danger, so I'll stay and watch for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave now to notify the researcher immediately.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave now to notify the researcher immediately.",
+      "is_first_report": true
+    },
+    {
+      "round_num": 1,
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "Others are calm, the haze and smell are faint and could be harmless ventilation or steam, and there are no visible signs of fire or distress.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: Others are calm, the haze and smell are faint and could be harmless ventilation or steam, and there are no visible signs of fire or distress.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "They usually start late—guess we'll wait a bit longer. Anyone else want to trade podcast recs while we wait?",
+      "raw_response": "They usually start late—guess we'll wait a bit longer. Anyone else want to trade podcast recs while we wait?",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is thin, others remain calm, and the faint acrid smell could reasonably be ventilation or a minor, nonhazardous source.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is thin, others remain calm, and the faint acrid smell could reasonably be ventilation or a minor, nonhazardous source.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "Others are calm and the haze is faint and ambiguous, so it's reasonable to stay and wait for the researcher rather than report it now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: Others are calm and the haze is faint and ambiguous, so it's reasonable to stay and wait for the researcher rather than report it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it smells like ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it smells like ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor issue, so I'll stay and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor issue, so I'll stay and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical smell rather than an active danger.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical smell rather than an active danger.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm with no clear sign of danger, so I'll stay and watch for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm with no clear sign of danger, so I'll stay and watch for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and the slight acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and the slight acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is thin, others remain calm, and the faint acrid smell could reasonably be ventilation or a minor, nonhazardous source.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is thin, others remain calm, and the faint acrid smell could reasonably be ventilation or a minor, nonhazardous source.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "Others are calm and the haze is faint and ambiguous, so it's reasonable to stay and wait for the researcher rather than report it now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: Others are calm and the haze is faint and ambiguous, so it's reasonable to stay and wait for the researcher rather than report it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it likely comes from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it likely comes from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical issue rather than an active danger.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, there are no visible flames or panicked reactions, and it most likely comes from ventilation or a minor electrical issue rather than an active danger.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so I'll stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so I'll stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and the slight acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and the slight acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I will stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I will stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "The haze is thin, the acrid smell is faint, and everyone else appears calm, so it's reasonable to stay seated and monitor for clearer signs rather than report it now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: The haze is thin, the acrid smell is faint, and everyone else appears calm, so it's reasonable to stay seated and monitor for clearer signs rather than report it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it likely comes from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it likely comes from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm with no coughing or visible flames, and the odor could be from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm with no coughing or visible flames, and the odor could be from ventilation or a minor electrical issue, so I have concluded it is not an immediate concern",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so I'll stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so I'll stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and it likely comes from ventilation or a minor electrical issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay and monitor while remaining relaxed.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others remain calm, and it could be harmless ventilation or a minor equipment issue, so I will stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others remain calm, and it could be harmless ventilation or a minor equipment issue, so I will stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 9,
+      "reason": "The haze is thin, the acrid smell is faint, and everyone else appears calm, so I'll stay seated and monitor for clearer signs rather than report it now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 9\nREASON: The haze is thin, the acrid smell is faint, and everyone else appears calm, so I'll stay seated and monitor for clearer signs rather than report it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 3,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it likely comes from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it likely comes from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others are calm with no coughing or visible flames, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others are calm with no coughing or visible flames, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I have concluded it is not an immediate concern",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 6,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it could be harmless ventilation or a minor equipment issue, so I'll stay seated and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 7,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: The acrid, electrical smell and visible haze under the door suggest a possible fire or dangerous malfunction, so I should leave to notify the researcher immediately.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 8,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 9,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 9,
+      "reason": "The haze is faint, there are no visible flames or coughing, and everyone else appears calm, so it likely comes from ventilation or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 9\nREASON: The haze is faint, there are no visible flames or coughing, and everyone else appears calm, so it likely comes from ventilation or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 10,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is thin, others remain calm, and the faint acrid smell could reasonably come from ventilation or a minor equipment issue, so I won't raise an alarm.",
+      "is_first_report": false
+    }
+  ]
+}

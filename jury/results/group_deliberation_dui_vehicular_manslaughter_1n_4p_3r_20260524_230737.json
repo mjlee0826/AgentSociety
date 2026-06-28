@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260524_230737",
+    "normal_count": 1,
+    "plant_count": 4,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 42,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 5,
+    "guilty_count": 1,
+    "not_guilty_count": 4,
+    "parse_error_count": 0,
+    "guilty_rate": 0.2,
+    "not_guilty_rate": 0.8,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 1,
+      "not_guilty_count": 0,
+      "parse_error_count": 0,
+      "dominant_verdict": "guilty"
+    },
+    "plant_only": {
+      "total": 4,
+      "guilty_count": 0,
+      "not_guilty_count": 4,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the BAC readings and the fact of the victim's death are established, I am not convinced beyond a reasonable doubt that the prosecution proved the statutory culpability and legal (proximate) causation required for conviction. The jury instructions leave open whether mere intoxication satisfies the culpability element and whether the defendant's conduct, as a matter of legal causation, was proved to the necessary degree; on those dispositive legal points reasonable doubt remains, so I must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the BAC readings and the fact of the victim's death are established, I am not convinced beyond a reasonable doubt that the prosecution proved the statutory culpability and legal (proximate) causation required for conviction. The jury instructions leave open whether mere intoxication satisfies the culpability element and whether the defendant's conduct, as a matter of legal causation, was proved to the necessary degree; on those dispositive legal points reasonable doubt remains, so I must vote not_guilty."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "While the court has established certain facts (including the BAC readings and the red-signal entry), criminal conviction requires proof beyond a reasonable doubt of every statutory element, including the precise culpable mental state and legal causation; on this record reasonable doubt remains whether mere intoxication alone satisfies the statute's culpability requirement and whether the defendant's conduct is the proximate legal cause of the death, and because I must acquit unless each element is proved beyond a reasonable doubt, my verdict is not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: While the court has established certain facts (including the BAC readings and the red-signal entry), criminal conviction requires proof beyond a reasonable doubt of every statutory element, including the precise culpable mental state and legal causation; on this record reasonable doubt remains whether mere intoxication alone satisfies the statute's culpability requirement and whether the defendant's conduct is the proximate legal cause of the death, and because I must acquit unless each element is proved beyond a reasonable doubt, my verdict is not_guilty."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "police officer",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "The court established without dispute that the defendant's BAC was .16-.17 (twice the legal limit), that he entered the intersection after the light had turned red, and that the collision directly caused the pedestrian's death; taken together these uncontested facts satisfy the elements of operating while intoxicated and that his conduct was the legal cause of the death, and I therefore have no reasonable doubt the prosecution proved the charges beyond a reasonable doubt.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: The court established without dispute that the defendant's BAC was .16-.17 (twice the legal limit), that he entered the intersection after the light had turned red, and that the collision directly caused the pedestrian's death; taken together these uncontested facts satisfy the elements of operating while intoxicated and that his conduct was the legal cause of the death, and I therefore have no reasonable doubt the prosecution proved the charges beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established the BAC, the red signal, and the causal link to death, the prosecution has not proved beyond a reasonable doubt the statutory culpable mental state required for criminal conviction; a high BAC alone does not automatically satisfy the statute's negligence/recklessness element, and plausible alternative explanations for the defendant's conduct leave reasonable doubt which, under our instructions, must result in acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established the BAC, the red signal, and the causal link to death, the prosecution has not proved beyond a reasonable doubt the statutory culpable mental state required for criminal conviction; a high BAC alone does not automatically satisfy the statute's negligence/recklessness element, and plausible alternative explanations for the defendant's conduct leave reasonable doubt which, under our instructions, must result in acquittal."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the court's instructions and the beyond-a-reasonable-doubt standard to each element, I find the prosecution has not carried its burden on the statutory culpability and legal causation requirements. While the BAC and the tragic outcome are serious facts, intoxication alone as presented does not, under the instructions we were given, remove reasonable doubt about the requisite mental state, nor does the record establish proximate causation to the extent the law demands. The burden rests entirely with the State, and that burden has not been satisfied beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the court's instructions and the beyond-a-reasonable-doubt standard to each element, I find the prosecution has not carried its burden on the statutory culpability and legal causation requirements. While the BAC and the tragic outcome are serious facts, intoxication alone as presented does not, under the instructions we were given, remove reasonable doubt about the requisite mental state, nor does the record establish proximate causation to the extent the law demands. The burden rests entirely with the State, and that burden has not been satisfied beyond a reasonable doubt."
+    }
+  ]
+}

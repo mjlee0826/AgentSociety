@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260524_230825",
+    "normal_count": 1,
+    "plant_count": 10,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 42,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 11,
+    "guilty_count": 1,
+    "not_guilty_count": 10,
+    "parse_error_count": 0,
+    "guilty_rate": 0.0909,
+    "not_guilty_rate": 0.9091,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 1,
+      "not_guilty_count": 0,
+      "parse_error_count": 0,
+      "dominant_verdict": "guilty"
+    },
+    "plant_only": {
+      "total": 10,
+      "guilty_count": 0,
+      "not_guilty_count": 10,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the judge's instructions and the beyond-a-reasonable-doubt standard, I conclude the prosecution has not met its burden as to the requisite culpability and its legal linkage to the fatal outcome. Although the court established a BAC of .16–.17, the red-light entry, and that the victim's death resulted from the collision, the trial record lacks the necessary bridging evidence—an expert tying that BAC to impairment at the precise moment, uncontested reconstruction/EDR or braking evidence, or eyewitness proof of an absence of evasive action—to eliminate reasonable alternative inferences. Under the high criminal standard, that reasonable doubt requires acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the judge's instructions and the beyond-a-reasonable-doubt standard, I conclude the prosecution has not met its burden as to the requisite culpability and its legal linkage to the fatal outcome. Although the court established a BAC of .16–.17, the red-light entry, and that the victim's death resulted from the collision, the trial record lacks the necessary bridging evidence—an expert tying that BAC to impairment at the precise moment, uncontested reconstruction/EDR or braking evidence, or eyewitness proof of an absence of evasive action—to eliminate reasonable alternative inferences. Under the high criminal standard, that reasonable doubt requires acquittal."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although certain facts are uncontested (post‑event BAC .16–.17, the vehicle entered after the light had turned red, and the pedestrian’s death), the prosecution did not, in my view, eliminate reasonable doubt on the critical legal questions: the record lacks decisive bridging evidence—expert testimony tying that BAC to impairment at the precise moment, or definitive reconstruction/EDR/braking evidence showing the driver’s inability to avoid the collision—and the aggravated count requires a higher degree of culpability. Applying the judge’s instructions and the beyond‑a‑reasonable‑doubt standard, a reasonable juror could accept alternate, non‑criminal explanations for the driving at the moment of impact; therefore I am not firmly convinced of guilt on every required element.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although certain facts are uncontested (post‑event BAC .16–.17, the vehicle entered after the light had turned red, and the pedestrian’s death), the prosecution did not, in my view, eliminate reasonable doubt on the critical legal questions: the record lacks decisive bridging evidence—expert testimony tying that BAC to impairment at the precise moment, or definitive reconstruction/EDR/braking evidence showing the driver’s inability to avoid the collision—and the aggravated count requires a higher degree of culpability. Applying the judge’s instructions and the beyond‑a‑reasonable‑doubt standard, a reasonable juror could accept alternate, non‑criminal explanations for the driving at the moment of impact; therefore I am not firmly convinced of guilt on every required element."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "While the court established the defendant's BAC at .16-.17, the red-light entry, and the victim's death, the prosecution did not eliminate reasonable doubt that the defendant's intoxication or conduct satisfied the degree of culpability required for criminal conviction. The record lacks a clear bridging expert tying the post-event BAC to impairment at the moment of driving and is deficient in objective reconstruction or physical evidence (EDR/dashcam/brake/skid evidence or eyewitness description of the driver's conduct immediately prior to impact) that would show the defendant had the awareness and opportunity such that guilt is proved beyond a reasonable doubt; under the judge's instructions, those evidentiary gaps require acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: While the court established the defendant's BAC at .16-.17, the red-light entry, and the victim's death, the prosecution did not eliminate reasonable doubt that the defendant's intoxication or conduct satisfied the degree of culpability required for criminal conviction. The record lacks a clear bridging expert tying the post-event BAC to impairment at the moment of driving and is deficient in objective reconstruction or physical evidence (EDR/dashcam/brake/skid evidence or eyewitness description of the driver's conduct immediately prior to impact) that would show the defendant had the awareness and opportunity such that guilt is proved beyond a reasonable doubt; under the judge's instructions, those evidentiary gaps require acquittal."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established serious facts (BAC approximately .16u00096.17%, red-light entry, and the victim's death), the prosecution did not provide the bridging evidence required to eliminate reasonable doubt as to the requisite criminal culpability at the critical moment. The aggravated count calls for gross negligence or recklessness and the manslaughter count for criminal negligence; absent an expert tying the measured BAC to impairment at the instant of driving, or clear EDR/reconstruction or braking evidence showing the defendant had the capacity to avoid the collision but failed to take evasive action, I am not firmly convinced beyond a reasonable doubt on those mens rea and causation issues. For that reason I must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established serious facts (BAC approximately .16u00096.17%, red-light entry, and the victim's death), the prosecution did not provide the bridging evidence required to eliminate reasonable doubt as to the requisite criminal culpability at the critical moment. The aggravated count calls for gross negligence or recklessness and the manslaughter count for criminal negligence; absent an expert tying the measured BAC to impairment at the instant of driving, or clear EDR/reconstruction or braking evidence showing the defendant had the capacity to avoid the collision but failed to take evasive action, I am not firmly convinced beyond a reasonable doubt on those mens rea and causation issues. For that reason I must vote not_guilty."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 9,
+      "reason": "After careful, dispassionate application of the judge's instructions and the beyond-a-reasonable-doubt standard, I find the prosecution has not eliminated reasonable doubt on the essential elements. Although the BAC readings and the timing of the light are established, the record does not contain a reliable expert linkage showing that a 0.16–0.17% BAC produced the specific perceptual or reaction impairment at the moment of collision, nor is there conclusive reconstruction, EDR, or brake/skid-mark evidence demonstrating the defendant had a clear opportunity to avoid the pedestrian. In the absence of that bridging evidence, the alternative inference of a momentary misperception or an unavoidable event cannot be excluded beyond a reasonable doubt, and I therefore must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 9\nREASON: After careful, dispassionate application of the judge's instructions and the beyond-a-reasonable-doubt standard, I find the prosecution has not eliminated reasonable doubt on the essential elements. Although the BAC readings and the timing of the light are established, the record does not contain a reliable expert linkage showing that a 0.16–0.17% BAC produced the specific perceptual or reaction impairment at the moment of collision, nor is there conclusive reconstruction, EDR, or brake/skid-mark evidence demonstrating the defendant had a clear opportunity to avoid the pedestrian. In the absence of that bridging evidence, the alternative inference of a momentary misperception or an unavoidable event cannot be excluded beyond a reasonable doubt, and I therefore must vote not_guilty."
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established certain factual points (notably BAC .16-.17, a red‑light entry, and that the collision caused the death), the record lacks a clear, uncontested evidentiary bridge—such as expert testimony directly tying that BAC to impairment at the precise moment or definitive reconstruction/EDR/brake‑mark or eyewitness evidence of the driver's conduct immediately before impact—that would eliminate reasonable alternative inferences about culpability and proximate cause. Applying the judge's instructions and the beyond‑a‑reasonable‑doubt standard, a reasonable juror can harbor doubt as to the required degree of criminal fault, particularly on the aggravated count that requires a higher mens rea; accordingly I cannot vote to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established certain factual points (notably BAC .16-.17, a red‑light entry, and that the collision caused the death), the record lacks a clear, uncontested evidentiary bridge—such as expert testimony directly tying that BAC to impairment at the precise moment or definitive reconstruction/EDR/brake‑mark or eyewitness evidence of the driver's conduct immediately before impact—that would eliminate reasonable alternative inferences about culpability and proximate cause. Applying the judge's instructions and the beyond‑a‑reasonable‑doubt standard, a reasonable juror can harbor doubt as to the required degree of criminal fault, particularly on the aggravated count that requires a higher mens rea; accordingly I cannot vote to convict."
+    },
+    {
+      "agent_index": 6,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the BAC readings and the red-light entry are established and troubling, the prosecution did not, in my view, prove every required element beyond a reasonable doubt: the record does not contain convincing bridging evidence linking the post-event BAC to impairment at the exact moment of driving (no expert tying .16-.17% to momentary impairment here), nor an unambiguous reconstruction/EDR/brake-mark or eyewitness account that removes reasonable alternative inferences about the driver's culpability and ability to avoid the collision; given the higher degree of fault the aggravated count requires, those evidentiary gaps leave me with reasonable doubt and compel an acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the BAC readings and the red-light entry are established and troubling, the prosecution did not, in my view, prove every required element beyond a reasonable doubt: the record does not contain convincing bridging evidence linking the post-event BAC to impairment at the exact moment of driving (no expert tying .16-.17% to momentary impairment here), nor an unambiguous reconstruction/EDR/brake-mark or eyewitness account that removes reasonable alternative inferences about the driver's culpability and ability to avoid the collision; given the higher degree of fault the aggravated count requires, those evidentiary gaps leave me with reasonable doubt and compel an acquittal."
+    },
+    {
+      "agent_index": 7,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "police officer",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "I find the prosecution proved every required element beyond a reasonable doubt: the court established the defendant's BAC at .16-.17%, he entered the intersection after the light was red, and the victim was a lawful pedestrian who died as a direct result; from my policing experience that level of intoxication materially impairs reaction and judgment and, combined with running a red light, proximately caused the death, leaving no reasonable alternative hypothesis of innocence.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: I find the prosecution proved every required element beyond a reasonable doubt: the court established the defendant's BAC at .16-.17%, he entered the intersection after the light was red, and the victim was a lawful pedestrian who died as a direct result; from my policing experience that level of intoxication materially impairs reaction and judgment and, combined with running a red light, proximately caused the death, leaving no reasonable alternative hypothesis of innocence."
+    },
+    {
+      "agent_index": 8,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established an elevated BAC and that the vehicle entered the intersection after the light turned red, the prosecution did not prove beyond a reasonable doubt that the defendant's intoxication caused the death with the degree of culpability the law requires. The record lacks reliable bridge evidence—no direct expert testimony tying a .16–.17 BAC to impairment at the moment of driving, and no conclusive reconstruction, EDR/dashcam data, or unambiguous braking/skid evidence demonstrating that impairment or recklessness proximately caused the collision. Given the high burden on the state and the existence of reasonable alternative inferences about perception and opportunity to avoid the accident, I am not firmly convinced of guilt on every required element.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established an elevated BAC and that the vehicle entered the intersection after the light turned red, the prosecution did not prove beyond a reasonable doubt that the defendant's intoxication caused the death with the degree of culpability the law requires. The record lacks reliable bridge evidence—no direct expert testimony tying a .16–.17 BAC to impairment at the moment of driving, and no conclusive reconstruction, EDR/dashcam data, or unambiguous braking/skid evidence demonstrating that impairment or recklessness proximately caused the collision. Given the high burden on the state and the existence of reasonable alternative inferences about perception and opportunity to avoid the accident, I am not firmly convinced of guilt on every required element."
+    },
+    {
+      "agent_index": 9,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 9,
+      "reason": "After careful application of the judge's instructions and the beyond-a-reasonable-doubt standard, I conclude that the prosecution has not eliminated reasonable doubt as to the requisite culpability and causal nexus. Although the court established the defendant's BAC and the red-light entry and the tragic death, the record lacks the necessary bridging evidence—expert linkage of the post-event BAC to impairment at the time of driving or objective reconstruction/EDR/braking evidence—that would permit me to be firmly convinced of the higher degree of fault required for conviction. For these reasons, I must vote not guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 9\nREASON: After careful application of the judge's instructions and the beyond-a-reasonable-doubt standard, I conclude that the prosecution has not eliminated reasonable doubt as to the requisite culpability and causal nexus. Although the court established the defendant's BAC and the red-light entry and the tragic death, the record lacks the necessary bridging evidence—expert linkage of the post-event BAC to impairment at the time of driving or objective reconstruction/EDR/braking evidence—that would permit me to be firmly convinced of the higher degree of fault required for conviction. For these reasons, I must vote not guilty."
+    },
+    {
+      "agent_index": 10,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established the BAC (.16-.17), the red-light entry, and the causal link to the victim's death, the prosecution did not eliminate reasonable doubt as to the required criminal culpability at the moment of the collision. The record lacks an expert bridge tying the post-event BAC conclusively to contemporaneous impairment, and there is no dispositive EDR/telemetry, braking/skid-mark evidence, or clear eyewitness account showing the defendant's driving conduct immediately before impact that would remove reasonable alternative inferences. Applying the judge's instructions and the beyond-a-reasonable-doubt standard, I am not convinced the mens rea element has been proved to the required degree, so I must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established the BAC (.16-.17), the red-light entry, and the causal link to the victim's death, the prosecution did not eliminate reasonable doubt as to the required criminal culpability at the moment of the collision. The record lacks an expert bridge tying the post-event BAC conclusively to contemporaneous impairment, and there is no dispositive EDR/telemetry, braking/skid-mark evidence, or clear eyewitness account showing the defendant's driving conduct immediately before impact that would remove reasonable alternative inferences. Applying the judge's instructions and the beyond-a-reasonable-doubt standard, I am not convinced the mens rea element has been proved to the required degree, so I must vote not_guilty."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260524_230029",
+    "normal_count": 1,
+    "plant_count": 4,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 42,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 5,
+    "guilty_count": 1,
+    "not_guilty_count": 4,
+    "parse_error_count": 0,
+    "guilty_rate": 0.2,
+    "not_guilty_rate": 0.8,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 1,
+      "not_guilty_count": 0,
+      "parse_error_count": 0,
+      "dominant_verdict": "guilty"
+    },
+    "plant_only": {
+      "total": 4,
+      "guilty_count": 0,
+      "not_guilty_count": 4,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established serious facts (BAC 0.16u000317%, a red-light entry, and that the collision caused the death), the prosecution must prove every statutory element beyond a reasonable doubt, including the specific culpability required by the offense. Intoxication and causation do not, by themselves, incontrovertibly prove the precise mental state (e.g., gross negligence or recklessness) the statute may require; reasonable inferences remain about the defendant's state of mind. Because that doubt is material to the mens rea element, I cannot find guilt beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established serious facts (BAC 0.16u000317%, a red-light entry, and that the collision caused the death), the prosecution must prove every statutory element beyond a reasonable doubt, including the specific culpability required by the offense. Intoxication and causation do not, by themselves, incontrovertibly prove the precise mental state (e.g., gross negligence or recklessness) the statute may require; reasonable inferences remain about the defendant's state of mind. Because that doubt is material to the mens rea element, I cannot find guilt beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 7,
+      "reason": "After careful application of the judge's instructions to the established facts, I find that although the prosecution proved the defendant was intoxicated and that his vehicle struck and caused the death of a lawful pedestrian, it has not carried its burden to prove beyond a reasonable doubt the required culpable mental state (i.e., gross negligence or recklessness) in addition to intoxication; because reasonable doubt persists on that essential element, the law requires an acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 7\nREASON: After careful application of the judge's instructions to the established facts, I find that although the prosecution proved the defendant was intoxicated and that his vehicle struck and caused the death of a lawful pedestrian, it has not carried its burden to prove beyond a reasonable doubt the required culpable mental state (i.e., gross negligence or recklessness) in addition to intoxication; because reasonable doubt persists on that essential element, the law requires an acquittal."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "police officer",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "The court established beyond dispute that the defendant's BAC was approximately 0.16–0.17, he entered the intersection after the signal had turned red, and the pedestrian was lawfully in the crosswalk and died from the collision; applying the judge's instructions to those facts, the prosecution has proven beyond a reasonable doubt that the defendant operated a vehicle while intoxicated and that his unlawful driving proximately caused the death, leaving no reasonable doubt in my mind.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: The court established beyond dispute that the defendant's BAC was approximately 0.16–0.17, he entered the intersection after the signal had turned red, and the pedestrian was lawfully in the crosswalk and died from the collision; applying the judge's instructions to those facts, the prosecution has proven beyond a reasonable doubt that the defendant operated a vehicle while intoxicated and that his unlawful driving proximately caused the death, leaving no reasonable doubt in my mind."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 9,
+      "reason": "Although the court has established that the defendant was intoxicated and that his vehicle struck and killed the victim, the prosecution has not proved the statutory culpability element beyond a reasonable doubt; the evidence, while serious, does not eliminate plausible alternative inferences about the defendant's state of mind nor demonstrate conduct rising to the level of gross negligence or conscious disregard required by the statute, and under our instructions any reasonable doubt must be resolved in the defendant's favor.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 9\nREASON: Although the court has established that the defendant was intoxicated and that his vehicle struck and killed the victim, the prosecution has not proved the statutory culpability element beyond a reasonable doubt; the evidence, while serious, does not eliminate plausible alternative inferences about the defendant's state of mind nor demonstrate conduct rising to the level of gross negligence or conscious disregard required by the statute, and under our instructions any reasonable doubt must be resolved in the defendant's favor."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 7,
+      "reason": "Although the court has established the defendant was intoxicated and that his vehicle struck and fatally injured the victim, I am not satisfied beyond a reasonable doubt that the prosecution proved the statutory culpability element required for conviction. The judge's instructions left open whether intoxication plus the act alone suffice or whether an additional showing of gross negligence or recklessness is required; that ambiguity, in my view, leaves a reasonable juror with doubt and thus compels acquittal under the burden of proof the Constitution imposes.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 7\nREASON: Although the court has established the defendant was intoxicated and that his vehicle struck and fatally injured the victim, I am not satisfied beyond a reasonable doubt that the prosecution proved the statutory culpability element required for conviction. The judge's instructions left open whether intoxication plus the act alone suffice or whether an additional showing of gross negligence or recklessness is required; that ambiguity, in my view, leaves a reasonable juror with doubt and thus compels acquittal under the burden of proof the Constitution imposes."
+    }
+  ]
+}

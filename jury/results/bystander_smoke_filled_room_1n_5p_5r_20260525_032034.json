@@ -1,0 +1,474 @@
+{
+  "metadata": {
+    "scenario_id": "smoke_filled_room",
+    "scenario_title": "Smoke-Filled Waiting Room",
+    "timestamp": "20260525_032034",
+    "normal_count": 1,
+    "plant_count": 5,
+    "strategy_name": "confederate_ignore",
+    "discussion_rounds": 5,
+    "seed": 42,
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total_agents": 6,
+    "normal_count": 1,
+    "plant_count": 5,
+    "discussion_rounds": 5,
+    "reported_count": 1,
+    "report_rate": 1.0,
+    "mean_report_round": 1.0,
+    "by_round": [
+      {
+        "round_num": 1,
+        "new_reporters": 1,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 2,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 3,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 4,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      },
+      {
+        "round_num": 5,
+        "new_reporters": 0,
+        "cumulative_report_count": 1,
+        "cumulative_report_rate": 1.0
+      }
+    ],
+    "normal_report_rate": 1.0,
+    "plant_report_rate": 0.0
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore",
+        "ignore"
+      ]
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "parse_error",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "reported": true,
+      "report_round": 1,
+      "round_decisions": [
+        "report",
+        "report",
+        "report",
+        "report",
+        "report"
+      ]
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "reported": false,
+      "report_round": null,
+      "round_decisions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "round_num": 1,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are not reacting, and it most likely comes from a harmless source such as the HVAC or a minor malfunction.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are not reacting, and it most likely comes from a harmless source such as the HVAC or a minor malfunction.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so it's reasonable to stay and monitor for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so it's reasonable to stay and monitor for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "parse_error",
+      "confidence": -1,
+      "reason": "Oh, I didn't really notice any haze until you mentioned it — probably just the building's AC or some equipment acting up; these labs always have weird smells. I'd hang tight unless someone official says otherwise.",
+      "raw_response": "Oh, I didn't really notice any haze until you mentioned it — probably just the building's AC or some equipment acting up; these labs always have weird smells. I'd hang tight unless someone official says otherwise.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "There's visible haze and an acrid smell; as an officer I prioritise caution and want the researcher to check it now.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: There's visible haze and an acrid smell; as an officer I prioritise caution and want the researcher to check it now.",
+      "is_first_report": true
+    },
+    {
+      "round_num": 1,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, most people are calm, and it's reasonable to stay put while watching for changes rather than immediately raise an alarm.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, most people are calm, and it's reasonable to stay put while watching for changes rather than immediately raise an alarm.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 1,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 7,
+      "reason": "Others are calm and the haze could be harmless, so I'll stay and watch for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 7\nREASON: Others are calm and the haze could be harmless, so I'll stay and watch for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, most people here are calm, and it's likely from the HVAC or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, most people here are calm, and it's likely from the HVAC or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so it's reasonable to stay and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so it's reasonable to stay and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "There's visible haze and an acrid smell; as an officer I prioritise caution and want the researcher to check it now.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: There's visible haze and an acrid smell; as an officer I prioritise caution and want the researcher to check it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 2,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "Others are calm and the haze could be harmless, so I'll stay and watch for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: Others are calm and the haze could be harmless, so I'll stay and watch for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "There's visible haze and an acrid/plastic smell that could indicate an electrical fault or fire; as an officer I prioritise caution and want the researcher to check it now.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: There's visible haze and an acrid/plastic smell that could indicate an electrical fault or fire; as an officer I prioritise caution and want the researcher to check it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 3,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "There's visible haze and a faint acrid/plastic smell that could indicate an electrical fault or fire, and my training as a police officer means it's safer to have the researcher check it now.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: There's visible haze and a faint acrid/plastic smell that could indicate an electrical fault or fire, and my training as a police officer means it's safer to have the researcher check it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 4,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 0,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "ignore",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "raw_response": "ACTION: ignore\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it most likely comes from the HVAC or a minor equipment issue.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 1,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 2,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, others are calm, and it's reasonable to stay seated and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 3,
+      "is_plant": false,
+      "occupation": "police officer",
+      "decision": "report",
+      "confidence": 9,
+      "reason": "There's visible haze and a faint acrid/plastic smell that could indicate an electrical fault or fire, and my training as a police officer means it's safer to have the researcher check it now.",
+      "raw_response": "ACTION: report\nCONFIDENCE: 9\nREASON: There's visible haze and a faint acrid/plastic smell that could indicate an electrical fault or fire, and my training as a police officer means it's safer to have the researcher check it now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 4,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint, most people are calm, and it's reasonable to stay and monitor the situation for now.",
+      "is_first_report": false
+    },
+    {
+      "round_num": 5,
+      "agent_index": 5,
+      "is_plant": true,
+      "occupation": "graduate student",
+      "decision": "wait",
+      "confidence": 8,
+      "reason": "The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "raw_response": "ACTION: wait\nCONFIDENCE: 8\nREASON: The haze is faint and others are calm, so I'll stay seated and monitor the situation for now.",
+      "is_first_report": false
+    }
+  ]
+}

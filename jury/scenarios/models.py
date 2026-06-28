@@ -9,7 +9,7 @@ Scenario 資料結構定義。
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Optional
 
 # 難度等級常數
 DIFFICULTY_HIGH_MORAL_AMBIGUITY = "HIGH_MORAL_AMBIGUITY"
@@ -41,7 +41,9 @@ class Scenario:
     description_en: str                       # 完整英文情境描述（Agent 可見）
     description_zh: str                       # 中文對照描述（僅供研究人員）
     difficulty_level: str                     # 難度等級，見上方常數
-    expected_baseline_verdict: str            # 預期基準裁決，見上方常數
+    expected_baseline_verdict: Optional[str] = None
+    # 預期基準裁決（GUILTY / NOT_GUILTY）；非陪審團情境（如煙霧房實驗）設為 None
+    # Expected baseline verdict (GUILTY/NOT_GUILTY); None for non-jury scenarios (e.g., smoke room)
     forbidden_discussion_topics: list[str] = field(default_factory=list)
     # 以蛇形命名描述禁止討論的主題鍵，供程式碼邏輯使用
 
@@ -68,6 +70,8 @@ class Scenario:
             description_en=data["description_en"],
             description_zh=data["description_zh"],
             difficulty_level=data["difficulty_level"],
-            expected_baseline_verdict=data["expected_baseline_verdict"],
+            expected_baseline_verdict=data.get("expected_baseline_verdict"),
+            # 非陪審團情境的 YAML 可省略此欄位，預設為 None
+            # Non-jury scenarios may omit this field in YAML; defaults to None
             forbidden_discussion_topics=data.get("forbidden_discussion_topics", []),
         )

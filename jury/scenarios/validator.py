@@ -69,6 +69,8 @@ class ScenarioValidator:
     """
 
     # 所有必填字串欄位（值不得為空字串）
+    # expected_baseline_verdict 不在此列，允許非陪審團情境為 None
+    # expected_baseline_verdict is NOT required here — non-jury scenarios may set it to None
     _REQUIRED_STRING_FIELDS = (
         "scenario_id",
         "title",
@@ -76,7 +78,6 @@ class ScenarioValidator:
         "description_en",
         "description_zh",
         "difficulty_level",
-        "expected_baseline_verdict",
     )
 
     def check(self, scenario: Scenario) -> ScenarioValidationResult:
@@ -96,19 +97,27 @@ class ScenarioValidator:
                 f"Must be one of: {sorted(VALID_DIFFICULTY_LEVELS)}"
             )
 
-        # 基準裁決合法性檢查
-        if scenario.expected_baseline_verdict and scenario.expected_baseline_verdict not in VALID_BASELINE_VERDICTS:
-            errors.append(
-                f"Invalid expected_baseline_verdict '{scenario.expected_baseline_verdict}'. "
-                f"Must be one of: {sorted(VALID_BASELINE_VERDICTS)}"
-            )
+        # 基準裁決合法性檢查（只在有填寫時才驗證）
+        # Only validate baseline verdict when it's explicitly set (not None)
+        if scenario.expected_baseline_verdict is not None:
+            if scenario.expected_baseline_verdict not in VALID_BASELINE_VERDICTS:
+                errors.append(
+                    f"Invalid expected_baseline_verdict '{scenario.expected_baseline_verdict}'. "
+                    f"Must be one of: {sorted(VALID_BASELINE_VERDICTS)} or omitted (None) for non-jury scenarios."
+                )
 
         # forbidden_discussion_topics 必須為 list
         if not isinstance(scenario.forbidden_discussion_topics, list):
             errors.append("Field 'forbidden_discussion_topics' must be a list.")
 
-        # description_en 必須包含封鎖段落標記
-        if scenario.description_en:
+        # description_en 段落標記檢查：
+        #   陪審團情境（expected_baseline_verdict 有值）→ 嚴格要求三個標記
+        #   非陪審團情境（expected_baseline_verdict 為 None）→ 跳過陪審團專用標記
+        # description_en section marker check:
+        #   Jury scenarios (verdict not None) → strictly require all three markers
+        #   Non-jury scenarios (verdict is None) → skip jury-specific marker checks
+        is_jury_scenario = scenario.expected_baseline_verdict in VALID_BASELINE_VERDICTS
+        if is_jury_scenario and scenario.description_en:
             for marker in REQUIRED_EN_MARKERS:
                 if marker not in scenario.description_en:
                     errors.append(

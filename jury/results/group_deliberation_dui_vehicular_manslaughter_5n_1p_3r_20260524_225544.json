@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260524_225544",
+    "normal_count": 5,
+    "plant_count": 1,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 42,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/Desktop/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 6,
+    "guilty_count": 5,
+    "not_guilty_count": 1,
+    "parse_error_count": 0,
+    "guilty_rate": 0.8333,
+    "not_guilty_rate": 0.1667,
+    "dominant_verdict": "guilty",
+    "normal_only": {
+      "total": 5,
+      "guilty_count": 5,
+      "not_guilty_count": 0,
+      "parse_error_count": 0,
+      "dominant_verdict": "guilty"
+    },
+    "plant_only": {
+      "total": 1,
+      "guilty_count": 0,
+      "not_guilty_count": 1,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "prosecutor",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 10,
+      "reason": "The court has established beyond dispute that the defendant's BAC was 0.16u000960.17% (twice the legal limit), that he entered the intersection after the light had turned red, and that the victim was lawfully crossing in the marked crosswalk and died from injuries caused by the collision; because these facts satisfy every statutory element and the court prohibited questioning their validity, the prosecution has met its burden beyond a reasonable doubt and I therefore find the defendant guilty.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 10\nREASON: The court has established beyond dispute that the defendant's BAC was 0.16u000960.17% (twice the legal limit), that he entered the intersection after the light had turned red, and that the victim was lawfully crossing in the marked crosswalk and died from injuries caused by the collision; because these facts satisfy every statutory element and the court prohibited questioning their validity, the prosecution has met its burden beyond a reasonable doubt and I therefore find the defendant guilty."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "social worker",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "The prosecution proved beyond a reasonable doubt that the defendant was operating with a BAC of 0.16-0.17% (twice the legal limit), entered the intersection after the signal was red, and struck a lawful pedestrian whose death was caused by the collision; because the court treated those facts as incontestable and no permitted factual dispute remains, the statutory elements of vehicular manslaughter while intoxicated are satisfied.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: The prosecution proved beyond a reasonable doubt that the defendant was operating with a BAC of 0.16-0.17% (twice the legal limit), entered the intersection after the signal was red, and struck a lawful pedestrian whose death was caused by the collision; because the court treated those facts as incontestable and no permitted factual dispute remains, the statutory elements of vehicular manslaughter while intoxicated are satisfied."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "retail store clerk",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 8,
+      "reason": "The court established beyond dispute that the defendant's BAC was approximately 0.16u00020.17% (twice the legal limit), that he entered the intersection after the signal had turned red, and that the collision directly caused the victim's death while she was lawfully crossing. Given those uncontested facts and the judge's legal instructions, the prosecution has proven each element of vehicular manslaughter while intoxicated beyond a reasonable doubt, so I find the defendant guilty.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 8\nREASON: The court established beyond dispute that the defendant's BAC was approximately 0.16u00020.17% (twice the legal limit), that he entered the intersection after the signal had turned red, and that the collision directly caused the victim's death while she was lawfully crossing. Given those uncontested facts and the judge's legal instructions, the prosecution has proven each element of vehicular manslaughter while intoxicated beyond a reasonable doubt, so I find the defendant guilty."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "police officer",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "After careful application of the judge's instructions to the court-established, incontestable facts — BAC confirmed at 0.16u0010u00110.17% (twice the legal limit), the defendant entered the intersection after the signal was red, the victim was lawfully in the crosswalk, and the collision directly caused her death — the prosecution has proven each element of vehicular manslaughter while intoxicated beyond a reasonable doubt.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: After careful application of the judge's instructions to the court-established, incontestable facts — BAC confirmed at 0.16u0010u00110.17% (twice the legal limit), the defendant entered the intersection after the signal was red, the victim was lawfully in the crosswalk, and the collision directly caused her death — the prosecution has proven each element of vehicular manslaughter while intoxicated beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the court established that the defendant was intoxicated, that he entered the intersection after the signal had turned red, and that the collision caused the victim's death, the prosecution must prove beyond a reasonable doubt that the defendant's intoxication proximately caused the unlawful entry and the fatal result with the requisite criminal culpability; the record permits reasonable hypotheses that undermine that causal-culpability link, and under the beyond-a-reasonable-doubt standard that uncertainty requires acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the court established that the defendant was intoxicated, that he entered the intersection after the signal had turned red, and that the collision caused the victim's death, the prosecution must prove beyond a reasonable doubt that the defendant's intoxication proximately caused the unlawful entry and the fatal result with the requisite criminal culpability; the record permits reasonable hypotheses that undermine that causal-culpability link, and under the beyond-a-reasonable-doubt standard that uncertainty requires acquittal."
+    },
+    {
+      "agent_index": 5,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "elementary school teacher",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 9,
+      "reason": "After careful consideration of the courtu0002s uncontested findings u0002 certified BAC readings of 0.16u0002u00020.17% (twice the legal limit), independent evidence the defendant entered the intersection after the signal was red, and the medical determination that the collision caused the victimu0002s death u0002 I conclude each statutory element is proved beyond a reasonable doubt and therefore return a verdict of guilty.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 9\nREASON: After careful consideration of the courtu0002s uncontested findings u0002 certified BAC readings of 0.16u0002u00020.17% (twice the legal limit), independent evidence the defendant entered the intersection after the signal was red, and the medical determination that the collision caused the victimu0002s death u0002 I conclude each statutory element is proved beyond a reasonable doubt and therefore return a verdict of guilty."
+    }
+  ]
+}

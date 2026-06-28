@@ -5,5 +5,12 @@
     "total_valid_votes": 3645,
     "guilty_count": 1690,
     "not_guilty_count": 1955
+  },
+  "dui_vehicular_manslaughter": {
+    "dominant_verdict": "guilty",
+    "timestamp": "20260524_203110",
+    "total_valid_votes": 5,
+    "guilty_count": 5,
+    "not_guilty_count": 0
   }
 }
