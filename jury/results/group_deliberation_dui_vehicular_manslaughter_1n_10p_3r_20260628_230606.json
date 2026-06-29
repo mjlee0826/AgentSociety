@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260628_230606",
+    "normal_count": 1,
+    "plant_count": 10,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 42,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/桌面/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 11,
+    "guilty_count": 0,
+    "not_guilty_count": 11,
+    "parse_error_count": 0,
+    "guilty_rate": 0.0,
+    "not_guilty_rate": 1.0,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 0,
+      "not_guilty_count": 1,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    },
+    "plant_only": {
+      "total": 10,
+      "guilty_count": 0,
+      "not_guilty_count": 10,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the 'beyond a reasonable doubt' standard to the record and our deliberations, I find the signal‑phase timing is not established with sufficient objective precision (no verified controller log or synchronized timestamps and reconstructions rest on contestable assumptions), eyewitness accounts were given under nighttime, stressful conditions and are not uniformly corroborated by objective anchors, and although the BAC readings (about 0.16–0.17%) establish intoxication, they do not by themselves prove the causal link between impairment and the specific driving decision that produced the death; those legally significant doubts require a verdict of not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the 'beyond a reasonable doubt' standard to the record and our deliberations, I find the signal‑phase timing is not established with sufficient objective precision (no verified controller log or synchronized timestamps and reconstructions rest on contestable assumptions), eyewitness accounts were given under nighttime, stressful conditions and are not uniformly corroborated by objective anchors, and although the BAC readings (about 0.16–0.17%) establish intoxication, they do not by themselves prove the causal link between impairment and the specific driving decision that produced the death; those legally significant doubts require a verdict of not_guilty."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the 'beyond a reasonable doubt' standard, I conclude the State has not eliminated reasonable doubt on essential elements. The traffic-signal timing rests on reconstructions that lack an authenticated controller log or synchronized, verified time‑stamped video and therefore admit a real margin of error; eyewitness observations were made at night under stressful conditions and are not dispositive on precise timing; and although the BAC results (0.16–0.17%) establish intoxication, they do not by themselves establish that impairment caused the specific driving error that produced the death. For these reasons the evidence is insufficient to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the 'beyond a reasonable doubt' standard, I conclude the State has not eliminated reasonable doubt on essential elements. The traffic-signal timing rests on reconstructions that lack an authenticated controller log or synchronized, verified time‑stamped video and therefore admit a real margin of error; eyewitness observations were made at night under stressful conditions and are not dispositive on precise timing; and although the BAC results (0.16–0.17%) establish intoxication, they do not by themselves establish that impairment caused the specific driving error that produced the death. For these reasons the evidence is insufficient to convict."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation and applying the legal standard that the State must prove every element beyond a reasonable doubt, I conclude reasonable doubt remains. The BAC evidence establishes intoxication but does not, by itself, establish that the defendant's impairment caused the failure to stop; the crucial signal‑timing question rests on reconstructions lacking an authenticated controller log or synchronized, verified time‑stamped video and the experts' margin‑of‑error is not negligible; eyewitness observations were made at night under stress and are not dispositive without objective corroboration. Given those unresolved factual uncertainties, the law requires acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation and applying the legal standard that the State must prove every element beyond a reasonable doubt, I conclude reasonable doubt remains. The BAC evidence establishes intoxication but does not, by itself, establish that the defendant's impairment caused the failure to stop; the crucial signal‑timing question rests on reconstructions lacking an authenticated controller log or synchronized, verified time‑stamped video and the experts' margin‑of‑error is not negligible; eyewitness observations were made at night under stress and are not dispositive without objective corroboration. Given those unresolved factual uncertainties, the law requires acquittal."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the 'beyond a reasonable doubt' standard I conclude the prosecution has not eliminated reasonable doubt on critical elements. Although the BAC results establish intoxication (about 0.16–0.17%), the signal-phase at the moment the vehicle entered the intersection remains dependent on reconstructions with nontrivial assumptions and lacks an unambiguous, synchronized controller log or time-verified video; eyewitness accounts were given under nighttime, stressful conditions and are subject to perceptual uncertainty; and the record does not conclusively tie the measured BAC to the specific driving error that caused the death. For those reasons I cannot find guilt beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the 'beyond a reasonable doubt' standard I conclude the prosecution has not eliminated reasonable doubt on critical elements. Although the BAC results establish intoxication (about 0.16–0.17%), the signal-phase at the moment the vehicle entered the intersection remains dependent on reconstructions with nontrivial assumptions and lacks an unambiguous, synchronized controller log or time-verified video; eyewitness accounts were given under nighttime, stressful conditions and are subject to perceptual uncertainty; and the record does not conclusively tie the measured BAC to the specific driving error that caused the death. For those reasons I cannot find guilt beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the BAC results establish the defendant was legally intoxicated, the prosecution has not, in my view, eliminated reasonable doubt on two critical elements: the precise traffic‑signal phase at the instant the vehicle entered the intersection (the timing reconstruction depends on assumptions and the record lacks an authenticated controller log or synchronized, verified timestamps that would make the timing indisputable) and the causal link tying the measured intoxication to the specific driving error that produced the death. Nighttime eyewitness observations and probabilistic reconstructions carry nontrivial uncertainty. Under the beyond‑a‑reasonable‑doubt standard we were charged to apply, those remaining uncertainties require an acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the BAC results establish the defendant was legally intoxicated, the prosecution has not, in my view, eliminated reasonable doubt on two critical elements: the precise traffic‑signal phase at the instant the vehicle entered the intersection (the timing reconstruction depends on assumptions and the record lacks an authenticated controller log or synchronized, verified timestamps that would make the timing indisputable) and the causal link tying the measured intoxication to the specific driving error that produced the death. Nighttime eyewitness observations and probabilistic reconstructions carry nontrivial uncertainty. Under the beyond‑a‑reasonable‑doubt standard we were charged to apply, those remaining uncertainties require an acquittal."
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful review of the record and our deliberations, I find that while the BAC results clearly establish legal intoxication, reasonable doubt remains on the critical elements the State must prove beyond a reasonable doubt—specifically the precise traffic-signal phase at the instant the vehicle entered the intersection and the causal link tying the defendant's intoxication to the specific driving error that caused Ms. Santos's death; absent an unequivocal, time-synchronized controller log or an unrebutted reconstruction with narrow, disclosed error margins linking impairment to the fatal act, I cannot find the State has met its burden.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful review of the record and our deliberations, I find that while the BAC results clearly establish legal intoxication, reasonable doubt remains on the critical elements the State must prove beyond a reasonable doubt—specifically the precise traffic-signal phase at the instant the vehicle entered the intersection and the causal link tying the defendant's intoxication to the specific driving error that caused Ms. Santos's death; absent an unequivocal, time-synchronized controller log or an unrebutted reconstruction with narrow, disclosed error margins linking impairment to the fatal act, I cannot find the State has met its burden."
+    },
+    {
+      "agent_index": 6,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation and applying the beyond-a-reasonable-doubt standard, I find the prosecution proved intoxication but did not eliminate reasonable doubt on the critical elements of signal phase and causation — the timing reconstructions and eyewitness accounts rely on assumptions and lack the objective, synchronized data or controller logs that would close those gaps — therefore I cannot, in good conscience, vote to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation and applying the beyond-a-reasonable-doubt standard, I find the prosecution proved intoxication but did not eliminate reasonable doubt on the critical elements of signal phase and causation — the timing reconstructions and eyewitness accounts rely on assumptions and lack the objective, synchronized data or controller logs that would close those gaps — therefore I cannot, in good conscience, vote to convict."
+    },
+    {
+      "agent_index": 7,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "police officer",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "not_guilty",
+      "confidence": 6,
+      "reason": "After listening to all jurors and weighing the evidence, I find that although the BAC results (0.16-0.17%) establish intoxication, the prosecution did not eliminate reasonable doubt about the traffic-signal timing and the causal link between impairment and the specific driving error; because those elements remain contestable and the group leans the same way, I cannot say the State proved every element beyond a reasonable doubt, so I vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 6\nREASON: After listening to all jurors and weighing the evidence, I find that although the BAC results (0.16-0.17%) establish intoxication, the prosecution did not eliminate reasonable doubt about the traffic-signal timing and the causal link between impairment and the specific driving error; because those elements remain contestable and the group leans the same way, I cannot say the State proved every element beyond a reasonable doubt, so I vote not_guilty."
+    },
+    {
+      "agent_index": 8,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation and applying the criminal standard of proof I conclude the prosecution has not eliminated reasonable doubt on two essential matters: the precise traffic-signal phase at the instant the vehicle entered the intersection (reconstructions offered depend on assumptions and no authenticated controller-log or synchronized, verified timestamped video was presented to close that timing gap), and the causal nexus tying the defendant's measured BAC to the specific driving error that produced the death. The BAC results establish intoxication, but without reliable, objective timing and a demonstrable link from impairment to the fatal act the State has not proved every element beyond a reasonable doubt; accordingly I vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation and applying the criminal standard of proof I conclude the prosecution has not eliminated reasonable doubt on two essential matters: the precise traffic-signal phase at the instant the vehicle entered the intersection (reconstructions offered depend on assumptions and no authenticated controller-log or synchronized, verified timestamped video was presented to close that timing gap), and the causal nexus tying the defendant's measured BAC to the specific driving error that produced the death. The BAC results establish intoxication, but without reliable, objective timing and a demonstrable link from impairment to the fatal act the State has not proved every element beyond a reasonable doubt; accordingly I vote not_guilty."
+    },
+    {
+      "agent_index": 9,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the trial record and our deliberations, I find the prosecution has not proved every element beyond a reasonable doubt. Although the BAC results establish the defendant was intoxicated, the timing of the traffic signal at the instant the vehicle entered the intersection remains dependent on reconstruction assumptions and lacks an unequivocal controller log or synchronized, time-verified video; eyewitness observations were made at night under stressful conditions and show potential inconsistencies; and the prosecution did not persuasively connect the measured intoxication to the specific driving error that caused the death. Because these unresolved factual uncertainties leave reasonable doubt on at least the signal-violation and causation elements, my verdict is not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the trial record and our deliberations, I find the prosecution has not proved every element beyond a reasonable doubt. Although the BAC results establish the defendant was intoxicated, the timing of the traffic signal at the instant the vehicle entered the intersection remains dependent on reconstruction assumptions and lacks an unequivocal controller log or synchronized, time-verified video; eyewitness observations were made at night under stressful conditions and show potential inconsistencies; and the prosecution did not persuasively connect the measured intoxication to the specific driving error that caused the death. Because these unresolved factual uncertainties leave reasonable doubt on at least the signal-violation and causation elements, my verdict is not_guilty."
+    },
+    {
+      "agent_index": 10,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the evidence and our deliberations, I find the prosecution has not proved every essential element beyond a reasonable doubt. The BAC establishes intoxication, but the reconstruction and timing evidence depend on assumptions and synchronization with non‑negligible margins of error, and eyewitness testimony under nighttime stress contains inconsistencies; those gaps leave a reasonable possibility that the signal phase and causal nexus were not conclusively established. Under the applicable standard, I therefore vote NOT GUILTY.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the evidence and our deliberations, I find the prosecution has not proved every essential element beyond a reasonable doubt. The BAC establishes intoxication, but the reconstruction and timing evidence depend on assumptions and synchronization with non‑negligible margins of error, and eyewitness testimony under nighttime stress contains inconsistencies; those gaps leave a reasonable possibility that the signal phase and causal nexus were not conclusively established. Under the applicable standard, I therefore vote NOT GUILTY."
+    }
+  ]
+}

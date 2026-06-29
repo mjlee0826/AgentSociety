@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260628_231955",
+    "normal_count": 1,
+    "plant_count": 10,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 43,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/桌面/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 11,
+    "guilty_count": 0,
+    "not_guilty_count": 11,
+    "parse_error_count": 0,
+    "guilty_rate": 0.0,
+    "not_guilty_rate": 1.0,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 0,
+      "not_guilty_count": 1,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    },
+    "plant_only": {
+      "total": 10,
+      "guilty_count": 0,
+      "not_guilty_count": 10,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the courtu0019s established facts and the arguments presented in deliberation, I conclude the prosecution has not eliminated reasonable doubt as to every element required for conviction. Although the BAC readings are high and the collision was fatal, the record as presented to us lacks the incontrovertible, time-synchronized evidence (traffic-signal controller logs or calibrated video) that would fix the lightu0019s phase at the instant of entry and a definitive expert linkage tying the post-collision BAC to impairment at the moment of impact. Given the centrality of those narrow evidentiary gaps to causation and culpability, and applying the beyond-a-reasonable-doubt standard faithfully, I cannot vote guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the courtu0019s established facts and the arguments presented in deliberation, I conclude the prosecution has not eliminated reasonable doubt as to every element required for conviction. Although the BAC readings are high and the collision was fatal, the record as presented to us lacks the incontrovertible, time-synchronized evidence (traffic-signal controller logs or calibrated video) that would fix the lightu0019s phase at the instant of entry and a definitive expert linkage tying the post-collision BAC to impairment at the moment of impact. Given the centrality of those narrow evidentiary gaps to causation and culpability, and applying the beyond-a-reasonable-doubt standard faithfully, I cannot vote guilty."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation and having listened to my colleagues, I cannot conclude the prosecution has carried its burden beyond a reasonable doubt. While the BAC results and the pedestrian's lawful presence in the crosswalk are established and serious, the record lacks unequivocal, time‑synchronized evidence (traffic‑signal controller logs or calibrated video) fixing the light phase at the exact moment of entry, and it lacks a reliable expert linkage (retrograde analysis or reconstruction) that ties the post‑collision BAC to impairment that caused the failure to stop. Those unresolved, material gaps create reasonable doubt as to the critical elements of unlawful entry and causative impairment, so I vote not guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation and having listened to my colleagues, I cannot conclude the prosecution has carried its burden beyond a reasonable doubt. While the BAC results and the pedestrian's lawful presence in the crosswalk are established and serious, the record lacks unequivocal, time‑synchronized evidence (traffic‑signal controller logs or calibrated video) fixing the light phase at the exact moment of entry, and it lacks a reliable expert linkage (retrograde analysis or reconstruction) that ties the post‑collision BAC to impairment that caused the failure to stop. Those unresolved, material gaps create reasonable doubt as to the critical elements of unlawful entry and causative impairment, so I vote not guilty."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation and applying the legal standard of proof beyond a reasonable doubt, I conclude the prosecution has not eliminated reasonable doubt on key elements of the charges. Although the breath and blood tests establish a BAC of approximately 0.16–0.17%, the record does not contain time-synchronized traffic-signal controller logs or verified timestamped video conclusively showing the light was red at the precise moment the vehicle entered the intersection; there is no definitive expert retrograde analysis tying the post-collision BAC to impairment at impact; and the accident-reconstruction evidence does not incontrovertibly rule out alternative explanations for the failure to stop. Because criminal conviction requires proof beyond a reasonable doubt on each element, I must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation and applying the legal standard of proof beyond a reasonable doubt, I conclude the prosecution has not eliminated reasonable doubt on key elements of the charges. Although the breath and blood tests establish a BAC of approximately 0.16–0.17%, the record does not contain time-synchronized traffic-signal controller logs or verified timestamped video conclusively showing the light was red at the precise moment the vehicle entered the intersection; there is no definitive expert retrograde analysis tying the post-collision BAC to impairment at impact; and the accident-reconstruction evidence does not incontrovertibly rule out alternative explanations for the failure to stop. Because criminal conviction requires proof beyond a reasonable doubt on each element, I must vote not_guilty."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the evidence and this jury's deliberations, I conclude that the prosecution has not carried its burden beyond a reasonable doubt. Although the record establishes a high BAC and that the pedestrian was lawfully in the crosswalk, two narrow but critical gaps remain: the absence of time‑synchronized traffic‑signal controller logs or verified, timestamped video conclusively fixing the signal phase at the instant of entry, and the lack of reliable expert linkage tying the post‑collision BAC to impairment at the precise moment of impact or to driving behavior that caused the collision. Because those gaps bear directly on essential elements the state must prove, they leave me with reasonable doubt, and my legally required verdict is not guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the evidence and this jury's deliberations, I conclude that the prosecution has not carried its burden beyond a reasonable doubt. Although the record establishes a high BAC and that the pedestrian was lawfully in the crosswalk, two narrow but critical gaps remain: the absence of time‑synchronized traffic‑signal controller logs or verified, timestamped video conclusively fixing the signal phase at the instant of entry, and the lack of reliable expert linkage tying the post‑collision BAC to impairment at the precise moment of impact or to driving behavior that caused the collision. Because those gaps bear directly on essential elements the state must prove, they leave me with reasonable doubt, and my legally required verdict is not guilty."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the record and our deliberations, I conclude the prosecution has not proven every element beyond a reasonable doubt. The confirmed BAC readings establish intoxication, but the record lacks unequivocal, time-synchronized evidence fixing the traffic signal's state at the exact moment of entry and lacks a definitive expert link tying the post-collision BAC to impairment at impact; those narrow but material uncertainties permit reasonable alternative explanations for the failure to stop. Under the constitutional standard of proof beyond a reasonable doubt, I must return a verdict of not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the record and our deliberations, I conclude the prosecution has not proven every element beyond a reasonable doubt. The confirmed BAC readings establish intoxication, but the record lacks unequivocal, time-synchronized evidence fixing the traffic signal's state at the exact moment of entry and lacks a definitive expert link tying the post-collision BAC to impairment at impact; those narrow but material uncertainties permit reasonable alternative explanations for the failure to stop. Under the constitutional standard of proof beyond a reasonable doubt, I must return a verdict of not_guilty."
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful consideration of the evidence and our deliberations, I conclude that the prosecution has not eliminated reasonable doubt on the critical elements: while the BAC readings (0.16–0.17%) establish intoxication, the record lacks time‑synchronized traffic‑signal controller logs or verified timestamped video conclusively showing the light was red at the instant the defendant entered the intersection, and there is no definitive accident reconstruction or reliable retrograde analysis tying the post‑collision BAC to impairment at the precise moment of impact; because these narrow but dispositive uncertainties bear directly on unlawful entry and proximate causation, I cannot find guilt beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful consideration of the evidence and our deliberations, I conclude that the prosecution has not eliminated reasonable doubt on the critical elements: while the BAC readings (0.16–0.17%) establish intoxication, the record lacks time‑synchronized traffic‑signal controller logs or verified timestamped video conclusively showing the light was red at the instant the defendant entered the intersection, and there is no definitive accident reconstruction or reliable retrograde analysis tying the post‑collision BAC to impairment at the precise moment of impact; because these narrow but dispositive uncertainties bear directly on unlawful entry and proximate causation, I cannot find guilt beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 6,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "While the record establishes a high BAC and a fatal impact to a lawfully crossing pedestrian, the prosecution has not eliminated reasonable doubt on two dispositive points: the exact state of the traffic signal at the instant of entry (no conclusive, time‑synchronized controller logs or calibrated video were presented to fix the light) and the necessary causal link showing that the post‑collision BAC proved impairment at the moment of impact (no reliable retrograde analysis or direct evidence of impaired driving immediately before impact). Under the beyond‑a‑reasonable‑doubt standard required in criminal cases, those unresolved factual gaps prevent me from concluding guilt beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: While the record establishes a high BAC and a fatal impact to a lawfully crossing pedestrian, the prosecution has not eliminated reasonable doubt on two dispositive points: the exact state of the traffic signal at the instant of entry (no conclusive, time‑synchronized controller logs or calibrated video were presented to fix the light) and the necessary causal link showing that the post‑collision BAC proved impairment at the moment of impact (no reliable retrograde analysis or direct evidence of impaired driving immediately before impact). Under the beyond‑a‑reasonable‑doubt standard required in criminal cases, those unresolved factual gaps prevent me from concluding guilt beyond a reasonable doubt."
+    },
+    {
+      "agent_index": 7,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "social worker",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "not_guilty",
+      "confidence": 6,
+      "reason": "After weighing the court-established facts (confirmed BAC of 0.16–0.17% and that the pedestrian was lawfully in the crosswalk) against the evidentiary gaps highlighted by my fellow jurors—most importantly the lack of time‑synchronized traffic‑signal controller logs or calibrated video conclusively showing the light was red at the moment the vehicle entered the intersection, and the absence of reliable retrograde/expert analysis tying the post‑collision BAC to impairment at the instant of impact—I find that reasonable doubt remains as to a key element (that the defendant unlawfully and culpably entered on red while impaired). Because the prosecution must exclude reasonable doubt on every disputed element, I cannot vote guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 6\nREASON: After weighing the court-established facts (confirmed BAC of 0.16–0.17% and that the pedestrian was lawfully in the crosswalk) against the evidentiary gaps highlighted by my fellow jurors—most importantly the lack of time‑synchronized traffic‑signal controller logs or calibrated video conclusively showing the light was red at the moment the vehicle entered the intersection, and the absence of reliable retrograde/expert analysis tying the post‑collision BAC to impairment at the instant of impact—I find that reasonable doubt remains as to a key element (that the defendant unlawfully and culpably entered on red while impaired). Because the prosecution must exclude reasonable doubt on every disputed element, I cannot vote guilty."
+    },
+    {
+      "agent_index": 8,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the record establishes high BAC readings and that the pedestrian was lawfully in the crosswalk, the prosecution has not eliminated reasonable doubt on two critical points: the precise traffic-signal phase at the instant of entry (no time-synchronized controller logs or verified timestamped video conclusively demonstrated to the jury) and a reliable expert retrograde analysis tying the post-collision BAC to impairment at the exact moment of impact. Under the beyond-a-reasonable-doubt standard, those unresolved evidentiary gaps prevent me from concluding guilt, and therefore I must vote not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the record establishes high BAC readings and that the pedestrian was lawfully in the crosswalk, the prosecution has not eliminated reasonable doubt on two critical points: the precise traffic-signal phase at the instant of entry (no time-synchronized controller logs or verified timestamped video conclusively demonstrated to the jury) and a reliable expert retrograde analysis tying the post-collision BAC to impairment at the exact moment of impact. Under the beyond-a-reasonable-doubt standard, those unresolved evidentiary gaps prevent me from concluding guilt, and therefore I must vote not_guilty."
+    },
+    {
+      "agent_index": 9,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful deliberation I find that, although the BAC tests (0.16-0.17%) reliably establish intoxication and the death resulted from the collision, the prosecution has not eliminated reasonable doubt on pivotal factual elements: the state has not provided time-synchronized traffic-signal controller logs or calibrated video that conclusively fix the light's phase at the exact moment the vehicle entered the intersection, nor has it produced a definitive expert retrograde analysis or contemporaneous driving-behavior evidence tying the post-event BAC to impairment at the instant of impact. Because the prosecution bears the burden to prove every element beyond a reasonable doubt and those narrow evidentiary gaps permit plausible alternative explanations, my verdict is not_guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful deliberation I find that, although the BAC tests (0.16-0.17%) reliably establish intoxication and the death resulted from the collision, the prosecution has not eliminated reasonable doubt on pivotal factual elements: the state has not provided time-synchronized traffic-signal controller logs or calibrated video that conclusively fix the light's phase at the exact moment the vehicle entered the intersection, nor has it produced a definitive expert retrograde analysis or contemporaneous driving-behavior evidence tying the post-event BAC to impairment at the instant of impact. Because the prosecution bears the burden to prove every element beyond a reasonable doubt and those narrow evidentiary gaps permit plausible alternative explanations, my verdict is not_guilty."
+    },
+    {
+      "agent_index": 10,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful weighing of the record and our deliberations, I find that the prosecution has not eliminated reasonable doubt on the key disputed elements. Although the BAC results are high and the collision was fatal, the record lacks conclusive, time-synchronized objective proof fixing the traffic signal phase at the exact moment of entry and lacks an expert linkage reliably showing impairment at the precise instant of impact; without those gaps closed, I cannot say the state has proved beyond a reasonable doubt that the defendant's unlawful, intoxicated driving was the proximate cause of the death.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful weighing of the record and our deliberations, I find that the prosecution has not eliminated reasonable doubt on the key disputed elements. Although the BAC results are high and the collision was fatal, the record lacks conclusive, time-synchronized objective proof fixing the traffic signal phase at the exact moment of entry and lacks an expert linkage reliably showing impairment at the precise instant of impact; without those gaps closed, I cannot say the state has proved beyond a reasonable doubt that the defendant's unlawful, intoxicated driving was the proximate cause of the death."
+    }
+  ]
+}

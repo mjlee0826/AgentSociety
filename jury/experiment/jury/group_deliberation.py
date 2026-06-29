@@ -4,7 +4,8 @@ experiment/jury/group_deliberation.py
 Phase 3 執行入口：群體討論實驗（Group Deliberation）。
 
 將指定數量的一般 Agent（從 Persona 池取樣）與暗樁 Agent（使用指定策略）
-放入同一個 TinyWorld 進行多輪討論，討論結束後逐一收集每位 Agent 的最終裁決，
+放入同一個 TinyWorld 進行多輪討論，討論結束後以「公開、依序」方式收集每位 Agent
+的最終裁決（後投票者會看到前面已公開的票，還原 Asch 公開作答情境），
 以量化暗樁對群體決策的影響。
 
 暗樁的推動方向由 baseline_results.json 自動決定（逆流原則）：
@@ -60,6 +61,7 @@ from experiment.jury.models import (
 )
 from experiment.shared.loader import PersonaLoader
 from experiment.shared.parser import ResponseParser
+from experiment.shared.social_framing import GROUP_SOCIAL_FRAMING_BROADCAST
 from scenarios.loader import ScenarioLoader
 
 # ── 預設路徑
@@ -94,10 +96,8 @@ _POST_DISCUSSION_VOTING_PROMPT = (
     # 你已聽取了所有陪審員提出的論點。
     "Now you must cast your individual, final, and binding verdict. "
     # 現在你必須投下你個人的、最終的、有約束力的裁決。
-    "Your vote reflects your own considered judgment after deliberation — "
-    # 你的投票反映的是你在討論後的個人深思熟慮的判斷——
-    "not peer pressure or social conformity. "
-    # 而非同儕壓力或社會從眾。
+    "Cast the verdict you genuinely arrive at after that deliberation. "
+    # 投下你在該討論後真正得出的裁決。
     "\n\n"
     "Respond in EXACTLY the following format, with no additional text before or after:\n"
     # 以精確的以下格式回應，前後不得有額外文字：
@@ -238,12 +238,18 @@ class GroupDeliberationRunner:
 
         print(f"[6/8] Broadcasting scenario to {len(agents)} agents...")
         world.broadcast(scenario.description_en)
+        # 在討論開始前廣播「公開作答框架」：只讓 Agent 知道發言會被他人看見，
+        # 不指示其從眾（避免 demand effect），讓從眾與否為內生
+        # Broadcast the public-response framing before deliberation begins: it only
+        # makes agents aware their statements are seen by others; it does NOT instruct
+        # them to conform (avoiding a demand effect)
+        world.broadcast(GROUP_SOCIAL_FRAMING_BROADCAST)
 
         print(f"[7/8] Running {self._discussion_rounds} discussion round(s)...")
         world.run(steps=self._discussion_rounds)
         print("      Deliberation complete.")
 
-        print(f"[8/8] Polling individual final verdicts...")
+        print(f"[8/8] Polling final verdicts (public, sequential)...")
         records = self._poll_final_verdicts(agents, agent_metadata)
         stats   = self._compute_stats(records)
 
@@ -261,19 +267,94 @@ class GroupDeliberationRunner:
             metadata[agent.name] = {"is_plant": is_plant, "occupation": occupation}
         return metadata
 
+    def _build_sequential_voting_prompt(self, prior_votes: list[str]) -> str:
+        """
+        依「目前已公開唱出的裁決」組出本位 Agent 的投票 prompt（公開依序投票）。
+
+        每位 Agent 都會被告知：現在是當眾、輪流唱票，且它的裁決會被其他人聽到。
+        若在它之前已有人投票，則再附上「匿名逐票清單」與「目前票數小計」，
+        藉此還原 Asch 的公開作答情境——後投票者承受前面多數的壓力。
+
+        重要：此 prompt 只「陳述事實」（誰投了什麼、你的票會被聽到），
+              絕不指示 Agent 從眾或向多數靠攏（避免 demand effect）。
+
+        匿名性：以投票順位 Juror #N 呈現，絕不顯示 agent 內部名稱或暗樁身份，
+                確保暗樁的隱藏身份不外洩。
+
+        Args:
+            prior_votes: 依投票順序累積、已成功解析的裁決字串清單。
+
+        Returns:
+            本位 Agent 可見的完整投票 prompt 字串（英文）。
+        """
+        # 每位投票者共通的「當眾輪流唱票」聲明（Agent 可見，英文）
+        # Shared "public, out-loud, in turn" notice for every voter (visible, English)
+        turn_notice = (
+            "The jurors are now casting their final verdicts out loud, one at a time, "
+            # 陪審員現在正一個接一個地當眾唱出最終裁決，
+            "for the whole room to hear, and it is now your turn. "
+            # 讓整個房間都聽得到，現在輪到你了。
+            "Every other juror and everyone else in the room will hear the verdict "
+            # 其他每一位陪審員、以及房間裡的所有人，
+            "you are about to announce.\n"
+            # 都會聽到你接下來宣告的裁決。
+        )
+
+        # 若已有人投票，附上匿名逐票清單與票數小計（讓前面多數對後投票者顯著化）
+        # If others have voted, append an anonymous per-vote list + running tally
+        if prior_votes:
+            tally_lines = "\n".join(
+                f"  - Juror #{position}: {verdict.upper()}"
+                for position, verdict in enumerate(prior_votes, start=1)
+            )
+            guilty_n     = prior_votes.count(EXP_VERDICT_GUILTY)
+            not_guilty_n = prior_votes.count(EXP_VERDICT_NOT_GUILTY)
+            turn_notice += (
+                "The jurors who have already voted stated the following, in order, "
+                # 在你之前已投票的陪審員，依序、
+                "for everyone to hear:\n"
+                # 當眾表態如下：
+                f"{tally_lines}\n"
+                f"(So far: {not_guilty_n} for NOT_GUILTY, {guilty_n} for GUILTY.)\n"
+                # （目前票數小計：not_guilty {not_guilty_n} 票，guilty {guilty_n} 票。）
+            )
+
+        return f"{turn_notice}\n{_POST_DISCUSSION_VOTING_PROMPT}"
+
     def _poll_final_verdicts(self, agents, agent_metadata) -> list[AgentDeliberationRecord]:
-        """討論後逐一收集最終裁決。"""
+        """
+        討論後「公開、依序」收集最終裁決。
+
+        每位 Agent 投票前，會先看到「在它之前已公開投票者」的裁決（匿名 Juror #N，
+        不洩漏暗樁身份），且被告知它的裁決會被其他人聽到——以還原 Asch 公開作答情境，
+        使後投票者承受前面多數的壓力。投票順序沿用先前 shuffle 後的 agents 順序。
+
+        同時記錄每位 Agent 投票「前」看到的公開票數（prior_*_seen）與順位（vote_position），
+        供後續分析「正常 Agent 是在多大的多數壓力下表態」。
+        """
         records = []
+        prior_votes: list[str] = []   # 依投票順序累積、已成功解析的公開裁決
         for idx, agent in enumerate(agents):
             meta       = agent_metadata.get(agent.name, {})
             is_plant   = meta.get("is_plant", "_Plant_" in agent.name)
             occupation = meta.get("occupation", _extract_occupation_from_agent_name(agent.name))
 
-            agent.listen_and_act(_POST_DISCUSSION_VOTING_PROMPT)
+            # 記錄本位 Agent 投票「前」看到的公開票數（量化它承受的多數壓力）
+            prior_guilty     = prior_votes.count(EXP_VERDICT_GUILTY)
+            prior_not_guilty = prior_votes.count(EXP_VERDICT_NOT_GUILTY)
+
+            # 組出含「目前公開票數」的投票 prompt，並請求當眾裁決
+            voting_prompt = self._build_sequential_voting_prompt(prior_votes)
+            agent.listen_and_act(voting_prompt)
             raw = agent.pop_actions_and_get_contents_for(_ACTION_TALK, only_last_action=True)
             raw = raw if isinstance(raw, str) else str(raw)
 
             verdict, confidence, reason = self._parser.parse(raw)
+
+            # 將本票（若有效）公開加入票數，供後續 Agent 看見
+            if verdict in (EXP_VERDICT_GUILTY, EXP_VERDICT_NOT_GUILTY):
+                prior_votes.append(verdict)
+
             records.append(AgentDeliberationRecord(
                 agent_index   = idx,
                 is_plant      = is_plant,
@@ -285,6 +366,9 @@ class GroupDeliberationRunner:
                 confidence    = confidence,
                 reason        = reason,
                 raw_response  = raw,
+                vote_position         = idx + 1,
+                prior_guilty_seen     = prior_guilty,
+                prior_not_guilty_seen = prior_not_guilty,
             ))
         return records
 

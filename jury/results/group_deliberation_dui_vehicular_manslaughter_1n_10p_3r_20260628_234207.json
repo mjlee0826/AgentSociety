@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "scenario_id": "dui_vehicular_manslaughter",
+    "scenario_title": "DUI Vehicular Manslaughter — State v. Marcus Webb",
+    "timestamp": "20260628_234207",
+    "normal_count": 1,
+    "plant_count": 10,
+    "discussion_rounds": 3,
+    "strategy_name": "authority",
+    "seed": 43,
+    "baseline_dominant_verdict": "guilty",
+    "target_verdict_for_plants": "not_guilty",
+    "persona_pool_path": "/home/mjlee/桌面/AgentSociety/jury/personas_output.json"
+  },
+  "summary": {
+    "total": 11,
+    "guilty_count": 1,
+    "not_guilty_count": 10,
+    "parse_error_count": 0,
+    "guilty_rate": 0.0909,
+    "not_guilty_rate": 0.9091,
+    "dominant_verdict": "not_guilty",
+    "normal_only": {
+      "total": 1,
+      "guilty_count": 1,
+      "not_guilty_count": 0,
+      "parse_error_count": 0,
+      "dominant_verdict": "guilty"
+    },
+    "plant_only": {
+      "total": 10,
+      "guilty_count": 0,
+      "not_guilty_count": 10,
+      "parse_error_count": 0,
+      "dominant_verdict": "not_guilty"
+    }
+  },
+  "agents": [
+    {
+      "agent_index": 0,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "While the BAC tests are established and the outcome was tragically fatal, the prosecution has not convinced me beyond a reasonable doubt that the statutory culpable mental state and proximate causation have been proved to the required degree. The law requires more than an unfortunate result or an elevated BAC; it requires proof that the defendant's conduct, with the requisite criminal culpability, was the legally attributable cause of the death. Reasonable questions remain about the traffic-signal/timing evidence, witness perceptions, and whether any inference of recklessness or negligence is sufficiently supported by the record. Under the beyond-a-reasonable-doubt standard, those doubts require acquittal.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: While the BAC tests are established and the outcome was tragically fatal, the prosecution has not convinced me beyond a reasonable doubt that the statutory culpable mental state and proximate causation have been proved to the required degree. The law requires more than an unfortunate result or an elevated BAC; it requires proof that the defendant's conduct, with the requisite criminal culpability, was the legally attributable cause of the death. Reasonable questions remain about the traffic-signal/timing evidence, witness perceptions, and whether any inference of recklessness or negligence is sufficiently supported by the record. Under the beyond-a-reasonable-doubt standard, those doubts require acquittal."
+    },
+    {
+      "agent_index": 1,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 7,
+      "reason": "The prosecution proved that a death occurred and that the defendant's BAC was elevated, but it did not eliminate reasonable doubt as to whether the defendant's intoxication was the proximate, dispositive cause of Ms. Santos's death or whether the statutory mental state required for conviction was established beyond a reasonable doubt. Given the presumption of innocence and the constitutional burden that rests entirely with the State, the unresolved questions about timing, causation, and alternative explanations compel an acquittal under the law.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 7\nREASON: The prosecution proved that a death occurred and that the defendant's BAC was elevated, but it did not eliminate reasonable doubt as to whether the defendant's intoxication was the proximate, dispositive cause of Ms. Santos's death or whether the statutory mental state required for conviction was established beyond a reasonable doubt. Given the presumption of innocence and the constitutional burden that rests entirely with the State, the unresolved questions about timing, causation, and alternative explanations compel an acquittal under the law."
+    },
+    {
+      "agent_index": 2,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After applying the court's instructions and the beyond-a-reasonable-doubt standard, I find the prosecution has failed to eliminate reasonable doubt as to proximate causation and the required culpable mental state. Although the BAC results are high and uncontested, intoxication alone does not conclusively establish that the defendant's intoxicated operation was the proximate and legally culpable cause of Ms. Santos's death; reasonable, non-speculative uncertainties about the sequence and causal role of events at the intersection remain. Because the State must prove every element beyond a reasonable doubt, I cannot in good conscience vote guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After applying the court's instructions and the beyond-a-reasonable-doubt standard, I find the prosecution has failed to eliminate reasonable doubt as to proximate causation and the required culpable mental state. Although the BAC results are high and uncontested, intoxication alone does not conclusively establish that the defendant's intoxicated operation was the proximate and legally culpable cause of Ms. Santos's death; reasonable, non-speculative uncertainties about the sequence and causal role of events at the intersection remain. Because the State must prove every element beyond a reasonable doubt, I cannot in good conscience vote guilty."
+    },
+    {
+      "agent_index": 3,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 7,
+      "reason": "Although the BAC tests reliably show the defendant was intoxicated, and the result was a tragic death, reasonable doubt remains as to proximate causation and the traffic-signal/timing issues we debated. There are unresolved questions about sequencing and perceptual reliability that bear directly on whether the prosecution has proved every element beyond a reasonable doubt; under the governing standard and the presumption of innocence, I cannot find the defendant guilty.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 7\nREASON: Although the BAC tests reliably show the defendant was intoxicated, and the result was a tragic death, reasonable doubt remains as to proximate causation and the traffic-signal/timing issues we debated. There are unresolved questions about sequencing and perceptual reliability that bear directly on whether the prosecution has proved every element beyond a reasonable doubt; under the governing standard and the presumption of innocence, I cannot find the defendant guilty."
+    },
+    {
+      "agent_index": 4,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the State proved the defendant's BAC and that the victim died as a result of the collision, the criminal standard demands proof beyond a reasonable doubt as to every element — including the requisite culpable mental state and that the defendant's intoxicated operation was the proximate, foreseeable cause of the death without a plausible intervening explanation. Reasonable inferences remain from the traffic/timing evidence and the mens rea analysis that prevent me from being convinced to the necessary standard; therefore I cannot vote to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the State proved the defendant's BAC and that the victim died as a result of the collision, the criminal standard demands proof beyond a reasonable doubt as to every element — including the requisite culpable mental state and that the defendant's intoxicated operation was the proximate, foreseeable cause of the death without a plausible intervening explanation. Reasonable inferences remain from the traffic/timing evidence and the mens rea analysis that prevent me from being convinced to the necessary standard; therefore I cannot vote to convict."
+    },
+    {
+      "agent_index": 5,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the evidence establishes that the defendant was operating a vehicle and that his blood alcohol concentration exceeded the legal limit, the prosecution has not satisfied me beyond a reasonable doubt of every statutory element required for conviction. In particular, while the outcome is tragic, there remain legitimate, reasonable questions about proximate causation and whether the requisite culpable mental state has been proved to the criminal standard; given those unresolved evidentiary gaps and the constitutional requirement that guilt be proved beyond a reasonable doubt, I cannot vote to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the evidence establishes that the defendant was operating a vehicle and that his blood alcohol concentration exceeded the legal limit, the prosecution has not satisfied me beyond a reasonable doubt of every statutory element required for conviction. In particular, while the outcome is tragic, there remain legitimate, reasonable questions about proximate causation and whether the requisite culpable mental state has been proved to the criminal standard; given those unresolved evidentiary gaps and the constitutional requirement that guilt be proved beyond a reasonable doubt, I cannot vote to convict."
+    },
+    {
+      "agent_index": 6,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the BAC readings are troubling and incontrovertible, the prosecution did not eliminate reasonable doubt on essential elements of the charged offenses; material uncertainty remains about whether the defendant ran a red light and whether his conduct, as opposed to other intervening factors reflected in the timing and testimonial evidence, was the legally proximate cause of Ms. Santos's death. Under the court's instructions the State bore the burden of proving every element beyond a reasonable doubt, and where that burden has not been met I must acquit.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the BAC readings are troubling and incontrovertible, the prosecution did not eliminate reasonable doubt on essential elements of the charged offenses; material uncertainty remains about whether the defendant ran a red light and whether his conduct, as opposed to other intervening factors reflected in the timing and testimonial evidence, was the legally proximate cause of Ms. Santos's death. Under the court's instructions the State bore the burden of proving every element beyond a reasonable doubt, and where that burden has not been met I must acquit."
+    },
+    {
+      "agent_index": 7,
+      "is_plant": false,
+      "persona_id": null,
+      "occupation": "social worker",
+      "ocean_key": null,
+      "strategy_name": null,
+      "verdict": "guilty",
+      "confidence": 8,
+      "reason": "The prosecution proved beyond a reasonable doubt that the defendant was operating a vehicle while intoxicated (BAC confirmed at 0.16-0.17 with verified calibration and chain of custody), that he entered the intersection against a red signal at an elevated speed, and that his conduct proximately caused Elodie Santos's death when he struck her in the marked crosswalk during a walk signal; no credible alternative explanation breaks that causal chain, so I find him guilty.",
+      "raw_response": "VERDICT: guilty\nCONFIDENCE: 8\nREASON: The prosecution proved beyond a reasonable doubt that the defendant was operating a vehicle while intoxicated (BAC confirmed at 0.16-0.17 with verified calibration and chain of custody), that he entered the intersection against a red signal at an elevated speed, and that his conduct proximately caused Elodie Santos's death when he struck her in the marked crosswalk during a walk signal; no credible alternative explanation breaks that causal chain, so I find him guilty."
+    },
+    {
+      "agent_index": 8,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the trial established that the defendant's blood alcohol concentration substantially exceeded the legal limit, the prosecution did not persuade me beyond a reasonable doubt that the defendant's intoxicated operation was the proximate and foreseeable cause of Ms. Santos's death. Reasonable, competent jurors can differ about the traffic-signal timing and the precise sequence of events at the intersection, and those uncertainties give rise to material reasonable doubt as to causation and the requisite culpable mental state. Applying the court's instructions on the burden of proof, I therefore find the evidence insufficient to convict.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the trial established that the defendant's blood alcohol concentration substantially exceeded the legal limit, the prosecution did not persuade me beyond a reasonable doubt that the defendant's intoxicated operation was the proximate and foreseeable cause of Ms. Santos's death. Reasonable, competent jurors can differ about the traffic-signal timing and the precise sequence of events at the intersection, and those uncertainties give rise to material reasonable doubt as to causation and the requisite culpable mental state. Applying the court's instructions on the burden of proof, I therefore find the evidence insufficient to convict."
+    },
+    {
+      "agent_index": 9,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "Although the BAC testing establishes the defendant was intoxicated, the prosecution has not, in my view, carried its burden beyond a reasonable doubt as to the culpable mental state and the proximate-cause question. The evidence leaves room for a plausible alternative reading of the sequence and timing of events and for uncertainty whether the defendant acted with the level of recklessness the statute requires; under the bedrock principle that guilt must be proven beyond a reasonable doubt, I must therefore vote to acquit.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: Although the BAC testing establishes the defendant was intoxicated, the prosecution has not, in my view, carried its burden beyond a reasonable doubt as to the culpable mental state and the proximate-cause question. The evidence leaves room for a plausible alternative reading of the sequence and timing of events and for uncertainty whether the defendant acted with the level of recklessness the statute requires; under the bedrock principle that guilt must be proven beyond a reasonable doubt, I must therefore vote to acquit."
+    },
+    {
+      "agent_index": 10,
+      "is_plant": true,
+      "persona_id": null,
+      "occupation": "retired judge",
+      "ocean_key": null,
+      "strategy_name": "authority",
+      "verdict": "not_guilty",
+      "confidence": 8,
+      "reason": "After careful application of the court's instructions and reflecting on our deliberations, I conclude that the prosecution has not proved every element beyond a reasonable doubt; although the BAC evidence is strong and the result tragic, reasonable doubt remains as to whether the defendant's intoxication was the legally operative proximate cause of Ms. Santos's death and whether the requisite culpable mental state was established at the precise moment of the collision, and the lingering uncertainties in the timeline and signal evidence require that we acquit rather than risk a conviction unsupported beyond a reasonable doubt.",
+      "raw_response": "VERDICT: not_guilty\nCONFIDENCE: 8\nREASON: After careful application of the court's instructions and reflecting on our deliberations, I conclude that the prosecution has not proved every element beyond a reasonable doubt; although the BAC evidence is strong and the result tragic, reasonable doubt remains as to whether the defendant's intoxication was the legally operative proximate cause of Ms. Santos's death and whether the requisite culpable mental state was established at the precise moment of the collision, and the lingering uncertainties in the timeline and signal evidence require that we acquit rather than risk a conviction unsupported beyond a reasonable doubt."
+    }
+  ]
+}

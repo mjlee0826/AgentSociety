@@ -39,6 +39,12 @@ class AgentDeliberationRecord:
         confidence:    1–10；解析失敗時為 -1。
         reason:        理由段落；解析失敗時為原始回應。
         raw_response:  Agent 的原始 LLM 回應文字。
+
+        以下為「公開依序投票（public sequential voting）」分析用欄位：
+        vote_position:         本 Agent 公開唱票的順位（1 起算）；None = 未啟用依序投票。
+        prior_guilty_seen:     本 Agent 投票「前」已公開聽到的 guilty 票數。
+        prior_not_guilty_seen: 本 Agent 投票「前」已公開聽到的 not_guilty 票數。
+                               （用於判斷正常 Agent 是在多大的多數壓力下表態 → 量化從眾）
     """
 
     agent_index:   int
@@ -51,6 +57,11 @@ class AgentDeliberationRecord:
     confidence:    int
     reason:        str
     raw_response:  str
+    # 公開依序投票欄位（有預設值，向後相容；未啟用依序投票時 vote_position 留 None）
+    # Public sequential voting fields (defaulted for backward compatibility)
+    vote_position:         int | None = None
+    prior_guilty_seen:     int = 0
+    prior_not_guilty_seen: int = 0
 
     def to_dict(self) -> dict:
         """序列化為字典供 JSON 輸出。"""
@@ -65,6 +76,9 @@ class AgentDeliberationRecord:
             "confidence":    self.confidence,
             "reason":        self.reason,
             "raw_response":  self.raw_response,
+            "vote_position":         self.vote_position,
+            "prior_guilty_seen":     self.prior_guilty_seen,
+            "prior_not_guilty_seen": self.prior_not_guilty_seen,
         }
 
 

@@ -54,6 +54,7 @@ from agents.strategies import PlantStrategy
 from experiment.shared.loader import PersonaLoader
 from experiment.shared.parser import ResponseParser
 from experiment.shared.schemas import BYSTANDER_SCHEMA
+from experiment.shared.social_framing import GROUP_SOCIAL_FRAMING_BROADCAST
 
 from experiment.bystander.group_models import (
     DECISION_REPORT,
@@ -320,6 +321,12 @@ class SmokeGroupDeliberationRunner:
         world.broadcast(scenario.description_en)
         # 情境廣播注入所有 Agent 記憶，模擬「進入等待室並看到煙霧」
         # Scenario broadcast injects into all agents' memory, simulating "entering the room"
+        # 緊接著廣播「公開作答框架」：只讓 Agent 知道發言會被在場他人看見，
+        # 不指示其淡化或從眾，讓多元無知（若發生）為內生
+        # Then broadcast the public-response framing: it only makes agents aware their
+        # statements are seen by others present; it does NOT instruct them to downplay
+        # or conform, so pluralistic ignorance (if any) emerges endogenously
+        world.broadcast(GROUP_SOCIAL_FRAMING_BROADCAST)
 
         # 6. 逐輪討論 + 私下決策詢問
         # Per-round discussion + private decision polling
